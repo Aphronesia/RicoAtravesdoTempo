@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bigorna
+  - Coracao
+  - Pinha
+  - Chao
+  - Capivara
+  - Fundo
+  - Monstros
+  - SpawnObstacle
+  - SpawnCollectible
+  - SpawnPowerUp
+  - PowerUp1
+  - Spring
+  - Obstacle
+  - TopObstacle
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: fundo2
+    uniqueID: 33656223
+    locked: 0
+  - name: fundo
+    uniqueID: 461603749
+    locked: 0
+  - name: frente
+    uniqueID: 2470930163
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

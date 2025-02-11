@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: efaa28a0dd56a464aaadfb762d552234
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Pinha: {fileID: 7864161573008871788, guid: 6ba1f046d614e964a8d061e1e80a55ac, type: 3}
+  - Bigorna: {fileID: 7550034983060801454, guid: 0643f088162729e46b1ba794cea9ccc9, type: 3}
+  - Coracao: {fileID: 27042835477513184, guid: d6753c4ee22d62d41807bf0681016645, type: 3}
+  - Inicia: {instanceID: 0}
+  - capivara: {instanceID: 0}
+  - Temporizador: {instanceID: 0}
+  - txtPontos: {instanceID: 0}
+  - txtVidas: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,12 @@
+{
+  "giulia": 13,
+  "manu": 29,
+  "tinoco": 41,
+  "Ferle": 15,
+  "Dom": 34,
+  "Murilo": 69,
+  "Naynay": 24,
+  "Macrozs": 12,
+  "Caneca": 31,
+  "teste": 1
+}

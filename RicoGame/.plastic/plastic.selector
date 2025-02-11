@@ -1,0 +1,4 @@
+repository "RicoGame@Ferlemou@cloud"
+  path "/"
+    br "/main"
+    co "/main"
