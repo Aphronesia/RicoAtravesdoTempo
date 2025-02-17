@@ -13,7 +13,7 @@ public class Universo : MonoBehaviour
     public float SpawnRate;
     public int pontos, vidas, metaPoints;
     public bool Pausado, PodeSpawn;
-    public Capivara capivara;
+    public Capivara rico;
     public Temporizador temporizador;
     public SoundControllerPinha soundPinha;
     public TMP_Text txtPontos, txtVidas;
@@ -44,7 +44,7 @@ public class Universo : MonoBehaviour
         if ( vidas == 0 && umavez){
             soundPinha.PlaySound(2);
             PodeSpawn = false;
-            capivara.Morreu();
+            rico.Morreu();
             umavez=false;
             StartCoroutine(Faleceu());
             temporizador.Parar();
@@ -86,7 +86,7 @@ public class Universo : MonoBehaviour
     }
     public void Iniciar(){
         temporizador.Comeca();
-        capivara.Reviveu();
+        rico.Reviveu();
         Inicia.SetActive(false);
         Scoreboard.SetActive(false);
         ScoreboardSave.SetActive(false);
@@ -112,7 +112,7 @@ public class Universo : MonoBehaviour
     public void Pausa(){
         if(!Pausado){
             temporizador.Parar();
-            capivara.Parar();
+            rico.Parar();
             Time.timeScale=0f;
             Pausado =true;
             Pause.SetActive(true);
@@ -123,7 +123,7 @@ public class Universo : MonoBehaviour
             Pause.SetActive(false);
             Scoreboard.SetActive(false);
             temporizador.Voltar();
-            capivara.Voltar();
+            rico.Voltar();
             Time.timeScale=1f;
             Pausado = false;
         }

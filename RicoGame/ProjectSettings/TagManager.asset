@@ -18,11 +18,13 @@ TagManager:
   - Spring
   - Obstacle
   - TopObstacle
+  - mataNuvem
+  - Nuvem
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - objetos
   - Water
   - UI
   - 
@@ -54,6 +56,9 @@ TagManager:
   m_SortingLayers:
   - name: fundo2
     uniqueID: 33656223
+    locked: 0
+  - name: fundinho
+    uniqueID: 783000433
     locked: 0
   - name: fundo
     uniqueID: 461603749

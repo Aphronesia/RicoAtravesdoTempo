@@ -11,7 +11,7 @@ public class Capivara : MonoBehaviour
     public Universo universo; 
     public bool PodeMover;
 
-    [SerializeField]
+  
     float impulso;
 
     Rigidbody2D rig;
