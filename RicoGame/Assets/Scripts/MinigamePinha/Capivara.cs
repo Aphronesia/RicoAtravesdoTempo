@@ -40,11 +40,11 @@ public class Capivara : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            AAA();
+            MovimentLeft();
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            BBB();
+            MovimentRight();
         }
         if (Input.GetKeyDown(KeyCode.J)){
             Esquerda();
@@ -56,20 +56,22 @@ public class Capivara : MonoBehaviour
             Direita();
         }
     }
-    public void AAA()
+    public void MovimentLeft()
     {
-        if (pose == 1)
-        {
-            Esquerda();
-            pose = 0;
-        }
-        if (pose == 2)
-        {
-            Centro();
-            pose = 1;
+        switch (pose){
+            case 1:
+                Esquerda();
+                pose = 0;
+                break;
+            case 2:
+                Centro();
+                pose = 1;
+                break;
+            default:
+                break;
         }
     }
-    public void BBB()
+    public void MovimentRight()
     {
         if (pose == 1)
         {
