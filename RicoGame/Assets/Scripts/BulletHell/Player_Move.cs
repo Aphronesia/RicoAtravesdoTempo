@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player_Move : MonoBehaviour
 {
     [Header("Atributos do Rico")]
     [SerializeField, Tooltip("velocidade do rico")]
