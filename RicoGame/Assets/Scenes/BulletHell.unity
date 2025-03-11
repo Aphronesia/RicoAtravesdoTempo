@@ -204,8 +204,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 1696997755}
+        m_TargetAssemblyTypeName: Player_Move, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
         m_Arguments:
