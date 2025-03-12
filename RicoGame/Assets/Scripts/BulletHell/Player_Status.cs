@@ -5,8 +5,10 @@ using UnityEngine;
 public class Player_Status : MonoBehaviour
 {
     [Header ("Atribudos do Rico")]
-    [SerializeField, Tooltip("valor inteiro da vida")]
+    [SerializeField, 
+    Tooltip("valor inteiro da vida")]
     private int health;
+    private int healthMax;
     [SerializeField, Tooltip("tempo em segundos de invulnerabilidade")]
     private float invulnerable;
     public float cooldown;
