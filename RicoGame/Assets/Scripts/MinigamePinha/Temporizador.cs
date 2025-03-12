@@ -10,7 +10,7 @@ public class Temporizador : MonoBehaviour
     public bool timerIsRunning = false;
     public TMP_Text timeText;
     
-    public Universo universo;
+    public SpawnCai spawnCai;
 
     public TextMeshProUGUI textMeshProUGUI;
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class Temporizador : MonoBehaviour
             else
             {
                 Debug.Log("tempo acabou");
-                universo.Tempofim();
+                spawnCai.Tempofim();
                 Time.timeScale=0f;
                 timeRemaining = 0;
                 timerIsRunning = false;
@@ -50,13 +50,13 @@ public class Temporizador : MonoBehaviour
         }
         switch (timeRemaining){
             case <=30:
-            universo.TempoRapido();
+            spawnCai.TempoRapido();
             break;
             case >30 and <=90:
-            universo.TempoMedio();
+            spawnCai.TempoMedio();
             break;
             default:
-            universo.TempoPadrao();
+            spawnCai.TempoPadrao();
             break;
         }
     }

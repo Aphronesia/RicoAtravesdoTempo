@@ -1,11 +1,12 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class nuvem : MonoBehaviour
+public class NuvemMenor : MonoBehaviour
 {
-    public GameObject nuvemPrefab; 
+  public GameObject nuvemPrefab; 
 
-    public float cloudVelocity = 5f;
+    public float cloudVelocity = 2f;
     
 
     
@@ -36,7 +37,5 @@ public class nuvem : MonoBehaviour
     }
 
    
-
-  
 
 }
