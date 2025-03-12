@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player_Status : MonoBehaviour
+{
+    [Header ("Atribudos do Rico")]
+    [SerializeField, 
+    Tooltip("valor inteiro da vida")]
+    private int health;
+    private int healthMax;
+    [SerializeField, Tooltip("tempo em segundos de invulnerabilidade")]
+    private float invulnerable;
+    public float cooldown;
+    public float timer;
+    [SerializeField, Tooltip("transparencia do blink da invulnerabelidade")]
+    private Color color;
+    private SpriteRenderer renderer;
+    private void Start() {
+        renderer = GetComponent<SpriteRenderer>();
+        color = renderer.color;
+        health = 6;
+    }
+    private void Update() {
+        timer += Time.deltaTime;
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        switch (other.gameObject.tag)
+        {
+            case "Monstros":
+                Damage(1);
+            break;
+            default:
+            break;
+        }
+    }
+    private void Damage(int value){
+        if (timer > cooldown){
+            StartCoroutine(VisualInvunerable());
+            health = health - value;
+            cooldown = timer + invulnerable;
+        }
+        else{
+            Debug.LogError("ainda nao pode levar dano");
+        }
+    }
+    private IEnumerator VisualInvunerable(){
+        do{
+            yield return new WaitForSeconds(0.05f);
+            color.a = 0f;
+            renderer.color = color;
+            yield return new WaitForSeconds(0.05f);
+            color.a = 1f;
+            renderer.color = color;
+        }while (timer < cooldown);
+    }
+}

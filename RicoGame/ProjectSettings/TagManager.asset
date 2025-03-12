@@ -20,6 +20,7 @@ TagManager:
   - TopObstacle
   - mataNuvem
   - Nuvem
+  - Ground
   layers:
   - Default
   - TransparentFX
