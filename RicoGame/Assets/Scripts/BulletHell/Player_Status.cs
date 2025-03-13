@@ -1,24 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Status : MonoBehaviour
 {
-    [Header ("Atribudos do Rico")]
+    [Header("Atribudos do Rico")]
     [Tooltip("valor inteiro da vida")]
     public int health;
     public int healthMax;
     [SerializeField, Tooltip("tempo em segundos de invulnerabilidade")]
     private float invulnerable;
-    public float cooldown;
-    public float timer;
+    private float cooldown, timer;
     [SerializeField, Tooltip("transparencia do blink da invulnerabelidade")]
     private Color color;
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
     
+    public static event Action OnPlayerDamaged;
+    //public static event Action OnPlayeDeath;
     private void Start() {
-        renderer = GetComponent<SpriteRenderer>();
-        color = renderer.color;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        color = spriteRenderer.color;
         health = 6;
         healthMax = health;
     }
@@ -40,19 +42,17 @@ public class Player_Status : MonoBehaviour
             StartCoroutine(VisualInvunerable());
             health = health - value;
             cooldown = timer + invulnerable;
-        }
-        else{
-            Debug.LogError("ainda nao pode levar dano");
+            OnPlayerDamaged?.Invoke();
         }
     }
     private IEnumerator VisualInvunerable(){
         do{
             yield return new WaitForSeconds(0.05f);
             color.a = 0f;
-            renderer.color = color;
+            spriteRenderer.color = color;
             yield return new WaitForSeconds(0.05f);
             color.a = 1f;
-            renderer.color = color;
+            spriteRenderer.color = color;
         }while (timer < cooldown);
     }
 }
