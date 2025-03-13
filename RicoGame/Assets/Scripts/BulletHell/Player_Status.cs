@@ -5,10 +5,9 @@ using UnityEngine;
 public class Player_Status : MonoBehaviour
 {
     [Header ("Atribudos do Rico")]
-    [SerializeField, 
-    Tooltip("valor inteiro da vida")]
-    private int health;
-    private int healthMax;
+    [Tooltip("valor inteiro da vida")]
+    public int health;
+    public int healthMax;
     [SerializeField, Tooltip("tempo em segundos de invulnerabilidade")]
     private float invulnerable;
     public float cooldown;
@@ -16,10 +15,12 @@ public class Player_Status : MonoBehaviour
     [SerializeField, Tooltip("transparencia do blink da invulnerabelidade")]
     private Color color;
     private SpriteRenderer renderer;
+    
     private void Start() {
         renderer = GetComponent<SpriteRenderer>();
         color = renderer.color;
         health = 6;
+        healthMax = health;
     }
     private void Update() {
         timer += Time.deltaTime;
