@@ -5,16 +5,26 @@ using UnityEngine;
 
 public class Rico : MonoBehaviour
 {
-      public Vector3[] targetPositions; //array das cordenadas 
+    public SpriteRenderer spriteRenderer;
+    public Vector3[] targetPositions; //array das cordenadas 
     public float speed = 5f; 
-    private int currentTargetIndex = 0, direction = 1;  // 1 para direita, -1 para esquerda
+    private int currentTargetIndex = 0;  // 1 para direita, -1 para esquerda
     private bool isMoving = false, turn = true; 
     private Animator anima;
+    private int direction;
+    
 
 
     void Start()
     {
         anima = GetComponent<Animator>();
+         spriteRenderer = GetComponent<SpriteRenderer>();
+        
+         if (spriteRenderer == null)
+    {
+        Debug.LogError("SpriteRenderer não encontrado no objeto.");
+    } 
+
     }
 
     void Update()
@@ -78,4 +88,28 @@ public class Rico : MonoBehaviour
         }
 
     }
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+     if(collision.gameObject.CompareTag("Bigorna"))
+        StartCoroutine(DanoNumerator());
+
+        if(collision.gameObject.CompareTag("Coracao"))
+        StartCoroutine(Cura());
+    }
+    IEnumerator DanoNumerator()
+    {
+        spriteRenderer.color = Color.red;;
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = Color.white;
+    }
+
+    IEnumerator Cura()
+    {
+        spriteRenderer.color = Color.green;
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = Color.white;
+    }
+
+
 }
