@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
-    [Header("Atributos do Rico")]
+    [Header("Atributos da movimentação")]
     [SerializeField, Tooltip("velocidade do rico")]
     private float speed;
     [SerializeField, Tooltip("Força do pulo")]

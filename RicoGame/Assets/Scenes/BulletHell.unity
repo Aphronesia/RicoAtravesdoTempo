@@ -322,7 +322,7 @@ Canvas:
   m_GameObject: {fileID: 203681933}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 515226977}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1098,7 +1098,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726660989}
-  - component: {fileID: 726660988}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -1106,18 +1105,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &726660988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726660987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74cc7ee6f8c87e247845f4ad07fbd969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &726660989
 Transform:
   m_ObjectHideFlags: 0
@@ -1166,10 +1153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb7f3437c64fc3499e5c5b3e527f095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 6
+  healthMax: 6
   invulnerable: 2
-  cooldown: 0
-  timer: 0
   color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1696997755
 MonoBehaviour:
@@ -1355,14 +1341,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 203681937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -453, y: 268}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchoredPosition: {x: -323, y: 254}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702709699
 MonoBehaviour:
@@ -1414,6 +1400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e67bd0438e83a948b5b1cc71afce2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 655232467213814626, guid: 54277daf4418ef644bc17360b3e989b4, type: 3}
+  player_Status: {fileID: 1696997754}
 --- !u!114 &1702709702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,8 +1422,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 0, y: 0}
+  m_CellSize: {x: 120, y: 120}
+  m_Spacing: {x: -25, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1001 &1858527964
