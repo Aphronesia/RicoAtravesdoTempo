@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StatusRico : MonoBehaviour
 {
-
+    public int vida;
     public SpriteRenderer spriteRenderer;
     public Color colorNormal = Color.white;
     public Color colorDamage = Color.red;
