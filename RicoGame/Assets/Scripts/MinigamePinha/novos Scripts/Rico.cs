@@ -11,7 +11,6 @@ public class Rico : MonoBehaviour
     private int currentTargetIndex = 0;  // 1 para direita, -1 para esquerda
     private bool isMoving = false, turn = true; 
     private Animator anima;
-    private int direction;
     
 
 
@@ -34,7 +33,6 @@ public class Rico : MonoBehaviour
         {
             if (!isMoving && currentTargetIndex < targetPositions.Length - 1)
             {
-                direction = 1; 
                 isMoving = true; 
                 Flip(false);
                 currentTargetIndex++; // Avança para a próxima coordenada
@@ -46,7 +44,6 @@ public class Rico : MonoBehaviour
         {
             if (!isMoving && currentTargetIndex > 0)
             {
-                direction = -1; 
                 isMoving = true; 
                  Flip(true);
                 currentTargetIndex--; // Retrocede para a coordenada anterior
@@ -73,7 +70,7 @@ public class Rico : MonoBehaviour
         // Verifica se chegou na coordenada
         if (transform.position == targetPositions[currentTargetIndex])
         {
-            Debug.Log("rico pousou no " + currentTargetIndex);
+            //Debug.Log("rico pousou no " + currentTargetIndex);
             isMoving = false; // Para o movimento
         }
     }
@@ -88,7 +85,7 @@ public class Rico : MonoBehaviour
         }
 
     }
-    
+    /*
     void OnCollisionEnter2D(Collision2D collision)
     {
      if(collision.gameObject.CompareTag("Bigorna"))
@@ -109,7 +106,7 @@ public class Rico : MonoBehaviour
         spriteRenderer.color = Color.green;
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = Color.white;
-    }
+    }*/
 
 
 }

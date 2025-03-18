@@ -4,43 +4,51 @@ using UnityEngine;
 
 public class StatusRico : MonoBehaviour
 {
-  
+
     public SpriteRenderer spriteRenderer;
+    public Color colorNormal = Color.white;
+    public Color colorDamage = Color.red;
+    public Color colorHealh = Color.green;
 
 
-  void Start()
+    void Start()
     {
         // Obtém o componente SpriteRenderer do objeto atual
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
-         if (spriteRenderer == null)
-    {
-        Debug.LogError("SpriteRenderer não encontrado no objeto.");
-    }
-       
-    }
 
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("SpriteRenderer não encontrado no objeto.");
+        }
+
+    }
     // Método chamado quando ocorre uma colisão
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-     if(collision.gameObject.CompareTag("Bigorna"))
-        StartCoroutine(DanoNumerator());
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Bigorna"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(DanoNumerator());
+        }
 
-        if(collision.gameObject.CompareTag("Coracao"))
-        StartCoroutine(Cura());
+        if (other.gameObject.CompareTag("Coracao"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(Cura());
+        }
+        //Debug.Log("TRIGGER: coligiu com: " + other.gameObject.tag);
     }
     IEnumerator DanoNumerator()
     {
-        spriteRenderer.color = Color.red;;
+        spriteRenderer.color = colorDamage;
         yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
+        spriteRenderer.color = colorNormal;
     }
 
     IEnumerator Cura()
     {
-        spriteRenderer.color = Color.green;
+        spriteRenderer.color = colorHealh;
         yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
+        spriteRenderer.color = colorNormal;
     }
 
 
