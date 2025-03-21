@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class StatusRico : MonoBehaviour
 {
-    public int vida;
-    public SpriteRenderer spriteRenderer;
-    public Color colorNormal = Color.white;
-    public Color colorDamage = Color.red;
-    public Color colorHealh = Color.green;
+    [Header("atributos rico")]
+    [SerializeField,Tooltip("Cores colisão")]
+    private SpriteRenderer spriteRenderer;
+    private Color colorNormal = Color.white;
+    private Color colorDamage = Color.red;
+    private Color colorHealh = Color.green;
+
+    [SerializeField,Tooltip("vida")]
+    private int vida;
+    private Sprite deadRico;
+    float impulso;
 
 
     void Start()
