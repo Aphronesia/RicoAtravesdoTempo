@@ -49,4 +49,12 @@ public class ControlScenes : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+    public void Pause(bool pause){
+        if (pause){
+            Time.timeScale = 0f;
+        }
+        else{
+            Time.timeScale = 1f;
+        }
+    }
 }

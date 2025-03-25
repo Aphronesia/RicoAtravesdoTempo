@@ -194,10 +194,10 @@ TextureImporter:
       name: HeartEmpty
       rect:
         serializedVersion: 2
-        x: 309
+        x: 253
         y: 14
-        width: 43
-        height: 33
+        width: 34
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,6 +224,7 @@ TextureImporter:
     nameFileIdTable:
       HeartEmpty: 1375511157
       HeartHalf: -717784744
+      Hearts(60x60)_0: -184371186
       Hearts(60x60)_2: -1092483303
       Hearts(60x60)_4: -1050974338
       Hearts(60x60)_5: -845763781

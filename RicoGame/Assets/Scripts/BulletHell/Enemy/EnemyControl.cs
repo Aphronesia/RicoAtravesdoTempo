@@ -15,24 +15,30 @@ public class EnemyControl : MonoBehaviour
     [SerializeField]
     private float tiredCooldown;
     private int turn = 0;
-    private bool alive;
+    private bool alive, running;
 
     public static event Action<bool> OnEnemyTired;
     private void OnEnable() {
         EnemyAttack.OnAtkFinished += Tired;
         EnemyStatus.OnEnemyHit += EnemyHit;
         EnemyStatus.OnEnemyDie += Die;
+        UIControl.OnStarted += Started;
     }
     private void OnDisable() {
         EnemyAttack.OnAtkFinished -= Tired;
         EnemyStatus.OnEnemyHit -= EnemyHit;
         EnemyStatus.OnEnemyDie -= Die;
+        UIControl.OnStarted -= Started;
     }
     private void Start() {
         enemyStatus = GetComponent<EnemyStatus>();
         enemyAttack = GetComponent<EnemyAttack>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         alive = true;
+        running = false;
+    }
+    private void Started(bool value){
+        running = value;
         Attacking();
     }
     private void Attacking(){
