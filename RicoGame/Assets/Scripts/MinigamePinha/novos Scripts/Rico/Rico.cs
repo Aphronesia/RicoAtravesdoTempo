@@ -5,29 +5,43 @@ using UnityEngine;
 
 public class Rico : MonoBehaviour
 {
+    Rigidbody2D rig;
     public SpriteRenderer spriteRenderer;
-    public Vector3[] targetPositions; //array das cordenadas 
-    public float speed = 5f; 
+    [SerializeField] private Vector3[] targetPositions; //array das cordenadas 
+    [SerializeField]  private float speed = 5f, impulse; 
     private int currentTargetIndex = 0;  // 1 para direita, -1 para esquerda
     private bool isMoving = false, turn = true; 
     private Animator anima;
+    public Sprite RicoDead;
+    [SerializeField]
+    private int heart;
+    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private bool ricoDied = false;
+   
+    
+     
     
 
 
     void Start()
     {
+        rig = GetComponent<Rigidbody2D>();
+        heart = maxHealth;
         anima = GetComponent<Animator>();
          spriteRenderer = GetComponent<SpriteRenderer>();
         
-         if (spriteRenderer == null)
-    {
-        Debug.LogError("SpriteRenderer não encontrado no objeto.");
-    } 
+         if (spriteRenderer == null) {
+             Debug.LogError("SpriteRenderer não encontrado no objeto.");
+        } 
 
     }
 
     void Update()
     {
+        if (heart <= 0 && !ricoDied){
+             Died();  
+        }
+        if (ricoDied) return; // Se morreu, não faz mais nada
         
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -62,6 +76,7 @@ public class Rico : MonoBehaviour
         }
     }
 
+
     void MoverRico()
     {
         // Move o rico direção à coordenada atual
@@ -85,28 +100,41 @@ public class Rico : MonoBehaviour
         }
 
     }
-    /*
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-     if(collision.gameObject.CompareTag("Bigorna"))
-        StartCoroutine(DanoNumerator());
-
-        if(collision.gameObject.CompareTag("Coracao"))
-        StartCoroutine(Cura());
+     public void Died(){
+        if (ricoDied) return;
+        spriteRenderer.sprite = RicoDead;
+        isMoving = false;
+        turn = false;
+        
+        if (rig != null)
+        {
+            rig.bodyType=RigidbodyType2D.Dynamic;
+            rig.AddForce(Vector2.up * impulse,ForceMode2D.Impulse);
+        }
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
     }
-    IEnumerator DanoNumerator()
+
+    public void Damage()
     {
-        spriteRenderer.color = Color.red;;
-        yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
+          if (ricoDied) return; // Se já morreu, não toma mais dano
+        
+        heart = Mathf.Max(0, heart - 1); // Garante que a vida não fique negativa
+        
+        if (heart <= 0)
+        {
+            Died();
+        }
     }
-
-    IEnumerator Cura()
+     public void Heal(int healAmount)
     {
-        spriteRenderer.color = Color.green;
-        yield return new WaitForSeconds(0.2f);
-        spriteRenderer.color = Color.white;
-    }*/
-
+        if (ricoDied) return; // Se está morto, não pode ser curado
+        
+        heart = Mathf.Min(heart + healAmount, maxHealth); // Cura sem ultrapassar o máximo
+        Debug.Log("Vida atual: " + heart);
+        
+        
+    }
+      
 
 }

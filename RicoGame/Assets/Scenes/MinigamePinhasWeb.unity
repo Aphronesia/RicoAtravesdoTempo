@@ -647,7 +647,7 @@ MonoBehaviour:
   metaPoints: 0
   Pausado: 0
   PodeSpawn: 0
-  capivara: {fileID: 349839452}
+  rico: {fileID: 0}
   temporizador: {fileID: 80442373}
   soundPinha: {fileID: 80442375}
   txtPontos: {fileID: 1412365136}
@@ -684,7 +684,7 @@ MonoBehaviour:
   timeRemaining: 120
   timerIsRunning: 0
   timeText: {fileID: 350756743}
-  universo: {fileID: 80442371}
+  spawnCai: {fileID: 0}
   textMeshProUGUI: {fileID: 350756743}
 --- !u!82 &80442374
 AudioSource:
@@ -1966,7 +1966,6 @@ MonoBehaviour:
   PosicaoDireita: {x: 1.5, y: -1.33, z: 0}
   universo: {fileID: 80442371}
   PodeMover: 0
-  impulso: 10
   RicoVivo: {fileID: 21300000, guid: e72cca4e19da335458b0764cc7f4617b, type: 3}
   RicoMorto: {fileID: 21300000, guid: a9d26a66d9fd39241a179ed7edac145b, type: 3}
   corDano: {r: 1, g: 0, b: 0, a: 1}
@@ -6181,6 +6180,7 @@ GameObject:
   - component: {fileID: 1647447847}
   - component: {fileID: 1647447849}
   - component: {fileID: 1647447848}
+  - component: {fileID: 1647447850}
   m_Layer: 5
   m_Name: Vidas
   m_TagString: Untagged
@@ -6228,7 +6228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9d96d92a0174bf40823de117632e4f2, type: 3}
+  m_Sprite: {fileID: -2114075453, guid: 78e21c2c48b710942807f00e3e95d329, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6246,6 +6246,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647447846}
   m_CullTransparentMesh: 1
+--- !u!114 &1647447850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647447846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041da2ad0f296f34ca8f9c0de8d3aec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHeart: {fileID: -2114075453, guid: 78e21c2c48b710942807f00e3e95d329, type: 3}
+  emptyHeart: {fileID: 983863779, guid: 78e21c2c48b710942807f00e3e95d329, type: 3}
 --- !u!1 &1681163106
 GameObject:
   m_ObjectHideFlags: 0

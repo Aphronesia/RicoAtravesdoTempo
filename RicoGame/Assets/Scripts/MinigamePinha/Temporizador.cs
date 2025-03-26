@@ -17,7 +17,7 @@ public class Temporizador : MonoBehaviour
     void Start()
     {
         Time.timeScale=1f;
-        timerIsRunning = false;
+        timerIsRunning = true;
         DisplayTime(timeRemaining);
     }
     public void Comeca(){
