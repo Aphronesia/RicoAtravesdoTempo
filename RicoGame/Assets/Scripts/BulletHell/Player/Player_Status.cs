@@ -17,7 +17,7 @@ public class Player_Status : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     
     public static event Action OnPlayerDamaged;
-    //public static event Action OnPlayeDeath;
+    public static event Action OnPlayeDeath;
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         color = spriteRenderer.color;
@@ -43,6 +43,9 @@ public class Player_Status : MonoBehaviour
             health = health - value;
             cooldown = timer + invulnerable;
             OnPlayerDamaged?.Invoke();
+        }
+        if (health <= 0){
+            OnPlayeDeath?.Invoke();
         }
     }
     private IEnumerator VisualInvunerable(){
