@@ -21,6 +21,7 @@ TagManager:
   - mataNuvem
   - Nuvem
   - Ground
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -9,7 +9,7 @@ public class Player_Move : MonoBehaviour
     private float speed;
     [SerializeField, Tooltip("Força do pulo")]
     private float jumpForce;
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     private Rigidbody2D rig;
     Vector2 moveDirection = Vector2.zero;
 
@@ -38,5 +38,6 @@ public class Player_Move : MonoBehaviour
             default:
             break;
         }
+        //Debug.Log("colidiu com: " + other.gameObject.tag);
     }
 }
