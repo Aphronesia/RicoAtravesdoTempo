@@ -29,12 +29,12 @@ public class SpawnNuvem : MonoBehaviour
             float posicaoY = Random.Range(-1.59f, 2.54f);
 
             // Instancia a nuvem na posição (-4.6, posicaoY, 0) com rotação padrão
-            Instantiate(NuvemPrefab, new Vector3(-4.6f, posicaoY, 0f), Quaternion.identity);
+            Instantiate(NuvemPrefab, new Vector3(-9.5f, posicaoY, 0f), Quaternion.identity);
 
             // Espera 3 segundos antes de gerar a próxima nuvem
             yield return new WaitForSeconds(2);
 
-            Instantiate(Nuvem2_Prefab, new Vector3(-4.6f, posicaoY, 0f), Quaternion.identity);
+            Instantiate(Nuvem2_Prefab, new Vector3(-9.5f, posicaoY, 0f), Quaternion.identity);
 
             // Espera 5 segundos antes de gerar a próxima nuvem
             yield return new WaitForSeconds(5);
