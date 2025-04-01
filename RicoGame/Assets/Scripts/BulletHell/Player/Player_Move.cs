@@ -11,17 +11,28 @@ public class Player_Move : MonoBehaviour
     private float jumpForce;
     public bool isGrounded = false;
     private Rigidbody2D rig;
+    public  SpriteRenderer spriteRenderer;
+    private Animator animator;
     Vector2 moveDirection = Vector2.zero;
 
     public Joystick fixedjoy; 
     private void Start() {
         rig = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
     private void FixedUpdate() {
         Moviment();
     }
     private void Moviment(){
         rig.velocity = new Vector2(fixedjoy.Horizontal * speed, rig.velocity.y);
+        if (fixedjoy.Horizontal >= 0.1f){
+            spriteRenderer.flipX = true;
+        }
+        if (fixedjoy.Horizontal <= -0.1f){
+            spriteRenderer.flipX = false;
+        }
+        animator.SetBool("Move", rig.velocity.x != 0);
     }
     public void Jump(){
         if (isGrounded){

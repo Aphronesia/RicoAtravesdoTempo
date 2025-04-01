@@ -1,0 +1,1529 @@
+fileFormatVersion: 2
+guid: a8aa5406f99270a45ab62a409deb4d6e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anilha(50x50)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e9166a273c2c047a6d61b2a7f06b8d
+      internalID: -752306068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d709450ae768f4a4f925f65b4a12d45a
+      internalID: -1438928976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737527b101ef3ca4182bf7daa181a2c4
+      internalID: -1510663652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f525adc3772d74499d57269c14f1c2
+      internalID: 664296176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f25877daf726c4aacb6da6b9b1c675
+      internalID: 1591302195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790c5a1e2c22a5744a4eb7354e4b998b
+      internalID: 1745195609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35db471843a49f948a631948d8a0f4f6
+      internalID: -2031514802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe341345671e5e4eb3f33a994d390f1
+      internalID: -145573274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877145030cf9f3241ac0fa7a7d0eedfb
+      internalID: -1824995630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7ef531c610bcb409efcd0e6d12cd52
+      internalID: -455364693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dc1e1cfd90b0d419303a93856bd610
+      internalID: 1788655032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_11
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db127c65151cec4f95904a69a5da6e1
+      internalID: -1850784017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad76a73a55ddb914d833baeb41e08ed7
+      internalID: -1797005430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_13
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d240eb3ba8c99343b9b7e04abd5a557
+      internalID: -2001839520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_14
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5229904b519a09f4987859e5e36837a5
+      internalID: -1228327625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94fe9465e3bad44da4947e5145e4371
+      internalID: -1987378973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_16
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871590bb6307cc446b614f2b1ddc42df
+      internalID: 1770902193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_17
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dc05671a24e5f47b35497561341033
+      internalID: -630053461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_18
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c08a059bb999ad4cbf1db4820582331
+      internalID: -704423503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_19
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673566f2f03dc19428791f661c10a1dc
+      internalID: 1020623986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_20
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155e9b471750a774588bff740f962072
+      internalID: -1335167403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_21
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72008d76e3a55a84aa0ca93d914d9e97
+      internalID: -736241098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_22
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae64cd5b6739014593a8c84c62d521f
+      internalID: -1884113402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_23
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e279c02123ae13449a42d8bc9c1508f
+      internalID: 817995188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_24
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2552783f84ffa494288835ae1ca7e256
+      internalID: -105378087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_25
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28733cdc67ec2f84d8b385d3edb7b308
+      internalID: 865818851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_26
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d5c78fe5f6f08a4bb7fc75eb13e81dc
+      internalID: 783484692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_27
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c249a5851b3f76349a753c9a081558ff
+      internalID: 339601280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_28
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2312cbe17a91a264a82687e8fd2a32cf
+      internalID: -2036621512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_29
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd718c2fdac6774eb1ab2997ceee5a7
+      internalID: -830960016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_30
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0c23331f2539749a8bebe956e1f4ee
+      internalID: 382473074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_31
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d460ef4d5caed43a4a34b031c162e2
+      internalID: 1973032092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_32
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fd9addf21e7854cace861916f8b88c
+      internalID: -163138015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_33
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1bc661694778b4fae67a1f1a0d661d
+      internalID: 1073948082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_34
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d593290b0d9c51d469caa4ea91854da1
+      internalID: -659756162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_35
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2471ecc278f9c424ba131aa15aac28ef
+      internalID: -1493828017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_36
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410b5de127e815c468be2c4d5f7ac47f
+      internalID: 1853580781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_37
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72024d67fa752294cb264e3db36283c1
+      internalID: 1110199587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_38
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56f9746665db4546a1fa3c052a4704e
+      internalID: -137068926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_39
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ab7a547b8cc9a43b3a8980aefa91ad
+      internalID: -783692570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_40
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702631c3e9ad5784ab0936946264d9ec
+      internalID: -401340199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_41
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3cd53387b498843a4f91f59c33d70c
+      internalID: 510858304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_42
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39f683e007d8ad4bbbc02289ef606bc
+      internalID: -429632497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anilha(50x50)_43
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 0
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      physicsShape:
+      - - {x: 0, y: -25}
+        - {x: 25, y: 0}
+        - {x: 0, y: 25}
+        - {x: -25, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd6e8d1be3f6f5458b3022036ec3797
+      internalID: -1157390752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Anilha(50x50)_0: -752306068
+      Anilha(50x50)_1: -1438928976
+      Anilha(50x50)_10: 1788655032
+      Anilha(50x50)_11: -1850784017
+      Anilha(50x50)_12: -1797005430
+      Anilha(50x50)_13: -2001839520
+      Anilha(50x50)_14: -1228327625
+      Anilha(50x50)_15: -1987378973
+      Anilha(50x50)_16: 1770902193
+      Anilha(50x50)_17: -630053461
+      Anilha(50x50)_18: -704423503
+      Anilha(50x50)_19: 1020623986
+      Anilha(50x50)_2: -1510663652
+      Anilha(50x50)_20: -1335167403
+      Anilha(50x50)_21: -736241098
+      Anilha(50x50)_22: -1884113402
+      Anilha(50x50)_23: 817995188
+      Anilha(50x50)_24: -105378087
+      Anilha(50x50)_25: 865818851
+      Anilha(50x50)_26: 783484692
+      Anilha(50x50)_27: 339601280
+      Anilha(50x50)_28: -2036621512
+      Anilha(50x50)_29: -830960016
+      Anilha(50x50)_3: 664296176
+      Anilha(50x50)_30: 382473074
+      Anilha(50x50)_31: 1973032092
+      Anilha(50x50)_32: -163138015
+      Anilha(50x50)_33: 1073948082
+      Anilha(50x50)_34: -659756162
+      Anilha(50x50)_35: -1493828017
+      Anilha(50x50)_36: 1853580781
+      Anilha(50x50)_37: 1110199587
+      Anilha(50x50)_38: -137068926
+      Anilha(50x50)_39: -783692570
+      Anilha(50x50)_4: 1591302195
+      Anilha(50x50)_40: -401340199
+      Anilha(50x50)_41: 510858304
+      Anilha(50x50)_42: -429632497
+      Anilha(50x50)_43: -1157390752
+      Anilha(50x50)_44: 346888037
+      Anilha(50x50)_45: -932189964
+      Anilha(50x50)_46: -1076141533
+      Anilha(50x50)_47: 71279618
+      Anilha(50x50)_48: -1426572336
+      Anilha(50x50)_49: 1751746069
+      Anilha(50x50)_5: 1745195609
+      Anilha(50x50)_50: 159408746
+      Anilha(50x50)_51: -396307488
+      Anilha(50x50)_52: -1621335262
+      Anilha(50x50)_53: -799728404
+      Anilha(50x50)_54: -1768216837
+      Anilha(50x50)_55: 2016189226
+      Anilha(50x50)_56: -1380311139
+      Anilha(50x50)_57: -134539027
+      Anilha(50x50)_58: -389907578
+      Anilha(50x50)_59: 244736169
+      Anilha(50x50)_6: -2031514802
+      Anilha(50x50)_60: 1383699197
+      Anilha(50x50)_61: -1836341483
+      Anilha(50x50)_62: -330842584
+      Anilha(50x50)_63: 385491981
+      Anilha(50x50)_64: -263986982
+      Anilha(50x50)_65: 341604502
+      Anilha(50x50)_66: -456619739
+      Anilha(50x50)_67: -1451278893
+      Anilha(50x50)_68: -1200286117
+      Anilha(50x50)_69: -1032727143
+      Anilha(50x50)_7: -145573274
+      Anilha(50x50)_70: 1567917602
+      Anilha(50x50)_71: -563376039
+      Anilha(50x50)_72: -284678185
+      Anilha(50x50)_73: -166246332
+      Anilha(50x50)_74: 1837706743
+      Anilha(50x50)_75: 518516493
+      Anilha(50x50)_76: -3747634
+      Anilha(50x50)_77: -635236882
+      Anilha(50x50)_78: 1978731184
+      Anilha(50x50)_79: 1278045584
+      Anilha(50x50)_8: -1824995630
+      Anilha(50x50)_80: 1969306917
+      Anilha(50x50)_81: -1516790542
+      Anilha(50x50)_82: 1400242931
+      Anilha(50x50)_83: -613372448
+      Anilha(50x50)_84: -1284167463
+      Anilha(50x50)_85: -588258700
+      Anilha(50x50)_86: -1506564470
+      Anilha(50x50)_9: -455364693
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

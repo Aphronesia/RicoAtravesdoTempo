@@ -40,6 +40,15 @@ public class LevelManager : MonoBehaviour
                 }
             }
         }
+        if (Input.GetMouseButtonDown(0)){
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D collider = Physics2D.OverlapPoint(worldPoint);
+            if (collider != null){
+                Debug.Log("a");
+                GameObject objectClicked = collider.gameObject;
+                GetLevel(objectClicked);
+            }
+        }
     }
     private void GetLevel(GameObject objClick){
         int index = levels.IndexOf(objClick);

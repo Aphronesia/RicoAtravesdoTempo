@@ -8,10 +8,12 @@ public class dumbbellMove : AttacksSystem
     [SerializeField, Tooltip("velocidade de movimentação")]
     private float speed;
     private bool direction, walk;
+    private Animator anima;
     private void Start() {
         walk = false;
-        ChoseDirection();
-        StartSelfDestruct(4f);
+        //ChoseDirection();
+        //StartSelfDestruct(4f);
+        anima = GetComponent<Animator>();
     }
     private void FixedUpdate() {
         Moviment();
@@ -22,12 +24,18 @@ public class dumbbellMove : AttacksSystem
                 Destroy(this.gameObject);
             break;
             case "Wall":
-                Destroy(this.gameObject);
+                StartCoroutine(CrashWall());
             break;
             case "Ground":
                 walk = true;
+                anima.SetBool("Grounded", true);
             break;
         }
+    }
+    private IEnumerator CrashWall(){
+        anima.SetBool("Crash", true);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
     private void ChoseDirection(){
         direction = Random.value > 0.5f; // 50% de chance de ser true ou false
