@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d1574664ff1a42147b33fb8619c469af
+guid: 2c9ddb35ca48d1a4788da3e9913d9441
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 640
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,7 +137,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fundo predios_0
+      name: ArvoresCortadas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 640
-        height: 360
+        x: 266
+        y: 255
+        width: 47
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +163,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e7416330c52454b91d5e18aefb26b0
-      internalID: -269783301
+      spriteID: 4999adef44265084ba734ed601e6b3a9
+      internalID: -913490433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArvoresCortadas_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 231
+        width: 46
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba35996a9846f644d9282844b475002d
+      internalID: 2112664732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArvoresCortadas_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 206
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6600b562d28e32f47abb461b68fdd8a0
+      internalID: -23840122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArvoresCortadas_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 198
+        width: 47
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc78dc43a1ccaf84fa6994385b3852ee
+      internalID: 1524451287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArvoresCortadas_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 163
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a98157989a143a44a2af2c34f9e6e9b
+      internalID: 1919955321
       vertices: []
       indices: 
       edges: []
@@ -180,7 +264,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fundo predios_0: -269783301
+      ArvoresCortadas_0: -913490433
+      ArvoresCortadas_1: 2112664732
+      ArvoresCortadas_2: -23840122
+      ArvoresCortadas_3: 1524451287
+      ArvoresCortadas_4: 1919955321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
