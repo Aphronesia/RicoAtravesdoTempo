@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 307caea5e1e951b4b97c726ff650ee0d
+guid: 8b13d2db349920a4ab42813190dd9fa7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: postes_0
+      name: Poste_Luz_0
       rect:
         serializedVersion: 2
         x: 173
@@ -105,35 +105,35 @@ TextureImporter:
         width: 43
         height: 159
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac84639cdcb6b7743b45937737825c86
-      internalID: 1981486275
+      spriteID: ef57a6988e599914397ba04d73a2853e
+      internalID: -835922346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: postes_1
+      name: Poste_Luz_1
       rect:
         serializedVersion: 2
-        x: 438
-        y: 64
-        width: 47
-        height: 175
+        x: 395
+        y: 54
+        width: 90
+        height: 186
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9ee1338733efc4cbb88033e40f737f
-      internalID: -1657505062
+      spriteID: c51bb024ea9f9674ea517753afe3e83d
+      internalID: -1551322658
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      postes_0: 1981486275
-      postes_1: -1657505062
+      Poste_Luz_0: -835922346
+      Poste_Luz_1: -1551322658
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

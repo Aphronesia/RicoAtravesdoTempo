@@ -16,6 +16,7 @@ public class Rico : MonoBehaviour
     public int heart;  
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private bool ricoDied = false;
+    
    
 
     void Start()

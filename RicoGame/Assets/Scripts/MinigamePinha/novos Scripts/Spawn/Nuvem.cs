@@ -29,7 +29,7 @@ public class nuvem : MonoBehaviour
     {
         if (other.CompareTag("mataNuvem")) // Verifica se colidiu com o objeto "mataNuvem"
         {
-            Debug.Log("Nuvem destruida");
+            //Debug.Log("Nuvem destruida");
             Destroy(gameObject); // Destroi a nuvem atual
              
         }

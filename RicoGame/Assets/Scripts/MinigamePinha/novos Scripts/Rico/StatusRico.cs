@@ -12,6 +12,7 @@ public class StatusRico : MonoBehaviour
 
     private Rico ricoScript;
     [SerializeField] private int healAmount = 1;
+    public int pineCones;
 
     private void Start()
     {
@@ -36,6 +37,10 @@ public class StatusRico : MonoBehaviour
             if (ricoScript != null){
                 ricoScript.Heal(healAmount);
             }
+        }
+        if (other.gameObject.CompareTag("Pinha")){
+             Destroy(other.gameObject);
+             pineCones = pineCones + 1;
         }
        
     }

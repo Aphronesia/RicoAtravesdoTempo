@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 307caea5e1e951b4b97c726ff650ee0d
+guid: d38d8214dc7b2cf42b95d4e452dcd790
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: postes_0
+      name: Pinha_Abobora_Bigorna_0
       rect:
         serializedVersion: 2
-        x: 173
-        y: 62
-        width: 43
-        height: 159
+        x: 484
+        y: 304
+        width: 20
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac84639cdcb6b7743b45937737825c86
-      internalID: 1981486275
+      spriteID: 84d049ad1fa944247b0e0e01ef6a10da
+      internalID: -227791116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: postes_1
+      name: Pinha_Abobora_Bigorna_1
       rect:
         serializedVersion: 2
-        x: 438
-        y: 64
-        width: 47
-        height: 175
+        x: 506
+        y: 289
+        width: 14
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c9ee1338733efc4cbb88033e40f737f
-      internalID: -1657505062
+      spriteID: fd8782d75e025ad4fbf601ac4f593d21
+      internalID: -970587783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pinha_Abobora_Bigorna_2
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 289
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05a71543b58d2540843e22757713704
+      internalID: -1108330913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pinha_Abobora_Bigorna_3
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 286
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94645f7294633064698f0f71462fc398
+      internalID: -944961162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pinha_Abobora_Bigorna_4
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 287
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf97ed56270f77a4cafcfa907a8efec8
+      internalID: 626874150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pinha_Abobora_Bigorna_5
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 243
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d45acf200914c4eaa40d273566490f
+      internalID: -990721255
       vertices: []
       indices: 
       edges: []
@@ -149,8 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      postes_0: 1981486275
-      postes_1: -1657505062
+      Pinha_Abobora_Bigorna_0: -227791116
+      Pinha_Abobora_Bigorna_1: -970587783
+      Pinha_Abobora_Bigorna_2: -1108330913
+      Pinha_Abobora_Bigorna_3: -944961162
+      Pinha_Abobora_Bigorna_4: 626874150
+      Pinha_Abobora_Bigorna_5: -990721255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
