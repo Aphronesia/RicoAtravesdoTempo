@@ -10,6 +10,8 @@ public class StatusRico : MonoBehaviour
     public Color colorDamage = Color.red;
     public Color colorHealh = Color.green;
 
+    
+
     private Rico ricoScript;
     [SerializeField] private int healAmount = 1;
     public int pineCones;
@@ -17,6 +19,7 @@ public class StatusRico : MonoBehaviour
     private void Start()
     {
        ricoScript = GetComponent<Rico>();
+      
        if(ricoScript==null){
         Debug.LogError("Script rico n encontrado");
        }
@@ -40,7 +43,9 @@ public class StatusRico : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Pinha")){
              Destroy(other.gameObject);
-             pineCones = pineCones + 1;
+            pineCones++;
+        // Atualiza o score quando pegar uma pinha
+    
         }
        
     }

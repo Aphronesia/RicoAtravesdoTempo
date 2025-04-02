@@ -12,6 +12,7 @@ public class Temporizador : MonoBehaviour
     
     public SpawnCai spawnCai;
 
+
     public TextMeshProUGUI textMeshProUGUI;
     // Start is called before the first frame update
     void Start()
@@ -86,4 +87,9 @@ public class Temporizador : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+    public bool IsTimeUp()
+{
+    return timeRemaining <= 0f; // Supondo que currentTime é o tempo restante
+}
+
 }

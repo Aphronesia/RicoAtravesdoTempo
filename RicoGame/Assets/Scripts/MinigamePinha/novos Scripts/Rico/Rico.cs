@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Tilemaps;
+using System;
 using UnityEngine;
+
 
 public class Rico : MonoBehaviour
 {
@@ -15,12 +14,16 @@ public class Rico : MonoBehaviour
     public Sprite RicoDead;
     public int heart;  
     [SerializeField] private int maxHealth = 3;
-    [SerializeField] private bool ricoDied = false;
+    public bool ricoDied = false;
+    public event Action OnDeath;
+   
+
     
    
 
     void Start()
     {
+        ricoDied = false;
         rig = GetComponent<Rigidbody2D>();
         heart = maxHealth;
         anima = GetComponent<Animator>();
@@ -29,6 +32,11 @@ public class Rico : MonoBehaviour
          if (spriteRenderer == null) {
              Debug.LogError("SpriteRenderer não encontrado no objeto.");
         } 
+
+    }
+
+    public void StartGame()
+    {
 
     }
 
@@ -101,6 +109,8 @@ public class Rico : MonoBehaviour
     
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+        OnDeath?.Invoke();
     }
 
     public void Damage()
