@@ -9,13 +9,15 @@ public class dumbbellMove : AttacksSystem
     private float speed;
     private bool direction, walk;
     private Animator anima;
+    private SpriteRenderer spriteRenderer;
     private void Start() {
         walk = false;
-        //ChoseDirection();
+        ChoseDirection();
         //StartSelfDestruct(4f);
         anima = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    private void FixedUpdate() {
+    private void Update() {
         Moviment();
     }
     private void OnCollisionEnter2D(Collision2D other) {
@@ -43,16 +45,16 @@ public class dumbbellMove : AttacksSystem
         // inverte ou não o sinal de speed de acordo com a direction
         speed = (direction ? 1 : -1) * Mathf.Abs(speed);
 
-        // inverte a direção visual do objeto
-        if (!direction){
+        // inverte a direção do objeto
+        if (direction){
             Vector3 scale = transform.localScale;
-            scale.y *= -1;
+            scale.x *= -1;
             transform.localScale = scale;
             // A posição inicial do objecto é 
-            // X:-4.25f 
+            // X:4.25f 
             // Y:-3.4f
             // Z:0
-            Vector3 spawnPosition = new Vector3(4.25f, -1.6f, 0);
+            Vector3 spawnPosition = new Vector3(-4.25f, -1.6f, 0);
             transform.position = spawnPosition;
         }
     }
