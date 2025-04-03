@@ -16,7 +16,6 @@ public class EnemyControl : MonoBehaviour
     private float tiredCooldown;
     private int turn = 0;
     private bool alive, running;
-
     public static event Action<bool> OnEnemyTired;
     private void OnEnable() {
         EnemyAttack.OnAtkFinished += Tired;
@@ -37,13 +36,14 @@ public class EnemyControl : MonoBehaviour
         alive = true;
         running = false;
     }
+    
     private void Started(bool value){
         running = value;
         Attacking();
     }
     private void Attacking(){
         OnEnemyTired?.Invoke(false);
-        if(alive){
+        if(alive && running){
             spriteRenderer.sprite = EnemyAtk;
             turn++;
             enemyAttack.atkPre(turn);

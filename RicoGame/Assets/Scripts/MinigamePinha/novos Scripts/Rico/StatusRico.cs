@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StatusRico : MonoBehaviour
 {
@@ -16,15 +17,16 @@ public class StatusRico : MonoBehaviour
     [SerializeField] private int healAmount = 1;
     public int pineCones;
 
+    [SerializeField]
+    private TMP_Text uiPinhas;
     private void Start()
     {
-       ricoScript = GetComponent<Rico>();
+        ricoScript = GetComponent<Rico>();
       
-       if(ricoScript==null){
-        Debug.LogError("Script rico n encontrado");
-       }
+        if(ricoScript==null){
+            Debug.LogError("Script rico n encontrado");
+        }
     }
-
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bigorna")){
             Destroy(other.gameObject);
@@ -42,8 +44,9 @@ public class StatusRico : MonoBehaviour
             }
         }
         if (other.gameObject.CompareTag("Pinha")){
-             Destroy(other.gameObject);
+            Destroy(other.gameObject);
             pineCones++;
+            uiPinhas.text = pineCones.ToString(pineCones >= 100 ? "D3" : "D2");
         // Atualiza o score quando pegar uma pinha
     
         }
