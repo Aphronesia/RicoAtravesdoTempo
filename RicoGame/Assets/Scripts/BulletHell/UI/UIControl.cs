@@ -70,6 +70,9 @@ public class UIControl : MonoBehaviour
     public void Restart(){
         controlScenes.RestartGame();
     }
+    public void Home(){
+        controlScenes.ReturnHome();
+    }
     public void Quit(){
         controlScenes.QuitGame();
     }

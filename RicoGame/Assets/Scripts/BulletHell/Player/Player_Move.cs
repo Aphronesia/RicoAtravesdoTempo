@@ -38,6 +38,7 @@ public class Player_Move : MonoBehaviour
         if (isGrounded){
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
+            animator.SetTrigger("jump");
         }
     }
     private void OnCollisionEnter2D(Collision2D other) {
