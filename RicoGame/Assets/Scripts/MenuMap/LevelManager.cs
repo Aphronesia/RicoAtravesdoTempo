@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject Rico;
+    private GameObject target;
     private int actualRico;
     public List<GameObject> levels = new List<GameObject>();
     [SerializeField]
@@ -17,6 +18,7 @@ public class LevelManager : MonoBehaviour
         actualRico = 0;
         GetLevels();
         OnStart?.Invoke();
+        target = levels[0];
 
     }
     private void GetLevels(){
@@ -27,9 +29,12 @@ public class LevelManager : MonoBehaviour
     private void Update() {
         GetClick();
     }
+    private void FixedUpdate() {
+        Rico.transform.position = Vector3.MoveTowards(Rico.transform.position, target.transform.position, 0.5f);
+    }
     private void GetClick(){
         if (Input.touchCount > 0){
-            Touch touch = Input.GetTouch(0);
+            Touch touch = Input.GetTouch(0); //pega o primeiro click na tela
             if (touch.phase == TouchPhase.Began){
                 Vector2 worldPoint = Camera.main.ScreenToWorldPoint(touch.position);
                 Collider2D collider = Physics2D.OverlapPoint(worldPoint);
@@ -44,7 +49,7 @@ public class LevelManager : MonoBehaviour
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D collider = Physics2D.OverlapPoint(worldPoint);
             if (collider != null){
-                Debug.Log("a");
+                //Debug.Log("a");
                 GameObject objectClicked = collider.gameObject;
                 GetLevel(objectClicked);
             }
@@ -54,7 +59,7 @@ public class LevelManager : MonoBehaviour
         int index = levels.IndexOf(objClick);
         if(index != -1){
             if ((index + 1) == actualRico || (index - 1) == actualRico){
-                Rico.transform.position = levels[index].transform.position;
+                target = levels[index];
                 actualRico = index;
             }
         }

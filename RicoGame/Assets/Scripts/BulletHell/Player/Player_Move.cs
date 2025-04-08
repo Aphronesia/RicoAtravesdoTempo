@@ -15,7 +15,8 @@ public class Player_Move : MonoBehaviour
     private Animator animator;
     Vector2 moveDirection = Vector2.zero;
 
-    public Joystick fixedjoy; 
+    public Joystick fixedjoy;
+    private Vector2 vecMove; 
     private void Start() {
         rig = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,22 +24,27 @@ public class Player_Move : MonoBehaviour
     }
     private void FixedUpdate() {
         Moviment();
+        Keyboard();
+    }
+    private void Keyboard(){
+        vecMove.x = Input.GetAxis("Horizontal");
     }
     private void Moviment(){
-        rig.velocity = new Vector2(fixedjoy.Horizontal * speed, rig.velocity.y);
-        if (fixedjoy.Horizontal >= 0.1f){
+        rig.velocity = new Vector2((fixedjoy.Horizontal + vecMove.x)* speed, rig.velocity.y);
+        if (fixedjoy.Horizontal  >= 0.1f || vecMove.x >= 0.1f){
             spriteRenderer.flipX = true;
         }
-        if (fixedjoy.Horizontal <= -0.1f){
+        if (fixedjoy.Horizontal <= -0.1f || vecMove.x <= -0.1f){
             spriteRenderer.flipX = false;
         }
-        animator.SetBool("Move", rig.velocity.x != 0);
+        animator.SetBool("Move", rig.velocity.x != 0 && isGrounded);
+        animator.SetBool("Jump", rig.velocity.y >= 0.1);
+        
     }
     public void Jump(){
         if (isGrounded){
             rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
-            animator.SetTrigger("jump");
         }
     }
     private void OnCollisionEnter2D(Collision2D other) {
@@ -46,6 +52,7 @@ public class Player_Move : MonoBehaviour
         {
             case "Ground":
                 isGrounded = true;
+                animator.SetTrigger("Ground");
             break;
             default:
             break;
