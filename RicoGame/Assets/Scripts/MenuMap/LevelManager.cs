@@ -6,20 +6,21 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Rico;
-    private GameObject target;
+    private GameObject rico;
+    private Vector3 target;
     private int actualRico;
     public List<GameObject> levels = new List<GameObject>();
     [SerializeField]
     private int levelCount;
     
     public static event Action OnStart;
+    public static event Action<Vector3> OnTarget;
     private void Start() {
         actualRico = 0;
         GetLevels();
         OnStart?.Invoke();
-        target = levels[0];
-
+        target = levels[0].transform.position;
+        OnTarget?.Invoke(target);
     }
     private void GetLevels(){
         for(int i = 0; i < levelCount; i++){
@@ -28,9 +29,6 @@ public class LevelManager : MonoBehaviour
     }
     private void Update() {
         GetClick();
-    }
-    private void FixedUpdate() {
-        Rico.transform.position = Vector3.MoveTowards(Rico.transform.position, target.transform.position, 0.5f);
     }
     private void GetClick(){
         if (Input.touchCount > 0){
@@ -59,7 +57,8 @@ public class LevelManager : MonoBehaviour
         int index = levels.IndexOf(objClick);
         if(index != -1){
             if ((index + 1) == actualRico || (index - 1) == actualRico){
-                target = levels[index];
+                target = levels[index].transform.position;
+                OnTarget?.Invoke(target);
                 actualRico = index;
             }
         }
