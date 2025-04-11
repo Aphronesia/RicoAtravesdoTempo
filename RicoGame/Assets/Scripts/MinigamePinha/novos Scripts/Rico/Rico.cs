@@ -15,11 +15,6 @@ public class Rico : MonoBehaviour
     public int heart;  
     [SerializeField] private int maxHealth = 3;
     public bool ricoDied = false;
-    public event Action OnDeath;
-   
-
-    
-   
 
     void Start()
     {
@@ -32,11 +27,6 @@ public class Rico : MonoBehaviour
          if (spriteRenderer == null) {
              Debug.LogError("SpriteRenderer não encontrado no objeto.");
         } 
-
-    }
-
-    public void StartGame()
-    {
 
     }
 
@@ -56,7 +46,7 @@ public class Rico : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)){
-            if (!isMoving && currentTargetIndex > 0){
+            if (!isMoving && currentTargetIndex >= 0){
                 isMoving = true; 
                  Flip(true);
                 currentTargetIndex--; // Retrocede para a coordenada anterior
@@ -110,8 +100,9 @@ public class Rico : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
-        OnDeath?.Invoke();
+      ControleUI.Instance.ShowDiedPanelComDelay();
     }
+
 
     public void Damage()
     {

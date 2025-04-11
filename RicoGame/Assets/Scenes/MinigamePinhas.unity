@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 20498800}
   m_Layer: 5
   m_Name: GameOver
-  m_TagString: Untagged
+  m_TagString: GameOverPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -787,7 +787,7 @@ MonoBehaviour:
   winPanel: {fileID: 719978150}
   gameOverPanel: {fileID: 20498798}
   diedPanel: {fileID: 187324487}
-  delayDead: 1.5
+  delayDead: 3
 --- !u!1 &116520844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 187324489}
   m_Layer: 5
   m_Name: PanelDied
-  m_TagString: Untagged
+  m_TagString: GameOverPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2550,7 +2550,7 @@ GameObject:
   - component: {fileID: 719978152}
   m_Layer: 5
   m_Name: win
-  m_TagString: Untagged
+  m_TagString: WinPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3183,7 +3183,6 @@ GameObject:
   m_Component:
   - component: {fileID: 993546919}
   - component: {fileID: 993546918}
-  - component: {fileID: 993546917}
   m_Layer: 0
   m_Name: Pinheiro
   m_TagString: Untagged
@@ -3191,27 +3190,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &993546917
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993546916}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c8100c747a427b04aab2bc57e7881b3c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &993546918
 SpriteRenderer:
   m_ObjectHideFlags: 0

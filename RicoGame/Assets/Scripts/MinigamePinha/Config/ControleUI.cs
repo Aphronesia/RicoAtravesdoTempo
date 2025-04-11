@@ -2,35 +2,50 @@ using UnityEngine;
 using System.Collections;
 
 public class ControleUI : MonoBehaviour
+
 {
+    public static ControleUI Instance { get; private set; }
+    [Header("Referências")]
     [SerializeField] private StatusRico statusRico; 
     [SerializeField] private Temporizador temporizador; // Referência ao script 
     [SerializeField] private Rico rico;
+
+    [Header("UI")]
     [SerializeField] private GameObject winPanel; 
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject diedPanel;
-    [SerializeField] private float delayDead = 3.5f;
+
+     [Header("Configurações")]
+    [SerializeField] private float delayDead = 2.5f;
      
+      private void Awake()
+    {
+        // Implementação do singleton
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Mantém entre cenas se necessário
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
     
         if (statusRico == null) statusRico = FindObjectOfType<StatusRico>();
         if (temporizador == null) temporizador = FindObjectOfType<Temporizador>();
-         if (rico == null) rico = FindObjectOfType<Rico>();
-
-        rico.OnDeath += () => StartCoroutine(ShowDeadPanelWithDelay());
+        if (rico == null) rico = FindObjectOfType<Rico>();
         if (winPanel != null) winPanel.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
-        if (diedPanel != null) diedPanel.SetActive(false);
+        
     }
 
     private void Update()
     {
-           if (rico != null && rico.ricoDied) // Supondo que 'ricoDied' é a variável de morte
-        { 
-            ShowDeadPanel();
-        } 
+       
         // Verifica se o jogador tem 30+ pinhas e se o tempo acabou
         if (temporizador != null && temporizador.IsTimeUp())
         {
@@ -63,35 +78,31 @@ public class ControleUI : MonoBehaviour
     }
     private void ShowGameOverPanel()
     {
-        if (gameOverPanel != null)
-        {
+        if (gameOverPanel != null){
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
         }
-       // else Debug.LogWarning("GameOverPanel não atribuído!");
+      
     }
 
-    private IEnumerator ShowDeadPanelWithDelay()
+    public void ShowDiedPanelComDelay()
+{
+    StartCoroutine(ShowDiedPanelAfterDelay());
+}
+
+private IEnumerator ShowDiedPanelAfterDelay()
+{
+    yield return new WaitForSeconds(delayDead);
+
+    if (diedPanel != null)
     {
-        yield return new WaitForSeconds(delayDead); // Espera o tempo definido
-        ShowDeadPanel(); // Mostra o painel após o delay
+        diedPanel.SetActive(true);
+        Time.timeScale = 0f; // Pausa o jogo, se for o caso
     }
-
-
-    private void ShowDeadPanel()
+    else
     {
-         //Debug.Log("Tentando mostrar painel de morte");
-        if(diedPanel !=null){
-            diedPanel.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        /* else
-        {
-            Debug.LogWarning("dead não atribuído no Inspector!");
-        }
-       */
-
+        Debug.LogWarning("DiedPanel não atribuído no Inspector!");
     }
-     
+}
 
 }

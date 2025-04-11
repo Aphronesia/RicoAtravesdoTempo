@@ -22,6 +22,9 @@ TagManager:
   - Nuvem
   - Ground
   - Wall
+  - WinPanel
+  - GameOverPanel
+  - PanelDied
   layers:
   - Default
   - TransparentFX
