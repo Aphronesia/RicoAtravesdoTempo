@@ -29,13 +29,8 @@ public class HomeController : MonoBehaviour
     {
         controlScenes.ChangeScene(NextScene);
     }
-    public void StartPinha()
-    {
-        controlScenes.ChangeScene(1);
-    }
-    public void StartTrem()
-    {
-        controlScenes.ChangeScene(2);
+    public void ChangeScene(int sceneNumber){
+        controlScenes.ChangeScene(sceneNumber);
     }
     public void QuitGame()
     {

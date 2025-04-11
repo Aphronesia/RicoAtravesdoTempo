@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: e425b26e2215ad84ead9eb3ff4cfdde5
   - enabled: 1
-    path: Assets/Scenes/MinigamePinhasWeb.unity
-    guid: a39fdf1aad27f924080b52f86c2578eb
+    path: Assets/Scenes/MenuMap.unity
+    guid: 2120bc74b8444a24b9c891d01f508886
+  - enabled: 1
+    path: Assets/Scenes/MinigamePinhas.unity
+    guid: e91d8ab52acd2b54dbce9fb2f40bdd81
   - enabled: 1
     path: Assets/Scenes/MinigameTrem.unity
     guid: 28488f21182d8594a9252ec51d692201
-  - enabled: 0
-    path: Assets/Scenes/MinigamePinhas.unity
-    guid: e91d8ab52acd2b54dbce9fb2f40bdd81
+  - enabled: 1
+    path: Assets/Scenes/BulletHell.unity
+    guid: c5b3d144465b94e439b67b3b13a11a7b
   m_configObjects: {}
