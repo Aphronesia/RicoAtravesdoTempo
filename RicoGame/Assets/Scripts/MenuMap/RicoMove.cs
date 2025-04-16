@@ -27,7 +27,7 @@ public class RicoMove : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
     }
     public void Started(){
-        Vector3 levelZeroPos = lvManager.levels[0].transform.position;
+        Vector3 levelZeroPos = lvManager.levels[0].objLevel.transform.position;
         if (levelZeroPos != null){
             transform.position = levelZeroPos;
         }

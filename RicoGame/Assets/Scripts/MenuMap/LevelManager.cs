@@ -9,23 +9,34 @@ public class LevelManager : MonoBehaviour
     private GameObject rico;
     private Vector3 target;
     private int actualRico;
-    public List<GameObject> levels = new List<GameObject>();
     [SerializeField]
     private int levelCount;
-    
     public static event Action OnStart;
     public static event Action<Vector3> OnTarget;
+    public List<Level> levels = new List<Level>();
+    [System.Serializable]
+    public class Level{
+        public GameObject objLevel;
+        public bool played;
+    }
     private void Start() {
         actualRico = 0;
         GetLevels();
         OnStart?.Invoke();
-        target = levels[0].transform.position;
+        target = levels[0].objLevel.transform.position;
         OnTarget?.Invoke(target);
     }
     private void GetLevels(){
         for(int i = 0; i < levelCount; i++){
-            levels.Add(GameObject.Find("Level" + i));
+            GameObject levelFind = GameObject.Find("Level" + i);
+            if (levelFind != null){
+                levels.Add(new Level ());
+                levels[i].objLevel = levelFind;
+                levels[i].played = false;
+            }
         }
+        levels[0].played = true;
+        levels[1].played = true;
     }
     private void Update() {
         GetClick();
@@ -54,10 +65,12 @@ public class LevelManager : MonoBehaviour
         }
     }
     private void GetLevel(GameObject objClick){
-        int index = levels.IndexOf(objClick);
-        if(index != -1){
+        int index = levels.FindIndex(Level => Level.objLevel == objClick);
+        //resulta em -1 se o obj clicado nao tiver na List
+
+        if(index != -1 && levels[index].played == true ){
             if ((index + 1) == actualRico || (index - 1) == actualRico){
-                target = levels[index].transform.position;
+                target = levels[index].objLevel.transform.position;
                 OnTarget?.Invoke(target);
                 actualRico = index;
             }
