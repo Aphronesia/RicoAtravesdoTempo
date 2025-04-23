@@ -8,20 +8,22 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject rico;
     private Vector3 target;
-    private int actualRico;
+    public int actualRico;
     [SerializeField]
     private int levelCount;
     public static event Action OnStart;
     public static event Action<Vector3> OnTarget;
     public List<Level> levels = new List<Level>();
     [System.Serializable]
-    public class Level{
+    public class Level
+    {
         public GameObject objLevel;
         public bool played;
     }
     private void Start() {
         actualRico = 0;
         GetLevels();
+        rico = GameObject.Find("Rico");
         OnStart?.Invoke();
         target = levels[0].objLevel.transform.position;
         OnTarget?.Invoke(target);
@@ -32,7 +34,7 @@ public class LevelManager : MonoBehaviour
             if (levelFind != null){
                 levels.Add(new Level ());
                 levels[i].objLevel = levelFind;
-                levels[i].played = false;
+                levels[i].played = true; //false
             }
         }
         levels[0].played = true;
@@ -77,3 +79,4 @@ public class LevelManager : MonoBehaviour
         }
     }
 }
+

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ControlUIMap : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject LevelPopUp;
     private ControlScenes controlScenes;
     private void Start() {
         ControlScenes ScenesController = FindObjectOfType<ControlScenes>();

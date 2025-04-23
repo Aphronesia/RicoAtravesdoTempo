@@ -7,6 +7,8 @@ public class RicoMove : MonoBehaviour
 {
     [Header("Atributos do movimento")]
     private LevelManager lvManager;
+    [SerializeField]
+    private LevelPopUp lvPop;
     private Rigidbody2D rig;
     private Vector3 target;
     [SerializeField, Tooltip("velocidade do movimento")]
@@ -50,5 +52,21 @@ public class RicoMove : MonoBehaviour
     }
     private void Moviment(Vector3 newTarget){
         target = newTarget;
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        switch(other.gameObject.tag){
+            case "Level":
+                Debug.Log(other.gameObject.name);
+                lvPop.LevelEnter(lvManager.actualRico);
+            break;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other) {
+        switch(other.gameObject.tag){
+            case "Level":
+                Debug.Log(other.gameObject.name);
+                lvPop.LevelExit();
+            break;
+        }
     }
 }
