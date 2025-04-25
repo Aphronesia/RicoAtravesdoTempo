@@ -8,7 +8,7 @@ public class Player_Move : MonoBehaviour
     [SerializeField, Tooltip("velocidade do rico")]
     private float speed;
     [SerializeField, Tooltip("Força do pulo")]
-    private float jumpForce;
+    private float jumpForce; //9
     public bool isGrounded = false;
     private Rigidbody2D rig;
     public  SpriteRenderer spriteRenderer;

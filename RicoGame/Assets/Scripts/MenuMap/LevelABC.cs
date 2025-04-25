@@ -7,7 +7,7 @@ public class LevelABC : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         switch(other.gameObject.tag){
             case "Player":
-                Debug.Log("foi");
+                //Debug.Log("foi");
             break;
         }
     }

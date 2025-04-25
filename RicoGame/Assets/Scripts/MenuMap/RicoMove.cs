@@ -56,7 +56,7 @@ public class RicoMove : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         switch(other.gameObject.tag){
             case "Level":
-                Debug.Log(other.gameObject.name);
+                //Debug.Log(other.gameObject.name);
                 lvPop.LevelEnter(lvManager.actualRico);
             break;
         }
@@ -64,7 +64,7 @@ public class RicoMove : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         switch(other.gameObject.tag){
             case "Level":
-                Debug.Log(other.gameObject.name);
+                //Debug.Log(other.gameObject.name);
                 lvPop.LevelExit();
             break;
         }

@@ -21,8 +21,10 @@ public class Player_Status : MonoBehaviour
     private void Start() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         color = spriteRenderer.color;
-        health = 6;
-        healthMax = health;
+ 
+        // descomentar isso dps
+        //health = 6;
+        //healthMax = health;
     }
     private void Update() {
         timer += Time.deltaTime;
