@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class ControleUI : MonoBehaviour
 
@@ -14,9 +16,13 @@ public class ControleUI : MonoBehaviour
     [SerializeField] private GameObject winPanel; 
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private GameObject diedPanel;
+     [SerializeField] private GameObject pausePanel;
 
      [Header("Configurações")]
     [SerializeField] private float delayDead = 2.5f;
+
+     [Header("Buttons")]
+     public Button configButton;  
      
       private void Awake()
     {
@@ -34,45 +40,40 @@ public class ControleUI : MonoBehaviour
 
     private void Start()
     {
+        configButton.onClick.AddListener(OnButtonClick);
+         configButton.interactable = true;
     
         if (statusRico == null) statusRico = FindObjectOfType<StatusRico>();
         if (temporizador == null) temporizador = FindObjectOfType<Temporizador>();
         if (rico == null) rico = FindObjectOfType<Rico>();
         if (winPanel != null) winPanel.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
         
+  
     }
 
     private void Update()
     {
-       
         // Verifica se o jogador tem 30+ pinhas e se o tempo acabou
-        if (temporizador != null && temporizador.IsTimeUp())
-        {
+        if (temporizador != null && temporizador.IsTimeUp()){
            
-            
-            if (statusRico != null && statusRico.pineCones >= 30)
-            {
+            if (statusRico != null && statusRico.pineCones >= 30){
                 ShowWinPanel(); // Vitória
             }
-            else
-            {
+            else{
                 ShowGameOverPanel(); // Derrota por não coletar pinhas suficientes
             }
-            
         }
-    
     }
 
     private void ShowWinPanel()
     {
-        if (winPanel != null)
-        {
+        if (winPanel != null){
             winPanel.SetActive(true);
             Time.timeScale = 0f; // Pausa o jogo
         }
-        else
-        {
+        else{
             Debug.LogWarning("WinPanel não atribuído no Inspector!");
         }
     }
@@ -86,23 +87,42 @@ public class ControleUI : MonoBehaviour
     }
 
     public void ShowDiedPanelComDelay()
-{
-    StartCoroutine(ShowDiedPanelAfterDelay());
-}
-
-private IEnumerator ShowDiedPanelAfterDelay()
-{
-    yield return new WaitForSeconds(delayDead);
-
-    if (diedPanel != null)
     {
-        diedPanel.SetActive(true);
-        Time.timeScale = 0f; // Pausa o jogo, se for o caso
+        StartCoroutine(ShowDiedPanelAfterDelay());
     }
-    else
+
+    private IEnumerator ShowDiedPanelAfterDelay()
     {
-        Debug.LogWarning("DiedPanel não atribuído no Inspector!");
+        yield return new WaitForSeconds(delayDead);
+
+        if (diedPanel != null){
+            diedPanel.SetActive(true);
+            Time.timeScale = 0f; // Pausa o jogo, se for o caso
+        }
+        else{
+            Debug.LogWarning("DiedPanel não atribuído no Inspector!");
+        }
+    }
+       public void OnButtonClick()
+    {
+        if (pausePanel != null){
+            pausePanel.SetActive(true); // Mostra o painel de pausa
+            Time.timeScale = 0f;        // Pausa o jogo (opcional)
+            Debug.Log("Painel de pause ativado.");
+        }
+        else{
+            Debug.LogWarning("pausePanel não foi atribuído no Inspetor!");
+        }
+    }
+
+    public void ResumeGame()
+    {
+        if (pausePanel != null){
+            pausePanel.SetActive(false);
+            Time.timeScale = 1f; // Continua o jogo
+            Debug.Log("Jogo retomado.");
+        }
     }
 }
 
-}
+

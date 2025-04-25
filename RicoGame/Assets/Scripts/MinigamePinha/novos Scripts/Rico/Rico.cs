@@ -15,12 +15,17 @@ public class Rico : MonoBehaviour
     public int heart;  
     [SerializeField] private int maxHealth = 3;
     public bool ricoDied = false;
+     
 
     void Start()
     {
         ricoDied = false;
         rig = GetComponent<Rigidbody2D>();
         heart = maxHealth;
+         if (targetPositions.Length > 0){
+            transform.position = targetPositions[0];
+        }
+
         anima = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         
@@ -46,7 +51,7 @@ public class Rico : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)){
-            if (!isMoving && currentTargetIndex >= 0){
+            if (!isMoving && currentTargetIndex > 0){
                 isMoving = true; 
                  Flip(true);
                 currentTargetIndex--; // Retrocede para a coordenada anterior
