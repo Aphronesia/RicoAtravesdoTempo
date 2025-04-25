@@ -9,10 +9,13 @@ public class RicoMove : MonoBehaviour
     private LevelManager lvManager;
     [SerializeField]
     private LevelPopUp lvPop;
-    private Rigidbody2D rig;
+    public Rigidbody2D rig;
     private Vector3 target;
     [SerializeField, Tooltip("velocidade do movimento")]
     private float speed;
+    private bool moving;
+
+    public float distance;
     private void OnEnable() {
         LevelManager.OnStart += Started;
         LevelManager.OnTarget += Moviment;
@@ -26,12 +29,30 @@ public class RicoMove : MonoBehaviour
         if (levelController != null){
             lvManager = levelController.GetComponent<LevelManager>();
         }
+        GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
+        if(levelPop !=null){
+            lvPop = levelPop.GetComponent<LevelPopUp>();
+        }
         rig = GetComponent<Rigidbody2D>();
+        
+        moving = true;
     }
     public void Started(){
         Vector3 levelZeroPos = lvManager.levels[0].objLevel.transform.position;
         if (levelZeroPos != null){
             transform.position = levelZeroPos;
+        }
+    }
+    private void Update() {
+        if (moving && distance == 0){
+            lvPop.LevelEnter(lvManager.actualRico);
+            moving = false;
+            //Debug.Log("parou");
+        }
+        if (!moving && distance != 0){
+            lvPop.LevelExit();
+            moving = true;
+            //Debug.Log("movendo");
         }
     }
     private void FixedUpdate() {
@@ -40,7 +61,7 @@ public class RicoMove : MonoBehaviour
         
 
         Vector3 direction = target - currentPos;
-        float distance = direction.magnitude;
+        distance = direction.magnitude;
         float step = speed * Time.fixedDeltaTime;
         if(distance <= step){
             rig.MovePosition(target);
@@ -52,21 +73,5 @@ public class RicoMove : MonoBehaviour
     }
     private void Moviment(Vector3 newTarget){
         target = newTarget;
-    }
-    private void OnTriggerEnter2D(Collider2D other) {
-        switch(other.gameObject.tag){
-            case "Level":
-                //Debug.Log(other.gameObject.name);
-                lvPop.LevelEnter(lvManager.actualRico);
-            break;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other) {
-        switch(other.gameObject.tag){
-            case "Level":
-                //Debug.Log(other.gameObject.name);
-                lvPop.LevelExit();
-            break;
-        }
     }
 }

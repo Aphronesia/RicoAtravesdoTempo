@@ -486,7 +486,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvPop: {fileID: 1600987832}
+  rig: {fileID: 0}
   speed: 6
+  distance: 0
 --- !u!61 &433217178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,7 +560,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &465597945
 GameObject:
   m_ObjectHideFlags: 0

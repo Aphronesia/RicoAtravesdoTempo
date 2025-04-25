@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     public int actualRico;
     [SerializeField]
     private int levelCount;
+    private LevelPopUp lvPop;
     public static event Action OnStart;
     public static event Action<Vector3> OnTarget;
     public List<Level> levels = new List<Level>();
@@ -21,6 +22,11 @@ public class LevelManager : MonoBehaviour
         public bool played;
     }
     private void Start() {
+        GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
+        if(levelPop !=null){
+            lvPop = levelPop.GetComponent<LevelPopUp>();
+        }
+
         actualRico = 0;
         GetLevels();
         rico = GameObject.Find("Rico");
@@ -75,6 +81,7 @@ public class LevelManager : MonoBehaviour
                 target = levels[index].objLevel.transform.position;
                 OnTarget?.Invoke(target);
                 actualRico = index;
+                lvPop.LevelExit();
             }
         }
     }
