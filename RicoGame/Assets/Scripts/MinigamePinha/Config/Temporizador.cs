@@ -17,8 +17,8 @@ public class Temporizador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale=1f;
-        timerIsRunning = true;
+       // Time.timeScale=1f;
+        timerIsRunning = false;
         DisplayTime(timeRemaining);
     }
     public void Comeca(){
@@ -79,7 +79,7 @@ public class Temporizador : MonoBehaviour
         textMeshProUGUI.color = Color.white;
         DisplayTime(timeRemaining);
     }
-    void DisplayTime(float timeToDisplay)
+    public void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
         //Formatar a escala de tempo

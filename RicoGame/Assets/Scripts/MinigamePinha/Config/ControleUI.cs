@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class ControleUI : MonoBehaviour
 
@@ -11,35 +11,23 @@ public class ControleUI : MonoBehaviour
     [SerializeField] private StatusRico statusRico; 
     [SerializeField] private Temporizador temporizador; // Referência ao script 
     [SerializeField] private Rico rico;
+    [SerializeField] private GameObject winPanel, gameOverPanel,diedPanel,pausePanel,startPanel; 
+      public ControlScenes controlScenes;
 
-    [Header("UI")]
-    [SerializeField] private GameObject winPanel; 
-    [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private GameObject diedPanel;
-     [SerializeField] private GameObject pausePanel;
 
      [Header("Configurações")]
     [SerializeField] private float delayDead = 2.5f;
 
      [Header("Buttons")]
-     public Button configButton;  
+     public Button configButton; 
+
+     private bool startGame = false; 
      
-      private void Awake()
-    {
-        // Implementação do singleton
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Mantém entre cenas se necessário
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+     
 
     private void Start()
     {
+        Time.timeScale = 0f; // Começa pausado
         configButton.onClick.AddListener(OnButtonClick);
          configButton.interactable = true;
     
@@ -49,12 +37,28 @@ public class ControleUI : MonoBehaviour
         if (winPanel != null) winPanel.SetActive(false);
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
-        
+        if (startPanel != null) startPanel.SetActive(true);
   
     }
+     private void Awake()
+    {
+        // Implementação do singleton
+        if (Instance == null)
+        {
+            Instance = this;
+            //DontDestroyOnLoad(gameObject); // Mantém entre cenas se necessário
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+ 
 
     private void Update()
     {
+        if(!startGame) return;
         // Verifica se o jogador tem 30+ pinhas e se o tempo acabou
         if (temporizador != null && temporizador.IsTimeUp()){
            
@@ -115,6 +119,21 @@ public class ControleUI : MonoBehaviour
         }
     }
 
+        public void StartGame()
+    {
+        if (startPanel != null)
+        {
+            startPanel.SetActive(false);
+        }
+
+        Time.timeScale = 1f;
+        startGame = true;
+
+         if (temporizador != null)
+          temporizador.Comeca();
+        
+    }
+
     public void ResumeGame()
     {
         if (pausePanel != null){
@@ -123,6 +142,15 @@ public class ControleUI : MonoBehaviour
             Debug.Log("Jogo retomado.");
         }
     }
+    public void ReturnToStartPanel()
+    {
+         controlScenes.RestartGame();
+    }
+
+    public void ReturnHome(){
+        controlScenes.ReturnHome();
+    }
 }
+
 
 
