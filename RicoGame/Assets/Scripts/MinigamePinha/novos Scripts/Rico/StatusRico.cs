@@ -10,6 +10,7 @@ public class StatusRico : MonoBehaviour
     public Color colorNormal = Color.white;
     public Color colorDamage = Color.red;
     public Color colorHealh = Color.green;
+     public Temporizador temporizador; 
 
     
 
@@ -31,6 +32,10 @@ public class StatusRico : MonoBehaviour
         if (other.gameObject.CompareTag("Bigorna")){
             Destroy(other.gameObject);
             StartCoroutine(DamageNumerator());
+             if (temporizador != null)
+            {
+                temporizador.Dano(); // Chama o método de dano (que tira 10 segundos)
+            }
              if (ricoScript != null){
                  ricoScript.Damage();
              }  
@@ -65,5 +70,7 @@ public class StatusRico : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = colorNormal;
     }
+
+
 
 }

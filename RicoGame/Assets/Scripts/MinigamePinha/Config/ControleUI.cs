@@ -150,6 +150,10 @@ public class ControleUI : MonoBehaviour
     public void ReturnHome(){
         controlScenes.ReturnHome();
     }
+
+    public void QuitGame(){
+        controlScenes.QuitGame();
+    }
 }
 
 
