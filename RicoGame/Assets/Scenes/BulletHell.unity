@@ -3159,11 +3159,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks:
-  - atkPrefabs: {fileID: 1677516911897377234, guid: 189ad6583a0999843a4c7b3b847fc0ee, type: 3}
-    repetitions: 3
-    cooldown: 3
   - atkPrefabs: {fileID: 8192903956396983541, guid: 4a3277d785962be489d60c41d68b4941, type: 3}
     repetitions: 4
+    cooldown: 3
+  - atkPrefabs: {fileID: 1677516911897377234, guid: 189ad6583a0999843a4c7b3b847fc0ee, type: 3}
+    repetitions: 20
     cooldown: 3
   atkLength: 0
 --- !u!114 &766894792
