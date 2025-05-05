@@ -6,16 +6,18 @@ public class ControlUIMap : MonoBehaviour
 {
     [SerializeField]
     private LevelPopUp lvPop;
-    private ControlScenes controlScenes;
-    private LevelManager lvManager;
+    private ControlScenes _controlScenes;
+    private LevelManager _lvManager;
+
+    private bool _pause;
     private void Start() {
         ControlScenes ScenesController = FindObjectOfType<ControlScenes>();
         if (ScenesController != null){
-            controlScenes = ScenesController.GetComponent<ControlScenes>();
+            _controlScenes = ScenesController.GetComponent<ControlScenes>();
         }
         GameObject levelController = GameObject.Find("LevelController");
         if (levelController != null){
-            lvManager = levelController.GetComponent<LevelManager>();
+            _lvManager = levelController.GetComponent<LevelManager>();
         }
         GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
         if(levelPop !=null){
@@ -24,6 +26,6 @@ public class ControlUIMap : MonoBehaviour
     }
     public void PlayLevel(){
         int index = lvPop.SceneIndex();
-        controlScenes.ChangeScene(index);
+        _controlScenes.ChangeScene(index);
     }
 }
