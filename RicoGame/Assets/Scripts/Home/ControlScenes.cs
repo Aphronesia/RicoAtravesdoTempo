@@ -56,5 +56,6 @@ public class ControlScenes : MonoBehaviour
         else{
             Time.timeScale = 1f;
         }
+        Debug.Log($"pause {pause}");
     }
 }

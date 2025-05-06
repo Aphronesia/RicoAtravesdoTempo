@@ -149,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Bot\xF5es_(Play,Sair,Voltar...)_0"
+      name: Button_Play(136x43)
       rect:
         serializedVersion: 2
         x: 251
@@ -157,7 +157,7 @@ TextureImporter:
         width: 136
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,15 +170,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xF5es_(Play,Sair,Voltar...)_1"
+      name: Button_Empty(136x43)
       rect:
         serializedVersion: 2
-        x: 402
+        x: 401
         y: 222
         width: 136
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xF5es_(Play,Sair,Voltar...)_2"
+      name: Button_Home(136x43)
       rect:
         serializedVersion: 2
         x: 251
@@ -199,7 +199,7 @@ TextureImporter:
         width: 136
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xF5es_(Play,Sair,Voltar...)_3"
+      name: Button_Quit(136x43)
       rect:
         serializedVersion: 2
         x: 402
@@ -220,7 +220,7 @@ TextureImporter:
         width: 136
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xF5es_(Play,Sair,Voltar...)_4"
+      name: Button_Restart(136x43)
       rect:
         serializedVersion: 2
         x: 251
@@ -241,7 +241,7 @@ TextureImporter:
         width: 136
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Bot\xF5es_(Play,Sair,Voltar...)_5"
+      name: Button_Cog(30x27)
       rect:
         serializedVersion: 2
         x: 407
@@ -262,7 +262,7 @@ TextureImporter:
         width: 30
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,12 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "Bot\xF5es_(Play,Sair,Voltar...)_0": 28366870
-      "Bot\xF5es_(Play,Sair,Voltar...)_1": 583372406
-      "Bot\xF5es_(Play,Sair,Voltar...)_2": 570723336
-      "Bot\xF5es_(Play,Sair,Voltar...)_3": 1136528781
-      "Bot\xF5es_(Play,Sair,Voltar...)_4": -1471012009
-      "Bot\xF5es_(Play,Sair,Voltar...)_5": 1512556569
+      Button_Cog(30x27): 1512556569
+      Button_Empty(136x43): 583372406
+      Button_Home(136x43): 570723336
+      Button_Play(136x43): 28366870
+      Button_Quit(136x43): 1136528781
+      Button_Restart(136x43): -1471012009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
