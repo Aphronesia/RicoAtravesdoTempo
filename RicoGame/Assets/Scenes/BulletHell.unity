@@ -3163,7 +3163,7 @@ MonoBehaviour:
     repetitions: 4
     cooldown: 3
   - atkPrefabs: {fileID: 1677516911897377234, guid: 189ad6583a0999843a4c7b3b847fc0ee, type: 3}
-    repetitions: 20
+    repetitions: 4
     cooldown: 3
   atkLength: 0
 --- !u!114 &766894792
