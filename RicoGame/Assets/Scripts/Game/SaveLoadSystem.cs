@@ -20,6 +20,7 @@ namespace Game
             public int menuMapRico;
 
         }
+        private Settings _settings;
         public SettingsData settingsData = new SettingsData();
         public GameData gameData = new GameData();
         private string _pathSettings;
@@ -43,6 +44,10 @@ namespace Game
         }
 
         private void Start(){
+            Settings GameSettings = FindObjectOfType<Settings>();
+            if (GameSettings != null){
+                _settings = GameSettings.GetComponent<Settings>();
+            }
             LoadSettingsData();
         }
         private static void CreateFolder(){
@@ -62,7 +67,6 @@ namespace Game
 
         }
         public void SaveSettingsData(){
-            GetSettingsData();
             string json = JsonUtility.ToJson(settingsData, true);
             File.WriteAllText(_pathSettings, json);
             Debug.Log("salvo em = " + _pathSettings);
@@ -74,18 +78,17 @@ namespace Game
 
                     JsonUtility.FromJsonOverwrite(json, settingsData);
                     
-                    OnLoadSettings?.Invoke();
+                    _settings.LoadSettings();
+                    //OnLoadSettings?.Invoke();
                 }
                 else{
-                    Debug.LogError("arquivo não existe");
+                    SaveSettingsData();
+                    Debug.Log("primeiro save settings");
                 }
             }
             catch (Exception ex){
                 Debug.LogWarning(ex.Message);
             }
-        }
-        private static void GetSettingsData(){
-
         }
         public void SaveGameData(){
             try {
@@ -103,6 +106,8 @@ namespace Game
                 if (File.Exists(_pathGame)){
                     string json = File.ReadAllText(_pathGame);
                     JsonUtility.FromJsonOverwrite(json, gameData);
+
+                    
                     OnLoadGame?.Invoke();
                 }
                 else{

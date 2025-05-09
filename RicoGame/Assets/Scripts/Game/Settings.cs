@@ -12,6 +12,7 @@ namespace Game{
         public float volumeMaster;
         public bool effects;
         
+        public static event Action OnLoadSettings;
         private void OnEnable(){
             SaveLoadSystem.OnLoadSettings += LoadSettings;
         }
@@ -19,11 +20,12 @@ namespace Game{
             SaveLoadSystem.OnLoadSettings -= LoadSettings;
         }
 
-        private void LoadSettings(){
+        public void LoadSettings(){
             if(_saveLoadSystem.settingsData != null){
                 volumeMusic = _saveLoadSystem.settingsData.volumeMusic;
                 volumeMaster = _saveLoadSystem.settingsData.volumeMaster;
                 effects = _saveLoadSystem.settingsData.effects;
+                OnLoadSettings?.Invoke();
             }
         }
         private void Awake() {
@@ -39,6 +41,13 @@ namespace Game{
             if (saveLoadManager != null){
                 _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
             }
+        }
+        public void SaveSettings(){
+            _saveLoadSystem.settingsData.volumeMusic = volumeMusic;
+            _saveLoadSystem.settingsData.volumeMaster = volumeMaster;
+            _saveLoadSystem.settingsData.effects = effects;
+
+            _saveLoadSystem.SaveSettingsData();
         }
     }
 
