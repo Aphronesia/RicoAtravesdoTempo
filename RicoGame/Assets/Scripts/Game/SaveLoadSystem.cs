@@ -44,7 +44,6 @@ namespace Game
 
         private void Start(){
             LoadSettingsData();
-            LoadGameData();
         }
         private static void CreateFolder(){
             string basePath = Application.persistentDataPath;

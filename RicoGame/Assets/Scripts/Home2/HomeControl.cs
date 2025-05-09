@@ -21,4 +21,10 @@ public class HomeControl : MonoBehaviour
     private void StartNewGame(){
 
     }
+    private void ContinueGame(){
+
+    }
+    private void Quit(){
+        controlScenes.QuitGame();
+    }
 }
