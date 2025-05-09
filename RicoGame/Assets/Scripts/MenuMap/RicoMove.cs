@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MenuMap;
 using UnityEngine;
 
 public class RicoMove : MonoBehaviour
@@ -19,10 +20,12 @@ public class RicoMove : MonoBehaviour
     private void OnEnable() {
         LevelManager.OnStart += Started;
         LevelManager.OnTarget += Moviment;
+        LevelManager.OnTargetLoad += LoadPosition;
     }
     private void OnDisable() {
         LevelManager.OnStart -= Started;
         LevelManager.OnTarget -= Moviment;
+        LevelManager.OnTargetLoad -= LoadPosition;
     }
     private void Start() {
         GameObject levelController = GameObject.Find("LevelController");
@@ -73,5 +76,9 @@ public class RicoMove : MonoBehaviour
     }
     private void Moviment(Vector3 newTarget){
         target = newTarget;
+    }
+
+    private void LoadPosition(Vector3 target){
+        transform.position = target;
     }
 }
