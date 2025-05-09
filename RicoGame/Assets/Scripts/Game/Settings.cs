@@ -13,13 +13,18 @@ namespace Game{
         public bool effects;
         
         private void OnEnable(){
-            SaveLoadSystem.OnLoadSettings += OnLoadSettings;
+            SaveLoadSystem.OnLoadSettings += LoadSettings;
+        }
+        private void OnDisable() {
+            SaveLoadSystem.OnLoadSettings -= LoadSettings;
         }
 
-        private void OnLoadSettings(){
-            volumeMusic = _saveLoadSystem.settingsData.volumeMusic;
-            volumeMaster = _saveLoadSystem.settingsData.volumeMaster;
-            effects = _saveLoadSystem.settingsData.effects;
+        private void LoadSettings(){
+            if(_saveLoadSystem.settingsData != null){
+                volumeMusic = _saveLoadSystem.settingsData.volumeMusic;
+                volumeMaster = _saveLoadSystem.settingsData.volumeMaster;
+                effects = _saveLoadSystem.settingsData.effects;
+            }
         }
         private void Awake() {
             if (FindObjectsOfType<Settings>().Length > 1)
@@ -30,10 +35,7 @@ namespace Game{
             {
                 DontDestroyOnLoad(gameObject);
             }
-        }
-
-        private void Start(){
-            GameObject saveLoadManager =  new GameObject("SaveLoadManager");
+            GameObject saveLoadManager =  GameObject.Find("SaveLoadManager");
             if (saveLoadManager != null){
                 _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
             }

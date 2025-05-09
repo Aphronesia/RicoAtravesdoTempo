@@ -1,5 +1,7 @@
 using System;
 using System.IO;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
@@ -35,13 +37,15 @@ namespace Game
             CreateFolder();
             _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
             _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
+
+            settingsData = new SettingsData();
+            gameData = new GameData();
         }
 
         private void Start(){
             LoadSettingsData();
             LoadGameData();
         }
-
         private static void CreateFolder(){
             string basePath = Application.persistentDataPath;
             string folderName = "Saves";
@@ -78,7 +82,7 @@ namespace Game
                 }
             }
             catch (Exception ex){
-                Debug.LogError(ex.Message);
+                Debug.LogWarning(ex.Message);
             }
         }
         private static void GetSettingsData(){
@@ -91,7 +95,7 @@ namespace Game
                 Debug.Log($"Salvo em = {_pathGame}");
             }
             catch(Exception ex){
-                Debug.LogError(ex.Message);
+                Debug.LogError(ex.ToString());
             }
         }
 
