@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2be85d6-e5e4-4341-bc7c-67d25e79cb9d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuMap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/UIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ControlScenes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ControlScenes.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SaveLoadSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SaveLoadSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home2/HomeControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home2/HomeControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home2/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home2/UI/UIControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/ControlUIMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/ControlUIMap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/RicoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/RicoMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigamePinha/Config/ControleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigamePinha/Config/ControleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigamePinha/Universo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigamePinha/Universo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameTrem/ControleUITrem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameTrem/ControleUITrem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIGeral/configUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIGeral/configUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +119,7 @@
       <workItem from="1745769852536" duration="5000" />
       <workItem from="1746738639174" duration="1917000" />
       <workItem from="1746744346401" duration="5701000" />
+      <workItem from="1746894252335" duration="19695000" />
     </task>
     <servers />
   </component>

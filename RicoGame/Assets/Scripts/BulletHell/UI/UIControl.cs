@@ -1,6 +1,7 @@
 using System; //para eventos estaticos
 using System.Collections;
 using System.Collections.Generic;
+using Game;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Game;
 using UnityEngine.SceneManagement;
 
 public class ControleUI : MonoBehaviour

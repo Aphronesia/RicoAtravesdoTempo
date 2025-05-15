@@ -2914,6 +2914,9 @@ MonoBehaviour:
   gameData:
     levelCompleted: 0
     menuMapRico: 0
+  runtimeGameData:
+    levelCompleted: 0
+    menuMapRico: 0
 --- !u!1 &1813590890
 GameObject:
   m_ObjectHideFlags: 0

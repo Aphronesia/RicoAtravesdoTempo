@@ -1,61 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControlScenes : MonoBehaviour
-{
+namespace Game{
+    public class ControlScenes : MonoBehaviour
+    {
     
-    void Awake()
-    {
-        if (FindObjectsOfType<ControlScenes>().Length > 1)
+        void Awake()
         {
-            Destroy(gameObject);
+            if (FindObjectsOfType<ControlScenes>().Length > 1)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
-        else
+        // Start is called before the first frame update
+        public void RestartGame()
         {
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    public void RestartGame()
-    {
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
-    }
-    
-    public void ChangeScene(int NameScene)
-    {
-        //Debug.Log("mudou a cena");
-        SceneManager.LoadScene(NameScene);
-    }
-    public void SartTrem()
-    {
-        //Debug.Log("mudou a cena");
-        SceneManager.LoadScene(2);
-    }
-    public void ReturnHome()
-    {
-        SceneManager.LoadScene("Home");
-    }
-    public void QuitGame()
-    {
-        Application.Quit();
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-    }
-    public void Pause(bool pause){
-        if (pause){
-            Time.timeScale = 0f;
-        }
-        else{
             Time.timeScale = 1f;
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(currentSceneName);
         }
-        Debug.Log($"pause {pause}");
+    
+        public void ChangeScene(int nameScene)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(nameScene);
+        }
+        public void ReturnHome()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Home");
+        }
+        public void QuitGame()
+        {
+            Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        }
+        public void Pause(bool pause){
+            Time.timeScale = pause ? 0f : 1f;
+            Debug.Log($"pause {pause}");
+        }
     }
 }

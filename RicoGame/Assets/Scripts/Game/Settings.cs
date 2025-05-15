@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Game{
     public class Settings : MonoBehaviour
@@ -13,13 +10,7 @@ namespace Game{
         public bool effects;
         
         public static event Action OnLoadSettings;
-        private void OnEnable(){
-            SaveLoadSystem.OnLoadSettings += LoadSettings;
-        }
-        private void OnDisable() {
-            SaveLoadSystem.OnLoadSettings -= LoadSettings;
-        }
-
+        
         public void LoadSettings(){
             if(_saveLoadSystem.settingsData != null){
                 volumeMusic = _saveLoadSystem.settingsData.volumeMusic;

@@ -1,41 +1,32 @@
 using System;
 using System.IO;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
 {
-    public class SaveLoadSystem : MonoBehaviour
-    {
-        [Serializable]
-        public class SettingsData{
-            public float volumeMusic;
-            public float volumeMaster;
-            public bool effects;
-        }
-        [Serializable]
-        public class GameData{
-            public int levelCompleted;
-            public int menuMapRico;
-
-        }
+    public class SaveLoadSystem : MonoBehaviour{
+        
+        private ControlScenes _controlScenes;
         private Settings _settings;
         public SettingsData settingsData = new SettingsData();
         public GameData gameData = new GameData();
+        public GameData runtimeGameData = new GameData();
+        
+        // Caminho dos Saves
         private string _pathSettings;
         private string _pathGame;
 
-        public static event Action OnLoadSettings;
         public static event Action OnLoadGame;
+
         private void Awake(){
             if (FindObjectsOfType<SaveLoadSystem>().Length > 1){
-                Destroy(gameObject); 
+                Destroy(gameObject);
             }
             else{
                 DontDestroyOnLoad(gameObject);
             }
-            CreateFolder();
+
+            CreateFolders();
             _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
             _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
 
@@ -44,13 +35,14 @@ namespace Game
         }
 
         private void Start(){
-            Settings GameSettings = FindObjectOfType<Settings>();
-            if (GameSettings != null){
-                _settings = GameSettings.GetComponent<Settings>();
-            }
+            TakeComponents();
+            
             LoadSettingsData();
+            LoadGameData();
         }
-        private static void CreateFolder(){
+        
+        
+        private static void CreateFolders(){
             string basePath = Application.persistentDataPath;
             string folderName = "Saves";
             string fullPath = Path.Combine(basePath, folderName);
@@ -58,7 +50,6 @@ namespace Game
             try{
                 if (!Directory.Exists(fullPath)){
                     Directory.CreateDirectory(fullPath);
-                    OnLoadGame?.Invoke();
                 }
             }
             catch (Exception ex){
@@ -66,18 +57,20 @@ namespace Game
             }
 
         }
+
         public void SaveSettingsData(){
             string json = JsonUtility.ToJson(settingsData, true);
             File.WriteAllText(_pathSettings, json);
             Debug.Log("salvo em = " + _pathSettings);
         }
+
         public void LoadSettingsData(){
             try{
                 if (File.Exists(_pathSettings)){
                     string json = File.ReadAllText(_pathSettings);
 
                     JsonUtility.FromJsonOverwrite(json, settingsData);
-                    
+
                     _settings.LoadSettings();
                     //OnLoadSettings?.Invoke();
                 }
@@ -90,24 +83,30 @@ namespace Game
                 Debug.LogWarning(ex.Message);
             }
         }
+
         public void SaveGameData(){
-            try {
+            try{
+                gameData = runtimeGameData;
                 string json = JsonUtility.ToJson(gameData, true);
                 File.WriteAllText(_pathGame, json);
                 Debug.Log($"Salvo em = {_pathGame}");
             }
-            catch(Exception ex){
+            catch (Exception ex){
                 Debug.LogError(ex.ToString());
             }
         }
 
+        public void ContinueGame(){
+            runtimeGameData = gameData;
+            
+        }
         public void LoadGameData(){
             try{
                 if (File.Exists(_pathGame)){
                     string json = File.ReadAllText(_pathGame);
                     JsonUtility.FromJsonOverwrite(json, gameData);
 
-                    
+
                     OnLoadGame?.Invoke();
                 }
                 else{
@@ -118,7 +117,48 @@ namespace Game
                 Debug.LogError(ex.Message);
             }
         }
-        
+
+        public void ClearData(){
+            // Não tá funcionando kk.
+            string dataPath = Application.persistentDataPath;
+            
+            
+            DirectoryInfo dir = new DirectoryInfo(dataPath);
+            // Deleta todos os arquivos
+            foreach (FileInfo file in dir.GetFiles()){
+                try{
+                    file.Delete();
+                }
+                catch (IOException ex){
+                    Debug.LogError($"Erro ao deletar arquivo {file.FullName}: {ex.Message}");
+                }
+            }
+            
+            Debug.Log("todos os arquivos deletados");
+            _controlScenes.RestartGame();
+        }
+        private void TakeComponents(){
+            Settings gameSettings = FindObjectOfType<Settings>();
+            if (gameSettings != null){
+                _settings = gameSettings.GetComponent<Settings>();
+            }
+            ControlScenes controlScenes = FindObjectOfType<ControlScenes>();
+            if (controlScenes != null){
+                _controlScenes = controlScenes.GetComponent<ControlScenes>();
+            }
+        }
+    
+    }
+    [Serializable]
+    public class SettingsData{
+        public float volumeMusic;
+        public float volumeMaster;
+        public bool effects;
+    }
+    [Serializable]
+    public class GameData{
+        public int levelCompleted;
+        public int menuMapRico;
     }
 }
 
