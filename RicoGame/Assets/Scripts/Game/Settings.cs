@@ -33,6 +33,12 @@ namespace Game{
                 _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
             }
         }
+
+        private void Start()
+        {
+            LoadSettings();
+        }
+
         public void SaveSettings(){
             _saveLoadSystem.settingsData.volumeMusic = volumeMusic;
             _saveLoadSystem.settingsData.volumeMaster = volumeMaster;

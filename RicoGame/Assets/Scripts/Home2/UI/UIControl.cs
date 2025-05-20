@@ -67,6 +67,13 @@ namespace Home2.UI{
             _panelTransition.interactable = false;
             _panelTransition.blocksRaycasts = false;
 
+            if (_saveLoadSystem.hasSettingsData){
+                _saveLoadSystem.LoadSettingsData();
+            }
+
+            if (_saveLoadSystem.hasGameData){
+                _saveLoadSystem.LoadGameData();
+            }
         }
         // Chamado pelo botão "Start" na UI.
         // Para quando for iniciar uma nova run do jogo.

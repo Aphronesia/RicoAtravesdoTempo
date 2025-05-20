@@ -10,17 +10,17 @@ public class SoundControllerTrem : MonoBehaviour
     public AudioClip[] sounds;
     public Slider slider;
     public float volumeLoaded;
-    SettingsController settingsController;
+    public SettingsController settingsController;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         slider.onValueChanged.AddListener(ChangeVolume);
 
-        SettingsController SetControl = FindObjectOfType<SettingsController>();
-        if (SetControl != null)
+        SettingsController setControl = FindObjectOfType<SettingsController>();
+        if (setControl != null)
         {
-            settingsController = SetControl.GetComponent<SettingsController>();
+            settingsController = setControl.GetComponent<SettingsController>();
             settingsController.Load();
             volumeLoaded = settingsController.volume;
             ChangeVolume(volumeLoaded);

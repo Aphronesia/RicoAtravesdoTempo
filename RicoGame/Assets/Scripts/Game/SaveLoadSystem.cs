@@ -12,6 +12,8 @@ namespace Game
         public GameData gameData = new GameData();
         public GameData runtimeGameData = new GameData();
         
+        public bool hasSettingsData, hasGameData;
+        
         // Caminho dos Saves
         private string _pathSettings;
         private string _pathGame;
@@ -62,6 +64,7 @@ namespace Game
             string json = JsonUtility.ToJson(settingsData, true);
             File.WriteAllText(_pathSettings, json);
             Debug.Log("salvo em = " + _pathSettings);
+            hasSettingsData = true;
         }
 
         public void LoadSettingsData(){
@@ -70,11 +73,12 @@ namespace Game
                     string json = File.ReadAllText(_pathSettings);
 
                     JsonUtility.FromJsonOverwrite(json, settingsData);
-
+                    hasSettingsData = true;
                     _settings.LoadSettings();
                     //OnLoadSettings?.Invoke();
                 }
                 else{
+                    hasSettingsData = false;
                     SaveSettingsData();
                     Debug.Log("primeiro save settings");
                 }
@@ -90,6 +94,7 @@ namespace Game
                 string json = JsonUtility.ToJson(gameData, true);
                 File.WriteAllText(_pathGame, json);
                 Debug.Log($"Salvo em = {_pathGame}");
+                hasGameData = true;
             }
             catch (Exception ex){
                 Debug.LogError(ex.ToString());
@@ -106,10 +111,11 @@ namespace Game
                     string json = File.ReadAllText(_pathGame);
                     JsonUtility.FromJsonOverwrite(json, gameData);
 
-
+                    hasGameData = true;
                     OnLoadGame?.Invoke();
                 }
                 else{
+                    hasGameData = false;
                     Debug.LogError("Arquivo não existe");
                 }
             }
