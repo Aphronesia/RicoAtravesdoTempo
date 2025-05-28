@@ -11,8 +11,8 @@ namespace Game{
         
         public static event Action OnLoadSettings;
         
-        public void LoadSettings(){
-            if(_saveLoadSystem.settingsData != null){
+        public void LoadSettings() {
+            if(_saveLoadSystem.settingsData != null) {
                 volumeMusic = _saveLoadSystem.settingsData.volumeMusic;
                 volumeMaster = _saveLoadSystem.settingsData.volumeMaster;
                 effects = _saveLoadSystem.settingsData.effects;
@@ -20,12 +20,10 @@ namespace Game{
             }
         }
         private void Awake() {
-            if (FindObjectsOfType<Settings>().Length > 1)
-            {
+            if (FindObjectsOfType<Settings>().Length > 1) {
                 Destroy(gameObject);
             }
-            else
-            {
+            else {
                 DontDestroyOnLoad(gameObject);
             }
             GameObject saveLoadManager =  GameObject.Find("SaveLoadManager");
@@ -34,8 +32,7 @@ namespace Game{
             }
         }
 
-        private void Start()
-        {
+        private void Start() {
             LoadSettings();
         }
 

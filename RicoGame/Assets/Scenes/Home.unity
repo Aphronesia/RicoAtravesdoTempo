@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionDuration: 1
   panelSettingRT: {fileID: 0}
-  onPanelPos: {x: 0, y: 0}
+  onPanelPos: {x: 110, y: 0}
   offPanelPos: {x: 0, y: 0}
   durationMoveUI: 0.5
   isOnSettings: 0
@@ -1079,6 +1079,8 @@ MonoBehaviour:
   runtimeGameData:
     levelCompleted: 0
     menuMapRico: 0
+  hasSettingsData: 0
+  hasGameData: 0
 --- !u!4 &687213461
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &761106547
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2056,7 +2058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1318103805
 RectTransform:
   m_ObjectHideFlags: 0

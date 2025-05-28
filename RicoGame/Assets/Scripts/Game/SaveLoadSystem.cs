@@ -34,6 +34,8 @@ namespace Game
 
             settingsData = new SettingsData();
             gameData = new GameData();
+            hasSettingsData = false;
+            hasGameData = false;
         }
 
         private void Start(){
@@ -125,7 +127,6 @@ namespace Game
         }
 
         public void ClearData(){
-            // Não tá funcionando kk.
             string dataPath = Application.persistentDataPath;
             
             
