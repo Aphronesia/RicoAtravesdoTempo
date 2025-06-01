@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d2be85d6-e5e4-4341-bc7c-67d25e79cb9d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/UIControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SaveLoadSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SaveLoadSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/ControlUIMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/ControlUIMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home2/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home2/UI/UIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/RicoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/RicoMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cutscene/UI/UIControl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -44,7 +49,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -112,6 +117,9 @@
       <workItem from="1747658397325" duration="752000" />
       <workItem from="1747741124510" duration="4626000" />
       <workItem from="1747822224740" duration="2742000" />
+      <workItem from="1748707401403" duration="5032000" />
+      <workItem from="1748717500418" duration="3260000" />
+      <workItem from="1748805368847" duration="4577000" />
     </task>
     <servers />
   </component>

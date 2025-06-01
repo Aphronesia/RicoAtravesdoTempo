@@ -21,13 +21,13 @@ public class EnemyControl : MonoBehaviour
         EnemyAttack.OnAtkFinished += Tired;
         EnemyStatus.OnEnemyHit += EnemyHit;
         EnemyStatus.OnEnemyDie += Die;
-        UIControl.OnStarted += Started;
+        BulletHell.UI.UIControl.OnStarted += Started;
     }
     private void OnDisable() {
         EnemyAttack.OnAtkFinished -= Tired;
         EnemyStatus.OnEnemyHit -= EnemyHit;
         EnemyStatus.OnEnemyDie -= Die;
-        UIControl.OnStarted -= Started;
+        BulletHell.UI.UIControl.OnStarted -= Started;
     }
     private void Start() {
         enemyStatus = GetComponent<EnemyStatus>();

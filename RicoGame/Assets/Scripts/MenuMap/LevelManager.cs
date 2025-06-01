@@ -11,9 +11,7 @@ namespace MenuMap{
         [SerializeField]
         private int levelCount;
         private LevelPopUp _lvPop;
-        public static event Action OnStart;
-        public static event Action<Vector3> OnTarget;
-        public static event Action<Vector3> OnTargetLoad;
+        public static event Action<Vector3, bool> OnTarget;
         public List<Level> levels = new List<Level>();
         [Serializable]
         public class Level
@@ -21,28 +19,24 @@ namespace MenuMap{
             public GameObject objLevel;
             public bool played;
         }
-
-        private void OnEnable(){
-            Game.SaveLoadSystem.OnLoadGame += OnLoad;
-        }
-
-        private void OnDisable(){
-            Game.SaveLoadSystem.OnLoadGame -= OnLoad;
-        }
-
-        private void OnLoad(){
-            actualRico = _saveLoadSystem.gameData.menuMapRico;
+        private void Load(){
+            actualRico = _saveLoadSystem.runtimeGameData.menuMapRico;
             _target = levels[actualRico].objLevel.transform.position;
-            OnTargetLoad?.Invoke(_target);
             
         }
         private void Start(){
             TakeComponent();
             
             GetLevels();
-            OnStart?.Invoke();
+
+            if (_saveLoadSystem.hasGameData){
+                Load();
+                OnTarget?.Invoke(_target, true);
+                return;
+            }
             _target = levels[0].objLevel.transform.position;
-            OnTarget?.Invoke(_target);
+            OnTarget?.Invoke(_target, true);
+            
         }
         private void GetLevels(){
             for(int i = 0; i < levelCount; i++){
@@ -50,10 +44,16 @@ namespace MenuMap{
                 if (levelFind != null){
                     levels.Add(new Level ());
                     levels[i].objLevel = levelFind;
-                    levels[i].played = true; //false
+                    levels[i].played = false; //false
                 }
             }
             levels[0].played = true;
+            if (_saveLoadSystem.hasGameData){
+                for (int i = 0; i <= _saveLoadSystem.runtimeGameData.levelCompleted; i++){
+                    levels[i+1].played = true;
+                }
+                return;
+            }
             levels[1].played = true;
         }
         private void Update() {
@@ -96,7 +96,7 @@ namespace MenuMap{
                 if ((index + 1) == actualRico || (index - 1) == actualRico)
                 {
                     _target = levels[index].objLevel.transform.position;
-                    OnTarget?.Invoke(_target);
+                    OnTarget?.Invoke(_target, false);
                     actualRico = index;
                     _saveLoadSystem.gameData.menuMapRico = actualRico;
                     _lvPop.LevelExit();

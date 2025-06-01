@@ -144,6 +144,11 @@ namespace Game
             Debug.Log("todos os arquivos deletados");
             _controlScenes.RestartGame();
         }
+
+        public void ClearRuntimeData(){
+            GameData reset =  new GameData();
+            runtimeGameData = reset;
+        }
         private void TakeComponents(){
             Settings gameSettings = FindObjectOfType<Settings>();
             if (gameSettings != null){

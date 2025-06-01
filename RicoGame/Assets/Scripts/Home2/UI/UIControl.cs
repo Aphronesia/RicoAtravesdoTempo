@@ -1,4 +1,5 @@
 using System.Collections;
+using Game;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -37,16 +38,16 @@ namespace Home2.UI{
         private CanvasGroup _panelTransition;
         private bool _hasGameData;
         //Componentes
-        private Game.Settings _settings;
-        private Game.SaveLoadSystem _saveLoadSystem;
-        private Game.ControlScenes _controlScene;
+        private Settings _settings;
+        private SaveLoadSystem _saveLoadSystem;
+        private ControlScenes _controlScene;
         private void OnEnable(){
-            Game.Settings.OnLoadSettings += OnLoadSettingsUI;
-            Game.SaveLoadSystem.OnLoadGame += OnLoadGameData;
+            Settings.OnLoadSettings += OnLoadSettingsUI;
+            SaveLoadSystem.OnLoadGame += OnLoadGameData;
         }
         private void OnDisable() {
-            Game.Settings.OnLoadSettings -= OnLoadSettingsUI;
-            Game.SaveLoadSystem.OnLoadGame -= OnLoadGameData;
+            Settings.OnLoadSettings -= OnLoadSettingsUI;
+            SaveLoadSystem.OnLoadGame -= OnLoadGameData;
         }
         public void OnLoadSettingsUI(){
             sMusic.value = _settings.volumeMusic;
@@ -70,7 +71,6 @@ namespace Home2.UI{
             if (_saveLoadSystem.hasSettingsData){
                 _saveLoadSystem.LoadSettingsData();
             }
-
             if (_saveLoadSystem.hasGameData){
                 _saveLoadSystem.LoadGameData();
             }
@@ -79,6 +79,12 @@ namespace Home2.UI{
         // Para quando for iniciar uma nova run do jogo.
         public void GameStart(){
             if (!_hasGameData){
+                _panelTransition.alpha = 0f;
+                _saveLoadSystem.ClearRuntimeData();
+                StartCoroutine(UITransition());
+                return;
+            }
+            if (_hasGameData){
                 _panelTransition.alpha = 0f;
                 StartCoroutine(UITransition());
             }
@@ -163,17 +169,17 @@ namespace Home2.UI{
             if (uiTransition != null){
                 _panelTransition = uiTransition.GetComponent<CanvasGroup>();
             }
-            Game.Settings gameSettings = FindObjectOfType<Game.Settings>();
+            Settings gameSettings = FindObjectOfType<Settings>();
             if (gameSettings != null){
-                _settings = gameSettings.GetComponent<Game.Settings>();
+                _settings = gameSettings.GetComponent<Settings>();
             }
-            Game.SaveLoadSystem saveLoadSystem = FindObjectOfType<Game.SaveLoadSystem>();
+            SaveLoadSystem saveLoadSystem = FindObjectOfType<SaveLoadSystem>();
             if (saveLoadSystem != null){
-                _saveLoadSystem = saveLoadSystem.GetComponent<Game.SaveLoadSystem>();
+                _saveLoadSystem = saveLoadSystem.GetComponent<SaveLoadSystem>();
             }
-            Game.ControlScenes controlScenes= FindObjectOfType<Game.ControlScenes>();
+            ControlScenes controlScenes= FindObjectOfType<ControlScenes>();
             if (controlScenes != null){
-                _controlScene = controlScenes.GetComponent<Game.ControlScenes>();
+                _controlScene = controlScenes.GetComponent<ControlScenes>();
             }
         }
     }
