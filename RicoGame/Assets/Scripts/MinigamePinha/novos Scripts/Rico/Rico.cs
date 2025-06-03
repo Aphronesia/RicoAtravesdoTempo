@@ -40,22 +40,19 @@ public class Rico : MonoBehaviour
         if (heart <= 0 && !ricoDied){
              Died();  
         }
-        if (ricoDied) return; // Se morreu, não faz mais nada
-        
+        if (ricoDied) return;
+
         if (Input.GetKeyDown(KeyCode.RightArrow)){
-            if (!isMoving && currentTargetIndex < targetPositions.Length - 1){
-                isMoving = true; 
-                Flip(false);
-                currentTargetIndex++; // Avança para a próxima coordenada
-            }
+            MoveRight();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)){
-            if (!isMoving && currentTargetIndex > 0){
-                isMoving = true; 
-                 Flip(true);
-                currentTargetIndex--; // Retrocede para a coordenada anterior
-            }
+            MoveLeft();
+        }
+
+        
+        if (Input.GetMouseButtonDown(0)){
+            HandleClickMovement();
         }
 
         if (isMoving){
@@ -66,6 +63,45 @@ public class Rico : MonoBehaviour
             anima.SetBool("CanRoll",false);
         }
     }
+
+      void HandleClickMovement()
+    {
+        if (isMoving) return;
+        
+        Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 playerScreenPos = Camera.main.WorldToScreenPoint(transform.position);
+
+        // Determina direção com base na posição do clique
+        if (clickPosition.x > transform.position.x)
+        {
+            MoveRight();
+        }
+        else if (clickPosition.x < transform.position.x)
+        {
+            MoveLeft();
+        }
+    }
+
+     void MoveRight()
+    {
+        if (!isMoving && currentTargetIndex < targetPositions.Length - 1)
+        {
+            isMoving = true; 
+            Flip(false);
+            currentTargetIndex++;
+        }
+    }
+
+    void MoveLeft()
+    {
+        if (!isMoving && currentTargetIndex > 0)
+        {
+            isMoving = true; 
+            Flip(true);
+            currentTargetIndex--;
+        }
+    }
+
     void MoverRico()
     {
         // Move o rico direção à coordenada atual

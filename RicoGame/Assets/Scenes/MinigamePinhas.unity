@@ -1653,6 +1653,7 @@ GameObject:
   - component: {fileID: 349839455}
   - component: {fileID: 349839457}
   - component: {fileID: 349839456}
+  - component: {fileID: 349839458}
   m_Layer: 0
   m_Name: capivara
   m_TagString: Capivara
@@ -1863,6 +1864,22 @@ MonoBehaviour:
   healAmount: 1
   pineCones: 0
   uiPinhas: {fileID: 1739588366}
+--- !u!114 &349839458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349839448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bacb4687094ecb4daab4a0aa6f29307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  minMoveDistance: 0.1
+  targetPosition: {x: 0, y: 0, z: 0}
+  isMoving: 0
 --- !u!1 &350756741
 GameObject:
   m_ObjectHideFlags: 0
