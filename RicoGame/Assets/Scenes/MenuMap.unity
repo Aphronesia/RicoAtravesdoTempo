@@ -486,7 +486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lvPop: {fileID: 1600987832}
-  rig: {fileID: 0}
   speed: 6
   distance: 0
 --- !u!61 &433217178
@@ -2745,9 +2744,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1780753723}
-        m_TargetAssemblyTypeName: Game.SaveLoadSystem, Assembly-CSharp
-        m_MethodName: SaveGameData
+      - m_Target: {fileID: 2114919194}
+        m_TargetAssemblyTypeName: MenuMap.ControlUIMap, Assembly-CSharp
+        m_MethodName: SaveData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2917,6 +2916,8 @@ MonoBehaviour:
   runtimeGameData:
     levelCompleted: 0
     menuMapRico: 0
+  hasSettingsData: 0
+  hasGameData: 0
 --- !u!1 &1813590890
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,9 +3531,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1780753723}
-        m_TargetAssemblyTypeName: Game.SaveLoadSystem, Assembly-CSharp
-        m_MethodName: LoadGameData
+      - m_Target: {fileID: 2114919194}
+        m_TargetAssemblyTypeName: MenuMap.ControlUIMap, Assembly-CSharp
+        m_MethodName: LoadData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

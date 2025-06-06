@@ -81,12 +81,12 @@ namespace Home2.UI{
             if (!_hasGameData){
                 _panelTransition.alpha = 0f;
                 _saveLoadSystem.ClearRuntimeData();
-                StartCoroutine(UITransition());
+                StartCoroutine(UITransition(1));
                 return;
             }
             if (_hasGameData){
                 _panelTransition.alpha = 0f;
-                StartCoroutine(UITransition());
+                StartCoroutine(UITransition(1));
             }
         }
         // Chamado pelo botão "Continue" na UI
@@ -95,11 +95,12 @@ namespace Home2.UI{
             if (_hasGameData){
                 _panelTransition.alpha = 0f;
                 _saveLoadSystem.ContinueGame();
-                StartCoroutine(UITransition());
+                StartCoroutine(UITransition(2));
             }
+            
         }
 
-        IEnumerator UITransition(){
+        IEnumerator UITransition(int scene){
             float startAlpha = _panelTransition.alpha;
             float time = 0f;
             while (time < transitionDuration){
@@ -111,7 +112,7 @@ namespace Home2.UI{
             _panelTransition.interactable = true;
             _panelTransition.blocksRaycasts = true;
             
-            _controlScene.ChangeScene(1);
+            _controlScene.ChangeScene(scene);
         }
         // Chamado pelo botão "Settings" na UI.
         public void OpenSettingsMenu(){
