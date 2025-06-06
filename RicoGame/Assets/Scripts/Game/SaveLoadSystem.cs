@@ -18,6 +18,7 @@ namespace Game
         private string _pathSettings;
         private string _pathGame;
 
+        [SerializeField] private bool pathInAssets;
         public static event Action OnLoadGame;
 
         private void Awake(){
@@ -28,9 +29,17 @@ namespace Game
                 DontDestroyOnLoad(gameObject);
             }
 
+            if (pathInAssets) {
+                _pathSettings = Path.Combine(Application.dataPath, "/Saves/SettingsData.json");
+                _pathGame = Path.Combine(Application.dataPath, "/Saves/GameData.json");
+                Debug.Log("Vai ser salvo nos assets");
+            }
+            else {
+                _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
+                _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
+                Debug.Log("Vai ser salvo na AppData");
+            }
             CreateFolders();
-            _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
-            _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
 
             settingsData = new SettingsData();
             gameData = new GameData();
@@ -45,7 +54,6 @@ namespace Game
             LoadGameData();
         }
         
-        
         private static void CreateFolders(){
             string basePath = Application.persistentDataPath;
             string folderName = "Saves";
@@ -59,7 +67,6 @@ namespace Game
             catch (Exception ex){
                 Debug.LogError($"[Erro] {ex.Message}");
             }
-
         }
 
         public void SaveSettingsData(){
