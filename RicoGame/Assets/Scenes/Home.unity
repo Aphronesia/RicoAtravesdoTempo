@@ -1081,7 +1081,7 @@ MonoBehaviour:
     menuMapRico: 0
   hasSettingsData: 0
   hasGameData: 0
-  pathInAssets: 1
+  pathInAssets: 0
 --- !u!4 &687213461
 Transform:
   m_ObjectHideFlags: 0

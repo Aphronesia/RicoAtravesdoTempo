@@ -29,7 +29,7 @@ public class ScoreboardJson //esse codigo cria o txt do scoreboard da faze das p
             // Cria o arquivo de salvamento (caminho do arquivo, variavel a ser salva)
             File.WriteAllText(outputPath, json);
 
-            Debug.Log("Arquivo salvo em: " + outputPath);
+            //Debug.Log("Arquivo salvo em: " + outputPath);
         }
         catch (Exception e) // se der erro 
         {

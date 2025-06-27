@@ -157,7 +157,7 @@ public class Rico : MonoBehaviour
     {
         if (ricoDied) return; // Se está morto, não pode ser curado
         heart = Mathf.Min(heart + healAmount, maxHealth); // Cura sem ultrapassar o máximo
-        Debug.Log("Vida atual: " + heart);
+        //Debug.Log("Vida atual: " + heart);
     }
       
 }

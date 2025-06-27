@@ -76,4 +76,7 @@ public class ControleUITrem : MonoBehaviour
     {
         controlScenes.ReturnHome();
     }
+    public void ReturnMenuMap(){
+        controlScenes.ReturnMenuMap();
+    }
 }

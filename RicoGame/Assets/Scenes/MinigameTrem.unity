@@ -3432,7 +3432,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 170360108}
         m_TargetAssemblyTypeName: ControleUITrem, Assembly-CSharp
-        m_MethodName: ReturnHome
+        m_MethodName: ReturnMenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26192,7 +26192,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 170360108}
         m_TargetAssemblyTypeName: ControleUITrem, Assembly-CSharp
-        m_MethodName: ReturnHome
+        m_MethodName: ReturnMenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

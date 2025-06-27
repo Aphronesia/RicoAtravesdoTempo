@@ -48,7 +48,7 @@ namespace Game{
         }
         public void Pause(bool pause){
             Time.timeScale = pause ? 0f : 1f;
-            Debug.Log($"pause {pause}");
+            //Debug.Log($"pause {pause}");
         }
     }
 }

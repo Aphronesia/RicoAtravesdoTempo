@@ -29,15 +29,17 @@ namespace Game
                 DontDestroyOnLoad(gameObject);
             }
 
+            // falso para salvar na app datra
+            pathInAssets = false;
             if (pathInAssets) {
                 _pathSettings = Path.Combine(Application.dataPath, "/Saves/SettingsData.json");
                 _pathGame = Path.Combine(Application.dataPath, "/Saves/GameData.json");
-                Debug.Log("Vai ser salvo nos assets");
+                //Debug.Log("Vai ser salvo nos assets");
             }
             else {
                 _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
                 _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
-                Debug.Log("Vai ser salvo na AppData");
+                //Debug.Log("Vai ser salvo na AppData");
             }
             CreateFolders();
 
@@ -72,7 +74,7 @@ namespace Game
         public void SaveSettingsData(){
             string json = JsonUtility.ToJson(settingsData, true);
             File.WriteAllText(_pathSettings, json);
-            Debug.Log("salvo em = " + _pathSettings);
+            //Debug.Log("salvo em = " + _pathSettings);
             hasSettingsData = true;
         }
 
@@ -89,7 +91,7 @@ namespace Game
                 else{
                     hasSettingsData = false;
                     SaveSettingsData();
-                    Debug.Log("primeiro save settings");
+                    //Debug.Log("primeiro save settings");
                 }
             }
             catch (Exception ex){
@@ -148,7 +150,7 @@ namespace Game
                 }
             }
             
-            Debug.Log("todos os arquivos deletados");
+            //Debug.Log("todos os arquivos deletados");
             _controlScenes.RestartGame();
         }
 
