@@ -34,6 +34,11 @@ namespace Game{
             Time.timeScale = 1f;
             SceneManager.LoadScene("Home");
         }
+        public void ReturnMenuMap()
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("MenuMap");
+        }
         public void QuitGame()
         {
             Application.Quit();

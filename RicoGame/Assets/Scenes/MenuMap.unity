@@ -2332,13 +2332,13 @@ MonoBehaviour:
     sceneIndex: -1
   - name: 'Pinhas '
     description: Pegue pinhas
-    sceneIndex: 2
+    sceneIndex: 3
   - name: Trem
     description: Corra !
-    sceneIndex: 3
+    sceneIndex: 4
   - name: Beco do Guaxinim
     description: Lute !
-    sceneIndex: 4
+    sceneIndex: 5
 --- !u!225 &1600987833
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2918,6 +2918,7 @@ MonoBehaviour:
     menuMapRico: 0
   hasSettingsData: 0
   hasGameData: 0
+  pathInAssets: 0
 --- !u!1 &1813590890
 GameObject:
   m_ObjectHideFlags: 0

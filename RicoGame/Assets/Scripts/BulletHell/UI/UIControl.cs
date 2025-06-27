@@ -74,6 +74,11 @@ namespace BulletHell.UI{
         public void Home(){
             controlScenes.ReturnHome();
         }
+
+        public void MenuMap()
+        {
+            controlScenes.ReturnMenuMap();
+        }
         public void Quit(){
             controlScenes.QuitGame();
         }

@@ -152,6 +152,10 @@ public class ControleUI : MonoBehaviour
         controlScenes.ReturnHome();
     }
 
+    public void ReturnMenuMap()
+    {
+        controlScenes.ReturnMenuMap();
+    }
     public void QuitGame(){
         controlScenes.QuitGame();
     }

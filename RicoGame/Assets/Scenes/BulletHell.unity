@@ -4077,8 +4077,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 726660990}
-        m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: Home
+        m_TargetAssemblyTypeName: BulletHell.UI.UIControl, Assembly-CSharp
+        m_MethodName: MenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4415,8 +4415,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 726660990}
-        m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: Quit
+        m_TargetAssemblyTypeName: BulletHell.UI.UIControl, Assembly-CSharp
+        m_MethodName: MenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5723,8 +5723,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 726660990}
-        m_TargetAssemblyTypeName: UIControl, Assembly-CSharp
-        m_MethodName: Home
+        m_TargetAssemblyTypeName: BulletHell.UI.UIControl, Assembly-CSharp
+        m_MethodName: MenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

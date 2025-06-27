@@ -1188,7 +1188,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98024915}
         m_TargetAssemblyTypeName: ControleUI, Assembly-CSharp
-        m_MethodName: ReturnHome
+        m_MethodName: ReturnMenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1400,7 +1400,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98024915}
         m_TargetAssemblyTypeName: ControleUI, Assembly-CSharp
-        m_MethodName: ReturnHome
+        m_MethodName: ReturnMenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1876,10 +1876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bacb4687094ecb4daab4a0aa6f29307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  minMoveDistance: 0.1
-  targetPosition: {x: 0, y: 0, z: 0}
-  isMoving: 0
 --- !u!1 &350756741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,7 +2883,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98024915}
         m_TargetAssemblyTypeName: ControleUI, Assembly-CSharp
-        m_MethodName: ReturnHome
+        m_MethodName: ReturnMenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3409,7 +3405,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98024915}
         m_TargetAssemblyTypeName: ControleUI, Assembly-CSharp
-        m_MethodName: ReturnHome
+        m_MethodName: ReturnMenuMap
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
