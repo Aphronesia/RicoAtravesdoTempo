@@ -29,13 +29,13 @@ namespace MenuMap{
             
             GetLevels();
 
-            if (_saveLoadSystem.hasGameData){
-                Load();
-                OnTarget?.Invoke(_target, true);
-                return;
-            }
-            _target = levels[0].objLevel.transform.position;
+            
+            Load();
             OnTarget?.Invoke(_target, true);
+            return;
+            
+            //_target = levels[0].objLevel.transform.position;
+            //OnTarget?.Invoke(_target, true);
             
         }
         private void GetLevels(){
@@ -48,13 +48,13 @@ namespace MenuMap{
                 }
             }
             levels[0].played = true;
-            if (_saveLoadSystem.hasGameData){
+            
                 for (int i = 0; i <= _saveLoadSystem.runtimeGameData.levelCompleted; i++){
                     levels[i+1].played = true;
                 }
                 return;
-            }
-            levels[1].played = true;
+            
+            //levels[1].played = true;
         }
         private void Update() {
             GetClick();

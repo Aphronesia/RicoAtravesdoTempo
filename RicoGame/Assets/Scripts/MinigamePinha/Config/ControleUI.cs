@@ -22,9 +22,9 @@ public class ControleUI : MonoBehaviour
      [Header("Buttons")]
      public Button configButton; 
 
-     private bool startGame = false; 
-     
-     
+     private bool startGame = false;
+
+     private SaveLoadSystem _saveLoadSystem;
 
     private void Start()
     {
@@ -39,7 +39,12 @@ public class ControleUI : MonoBehaviour
         if (gameOverPanel != null) gameOverPanel.SetActive(false);
         if (pausePanel != null) pausePanel.SetActive(false);
         if (startPanel != null) startPanel.SetActive(true);
-  
+        
+        
+        GameObject saveLoadManager =  GameObject.Find("SaveLoadManager");
+        if (saveLoadManager != null){
+            _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
+        }
     }
      private void Awake()
     {
@@ -72,8 +77,9 @@ public class ControleUI : MonoBehaviour
         }
     }
 
-    private void ShowWinPanel()
-    {
+    public void ShowWinPanel() {
+        _saveLoadSystem.runtimeGameData.levelCompleted = 3;
+        _saveLoadSystem.runtimeGameData.menuMapRico = 1;
         if (winPanel != null){
             winPanel.SetActive(true);
             Time.timeScale = 0f; // Pausa o jogo
