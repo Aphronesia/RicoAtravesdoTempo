@@ -11,6 +11,8 @@ namespace MenuMap {
         private LevelManager _lvManager;
 
         private bool _pause;
+        
+        
         private void Start() {
             TakeComponents();
             
@@ -20,6 +22,7 @@ namespace MenuMap {
             _controlScenes.ChangeScene(index);
         }
 
+        
         public void SaveData() {
             _saveLoadSystem.SaveGameData();
         }
@@ -27,6 +30,8 @@ namespace MenuMap {
         public void LoadData() {
             _saveLoadSystem.LoadGameData();
         }
+        
+        
         private void TakeComponents() {
             ControlScenes scenesController = FindObjectOfType<ControlScenes>();
             if (scenesController != null){

@@ -30,18 +30,20 @@ namespace Game
             }
 
             // falso para salvar na app datra
-            pathInAssets = false;
+            pathInAssets = true;
             if (pathInAssets) {
                 _pathSettings = Path.Combine(Application.dataPath, "/Saves/SettingsData.json");
                 _pathGame = Path.Combine(Application.dataPath, "/Saves/GameData.json");
+                CreateFolders(true);
                 //Debug.Log("Vai ser salvo nos assets");
             }
             else {
                 _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
                 _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
+                CreateFolders(false);
                 //Debug.Log("Vai ser salvo na AppData");
             }
-            CreateFolders();
+            
 
             settingsData = new SettingsData();
             gameData = new GameData();
@@ -56,8 +58,14 @@ namespace Game
             LoadGameData();
         }
         
-        private static void CreateFolders(){
-            string basePath = Application.persistentDataPath;
+        private static void CreateFolders(bool localSave) {
+            string basePath;
+            if (localSave) {
+                basePath = Application.dataPath;
+            }
+            else {
+                basePath = Application.persistentDataPath;
+            }
             string folderName = "Saves";
             string fullPath = Path.Combine(basePath, folderName);
 
@@ -73,7 +81,14 @@ namespace Game
 
         public void SaveSettingsData(){
             string json = JsonUtility.ToJson(settingsData, true);
-            File.WriteAllText(_pathSettings, json);
+            try {
+                File.WriteAllText(_pathSettings, json);
+            }
+            catch (Exception ex) {
+                Debug.LogError($"[Erro] {ex.Message}");
+                throw;
+            }
+            
             //Debug.Log("salvo em = " + _pathSettings);
             hasSettingsData = true;
         }
@@ -90,11 +105,15 @@ namespace Game
                 }
                 else{
                     hasSettingsData = false;
+                    settingsData.volumeMaster = 0.5f;
+                    settingsData.volumeMusic = 0.5f;
+                    settingsData.effects = true;
                     SaveSettingsData();
                     //Debug.Log("primeiro save settings");
                 }
             }
             catch (Exception ex){
+                SaveSettingsData();
                 Debug.LogWarning(ex.Message);
             }
         }
@@ -116,6 +135,11 @@ namespace Game
             runtimeGameData = gameData;
             
         }
+        public void ClearRuntimeData(){
+            GameData reset =  new GameData();
+            runtimeGameData = reset;
+            Debug.Log("runtimeData Limpo");
+        }
         public void LoadGameData(){
             try{
                 if (File.Exists(_pathGame)){
@@ -127,7 +151,7 @@ namespace Game
                 }
                 else{
                     hasGameData = false;
-                    Debug.LogError("Arquivo não existe");
+                    Debug.Log("Arquivo não existe");
                 }
             }
             catch (Exception ex){
@@ -152,11 +176,6 @@ namespace Game
             
             //Debug.Log("todos os arquivos deletados");
             _controlScenes.RestartGame();
-        }
-
-        public void ClearRuntimeData(){
-            GameData reset =  new GameData();
-            runtimeGameData = reset;
         }
         private void TakeComponents(){
             Settings gameSettings = FindObjectOfType<Settings>();

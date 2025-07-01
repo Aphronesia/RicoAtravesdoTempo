@@ -98,7 +98,7 @@ namespace MenuMap{
                     _target = levels[index].objLevel.transform.position;
                     OnTarget?.Invoke(_target, false);
                     actualRico = index;
-                    _saveLoadSystem.gameData.menuMapRico = actualRico;
+                    _saveLoadSystem.runtimeGameData.menuMapRico = actualRico;
                     _lvPop.LevelExit();
                 }
             }

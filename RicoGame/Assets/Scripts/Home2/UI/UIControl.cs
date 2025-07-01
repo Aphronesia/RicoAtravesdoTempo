@@ -39,6 +39,7 @@ namespace Home2.UI{
         private bool _hasGameData;
         //Componentes
         private Settings _settings;
+        [SerializeField]
         private SaveLoadSystem _saveLoadSystem;
         private ControlScenes _controlScene;
         private void OnEnable(){
@@ -80,12 +81,12 @@ namespace Home2.UI{
         public void GameStart(){
             if (!_hasGameData){
                 _panelTransition.alpha = 0f;
-                _saveLoadSystem.ClearRuntimeData();
                 StartCoroutine(UITransition(1));
                 return;
             }
             if (_hasGameData){
                 _panelTransition.alpha = 0f;
+                _saveLoadSystem.ClearRuntimeData();
                 StartCoroutine(UITransition(1));
             }
         }
