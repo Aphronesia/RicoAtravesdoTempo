@@ -20,16 +20,9 @@ namespace MenuMap{
         private void OnDisable() {
             LevelManager.OnTarget -= Movement;
         }
-        private void Start() {
-            GameObject levelController = GameObject.Find("LevelController");
-            if (levelController != null){
-                _lvManager = levelController.GetComponent<LevelManager>();
-            }
-            GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
-            if(levelPop !=null){
-                lvPop = levelPop.GetComponent<LevelPopUp>();
-            }
-            _rig = GetComponent<Rigidbody2D>();
+        private void Start(){
+            TakeComponents();
+            
         
             _moving = true;
         }
@@ -66,6 +59,18 @@ namespace MenuMap{
                 transform.position = newTarget;
             }
             _target = newTarget;
+        }
+
+        private void TakeComponents(){
+            GameObject levelController = GameObject.Find("LevelController");
+            if (levelController != null){
+                _lvManager = levelController.GetComponent<LevelManager>();
+            }
+            GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
+            if(levelPop !=null){
+                lvPop = levelPop.GetComponent<LevelPopUp>();
+            }
+            _rig = GetComponent<Rigidbody2D>();
         }
     }
 }

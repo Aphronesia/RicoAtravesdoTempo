@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using MinigameTrem.Scoreboard;
 using TMPro;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ public class ScoreboardTremControl : MonoBehaviour
     {
         string playerName = inputField.text; //pega a string escrita no inputField
         string namePlayer = playerName.ToLower();//deixa todos os caracteres minusculos
-        int points = scoreManager.points; //pega os pontos do script universo
+        int points = 1; // scoreManager.points; //pega os pontos do script universo
         AddOrUpdateScore(namePlayer, points); 
     }
     // Adiciona um novo item, ou substitui o valor se ja existir

@@ -28,6 +28,11 @@ public class ControleUI : MonoBehaviour
 
     private void Start()
     {
+        // Rotaciona a tela 
+        // Ferle que colocou isso ;)
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        
+        
         Time.timeScale = 0f; // Começa pausado
         configButton.onClick.AddListener(OnButtonClick);
          configButton.interactable = true;

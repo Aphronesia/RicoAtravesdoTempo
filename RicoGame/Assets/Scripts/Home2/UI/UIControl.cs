@@ -62,6 +62,9 @@ namespace Home2.UI{
         }
         private void Start(){
             TakeComponents();
+            
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
+            
             offPanelPos = panelSettingRT.anchoredPosition;
             continueText.color = canNotContinue;
 

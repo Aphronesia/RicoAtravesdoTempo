@@ -29,8 +29,8 @@ namespace Game
                 DontDestroyOnLoad(gameObject);
             }
 
-            // falso para salvar na app datra
-            pathInAssets = true;
+            // falso para salvar na appdata
+            pathInAssets = false;
             if (pathInAssets) {
                 _pathSettings = Path.Combine(Application.dataPath, "/Saves/SettingsData.json");
                 _pathGame = Path.Combine(Application.dataPath, "/Saves/GameData.json");
@@ -41,7 +41,7 @@ namespace Game
                 _pathSettings = Application.persistentDataPath + "/Saves/SettingsData.json";
                 _pathGame = Application.persistentDataPath + "/Saves/GameData.json";
                 CreateFolders(false);
-                //Debug.Log("Vai ser salvo na AppData");
+                // Debug.Log("Vai ser salvo na AppData");
             }
             
 
@@ -60,12 +60,7 @@ namespace Game
         
         private static void CreateFolders(bool localSave) {
             string basePath;
-            if (localSave) {
-                basePath = Application.dataPath;
-            }
-            else {
-                basePath = Application.persistentDataPath;
-            }
+            basePath = localSave ? Application.dataPath : Application.persistentDataPath;
             string folderName = "Saves";
             string fullPath = Path.Combine(basePath, folderName);
 
@@ -120,7 +115,9 @@ namespace Game
 
         public void SaveGameData(){
             try{
-                gameData = runtimeGameData;
+                gameData.menuMapRico = runtimeGameData.menuMapRico;
+                gameData.levelCompleted = runtimeGameData.levelCompleted;
+                gameData.recordPoinsTrem =  runtimeGameData.recordPoinsTrem;
                 string json = JsonUtility.ToJson(gameData, true);
                 File.WriteAllText(_pathGame, json);
                 Debug.Log($"Salvo em = {_pathGame}");
@@ -132,8 +129,11 @@ namespace Game
         }
 
         public void ContinueGame(){
-            runtimeGameData = gameData;
-            
+            Debug.Log("continuou");
+            runtimeGameData.menuMapRico = gameData.menuMapRico;
+            runtimeGameData.levelCompleted = gameData.levelCompleted;
+            runtimeGameData.recordPoinsTrem = gameData.recordPoinsTrem;
+
         }
         public void ClearRuntimeData(){
             GameData reset =  new GameData();
@@ -199,6 +199,7 @@ namespace Game
     public class GameData{
         public int levelCompleted;
         public int menuMapRico;
+        public int recordPoinsTrem;
     }
 }
 

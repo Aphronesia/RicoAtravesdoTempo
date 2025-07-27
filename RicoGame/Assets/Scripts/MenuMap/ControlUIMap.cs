@@ -15,7 +15,7 @@ namespace MenuMap {
         
         private void Start() {
             TakeComponents();
-            
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
         }
         public void PlayLevel(){
             int index = lvPop.SceneIndex();

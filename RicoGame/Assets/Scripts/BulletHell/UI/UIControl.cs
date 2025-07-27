@@ -38,6 +38,9 @@ namespace BulletHell.UI{
             uiDead = GameObject.Find("Canvas/UIDead");
         }
         private void Start() {
+            
+            Screen.orientation = ScreenOrientation.LandscapeLeft;
+            
             controlScenes = CtrlScenes.GetComponent<ControlScenes>();
             GetUIObjects();
             if (uiStart != null){

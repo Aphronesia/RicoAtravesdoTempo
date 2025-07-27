@@ -1,42 +1,74 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Game;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
-{
-    public int points;
-    public float tempoAcumulado = 0f;
-    public bool poinsIsRunning;
-    public TMP_Text timeText;
-    public TextMeshProUGUI textMeshProUGUI;
-    public ScoreboardTremControl tremControl;
-    // Start is called before the first frame update
-    void Start()
+namespace MinigameTrem.Scoreboard{
+    public class ScoreManager : MonoBehaviour
     {
-        points = 0;
-        tempoAcumulado = 0f;
-        poinsIsRunning = false;
-    }
-    public void StartRun()
-    {
-        poinsIsRunning = true;
-    }
-    public void StopRun()
-    {
-        poinsIsRunning = false;
-    }
-    void Update()
-    {
-        if(poinsIsRunning)
+        private int _points;
+        [SerializeField]
+        private int pointsToWin;
+        private string txtPoints = "Pontos: ";
+        public float tempoAcumulado;
+        public bool poinsIsRunning;
+        public TMP_Text timeText;
+        
+        private ControleUITrem _controleUI;
+        private SaveLoadSystem _saveLoadSystem;
+
+        public static event Action OnGanhou;
+        
+        // Start is called before the first frame update
+        void Start(){
+            TakeComponents();
+            _points = 0;
+            tempoAcumulado = 0f;
+            poinsIsRunning = false;
+        }
+        public void StartRun()
         {
-            tempoAcumulado += Time.deltaTime;  // Soma o tempo decorrido
-            if (tempoAcumulado >= 0.5f)  // Verifica se 1 segundo se passou
+            poinsIsRunning = true;
+        }
+        public void StopRun()
+        {
+            poinsIsRunning = false;
+        }
+        void Update()
+        {
+            if(poinsIsRunning)
             {
-                points++;
-                tempoAcumulado = 0f;     // Reseta o contador
+                tempoAcumulado += Time.deltaTime;  // Soma o tempo decorrido
+                if (tempoAcumulado >= 0.1f)  // Verifica se 1 segundo se passou
+                {
+                    _points++;
+                    tempoAcumulado = 0f;     // Reseta o contador
+                }
+                timeText.text = txtPoints + _points.ToString();
             }
+            
+            // VITÓRIA 
+            if (_points >= pointsToWin){
+                Debug.Log("ganhouuuu");
+                StopRun();
+                OnGanhou?.Invoke();
+                if (_points > _saveLoadSystem.runtimeGameData.recordPoinsTrem){
+                    _saveLoadSystem.runtimeGameData.recordPoinsTrem = _points;
+                }
+            }
+        }
+        private void TakeComponents(){
+            GameObject saveLoadManager =  GameObject.Find("SaveLoadManager");
+            if (saveLoadManager != null){
+                _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
+            }
+
+            ControleUITrem controleUITrem = FindObjectOfType<ControleUITrem>();
+            if (controleUITrem != null){
+                _controleUI = controleUITrem.GetComponent<ControleUITrem>();
+            }
+            
         }
     }
 }
