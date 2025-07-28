@@ -3926,6 +3926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 536466548}
   - component: {fileID: 536466549}
+  - component: {fileID: 536466550}
   m_Layer: 0
   m_Name: CeilingLight (4)
   m_TagString: Untagged
@@ -3998,6 +3999,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &536466550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536466547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa143a8adeb340acce1a2570e2ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blink: 0
+  _light: {fileID: 0}
 --- !u!1 &541445403
 GameObject:
   m_ObjectHideFlags: 0
@@ -22509,6 +22524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 910316116}
   - component: {fileID: 910316117}
+  - component: {fileID: 910316118}
   m_Layer: 0
   m_Name: CeilingLight (1)
   m_TagString: Untagged
@@ -22581,6 +22597,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &910316118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910316115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa143a8adeb340acce1a2570e2ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blink: 0
+  _light: {fileID: 0}
 --- !u!1 &929300202
 GameObject:
   m_ObjectHideFlags: 0
@@ -22792,8 +22822,6 @@ MonoBehaviour:
   - {fileID: 2832023160323495328, guid: 815fa1a24e4e5394d88e67bbc2c75eef, type: 3}
   - {fileID: 7129188073686777246, guid: 2becd5fa30d18f44c8bd41a26fb81fba, type: 3}
   - {fileID: 7047040830741810201, guid: 3b457dffc922d46489744bb4bc9cdefc, type: 3}
-  - {fileID: 7514524538894352402, guid: 774e024a9490fc14fa8b7056e50618d0, type: 3}
-  - {fileID: 7514524538894352402, guid: 774e024a9490fc14fa8b7056e50618d0, type: 3}
   - {fileID: 7514524538894352402, guid: 774e024a9490fc14fa8b7056e50618d0, type: 3}
   Collectible: []
   PowerUp:
@@ -27888,6 +27916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796170449}
   - component: {fileID: 1796170450}
+  - component: {fileID: 1796170451}
   m_Layer: 0
   m_Name: CeilingLight (14)
   m_TagString: Untagged
@@ -27960,6 +27989,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1796170451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796170448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa143a8adeb340acce1a2570e2ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blink: 0
+  _light: {fileID: 0}
 --- !u!1 &1807581077
 GameObject:
   m_ObjectHideFlags: 0
@@ -28790,6 +28833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959086857}
   - component: {fileID: 1959086858}
+  - component: {fileID: 1959086859}
   m_Layer: 0
   m_Name: CeilingLight (15)
   m_TagString: Untagged
@@ -28862,6 +28906,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1959086859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959086856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa143a8adeb340acce1a2570e2ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blink: 0
+  _light: {fileID: 0}
 --- !u!1 &1963922654
 GameObject:
   m_ObjectHideFlags: 0
@@ -29136,6 +29194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020166361}
   - component: {fileID: 2020166362}
+  - component: {fileID: 2020166363}
   m_Layer: 0
   m_Name: CeilingLight (8)
   m_TagString: Untagged
@@ -29208,6 +29267,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &2020166363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020166360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814fa143a8adeb340acce1a2570e2ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blink: 0
+  _light: {fileID: 0}
 --- !u!1 &2020789714
 GameObject:
   m_ObjectHideFlags: 0

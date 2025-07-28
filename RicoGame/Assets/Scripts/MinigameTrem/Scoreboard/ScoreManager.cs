@@ -50,7 +50,7 @@ namespace MinigameTrem.Scoreboard{
             
             // VITÓRIA 
             if (_points >= pointsToWin){
-                Debug.Log("ganhouuuu");
+                //Debug.Log("ganhouuuu");
                 StopRun();
                 OnGanhou?.Invoke();
                 if (_points > _saveLoadSystem.runtimeGameData.recordPoinsTrem){

@@ -36,6 +36,8 @@ public class Spawn : MonoBehaviour
             //Debug.Log("colidiu com SpawnCollectible");
             Spawnar(2);
         }
+
+        Debug.Log("Colidiu com" + colisionTrigger.name);
     }
     void Movimento()
     {
