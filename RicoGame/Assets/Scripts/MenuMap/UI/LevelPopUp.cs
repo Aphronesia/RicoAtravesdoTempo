@@ -15,18 +15,20 @@ public class LevelPopUp : MonoBehaviour
     public int actualSceneIndex;
     private Vector3 pos;
     private CanvasGroup canvasGroup;   
+    
+    private Image _image;
     public List<LevelPop> levels = new List<LevelPop>();
     [System.Serializable]
     public class LevelPop{
         public string name;
         public string description;
         public int sceneIndex;
+        public Sprite background;
     }
-    private void Start() {
-        ricopos = GameObject.Find("Rico");
-        if (canvasGroup == null){
-            canvasGroup = GetComponent<CanvasGroup>();
-        }
+    private void Start()
+    {
+        TakeComponents();
+        
     }
     private void Update() {
         pos = new Vector3 (ricopos.transform.position.x + distanceHorizontal, ricopos.transform.position.y, transform.position.z);
@@ -39,6 +41,7 @@ public class LevelPopUp : MonoBehaviour
         actualSceneIndex = levels[index].sceneIndex;
         if (tmp != null){
             tmp.text = levels[index].name;
+            _image.sprite = levels[index].background;
             //crasha caso nao exista um elemento no valor do index
         }
     }
@@ -47,5 +50,14 @@ public class LevelPopUp : MonoBehaviour
     }
     public int SceneIndex(){
         return actualSceneIndex;
+    }
+
+    private void TakeComponents()
+    {
+        ricopos = GameObject.Find("Rico");
+        if (canvasGroup == null){
+            canvasGroup = GetComponent<CanvasGroup>();
+        }
+        _image = GetComponent<Image>();
     }
 }
