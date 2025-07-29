@@ -76,8 +76,11 @@ namespace MinigameTrem{
             }
             if (other.gameObject.CompareTag("PowerUp1"))
             {
-                Destroy(other.gameObject);
-                StartCoroutine(InvisibilityTime());
+                PowerUps.IPowerUps powerUps = other.gameObject.GetComponent<PowerUps.IPowerUps>();
+                if (powerUps != null) {
+                    powerUps.Effect();
+                }
+                
             }
             if (invisibility)
             {
@@ -147,7 +150,7 @@ namespace MinigameTrem{
                 transform.position = PosicaoInicial;
             }
         }
-        private IEnumerator InvisibilityTime()
+        public IEnumerator InvisibilityTime()
         {
             invisibility = true;
             color.a = 0.5f;
