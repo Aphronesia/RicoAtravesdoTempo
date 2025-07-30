@@ -104,6 +104,9 @@ namespace MinigameTrem{
                         Morreu();
                     }
                 }
+                if (other.gameObject.CompareTag("Obstacle")) {
+                    Morreu();
+                }
                 //if (other.gameObject.CompareTag("TopObstacle"))
                 //{
                 //   chao = true;

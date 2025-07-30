@@ -5402,7 +5402,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 655232467213814626, guid: 54277daf4418ef644bc17360b3e989b4, type: 3}
-  player_Status: {fileID: 1696997754}
 --- !u!114 &1702709702
 MonoBehaviour:
   m_ObjectHideFlags: 0

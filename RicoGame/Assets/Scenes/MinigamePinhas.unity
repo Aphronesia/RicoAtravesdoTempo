@@ -436,6 +436,7 @@ RectTransform:
   - {fileID: 1393891338}
   - {fileID: 1653342958}
   - {fileID: 1103737989}
+  - {fileID: 1482653100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1654,9 +1655,8 @@ GameObject:
   - component: {fileID: 349839455}
   - component: {fileID: 349839457}
   - component: {fileID: 349839456}
-  - component: {fileID: 349839458}
   m_Layer: 0
-  m_Name: capivara
+  m_Name: Rico
   m_TagString: Capivara
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1822,8 +1822,10 @@ MonoBehaviour:
   impulse: 7
   RicoDead: {fileID: 21300000, guid: a9d26a66d9fd39241a179ed7edac145b, type: 3}
   heart: 0
-  maxHealth: 3
+  maxHealth: 4
   ricoDied: 0
+  healthmanager: {fileID: 1482653099}
+  healthHeart: {fileID: 1482653101}
 --- !u!95 &349839456
 Animator:
   serializedVersion: 5
@@ -1865,18 +1867,6 @@ MonoBehaviour:
   healAmount: 1
   pineCones: 0
   uiPinhas: {fileID: 1739588366}
---- !u!114 &349839458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349839448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bacb4687094ecb4daab4a0aa6f29307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &350756741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4037,10 +4027,10 @@ RectTransform:
   - {fileID: 1739588365}
   m_Father: {fileID: 56319268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -563.95, y: 214}
-  m_SizeDelta: {x: 152.1, y: 83.38}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 106.70001, y: -331.4}
+  m_SizeDelta: {x: 152.1, y: 83.380005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163913250
 MonoBehaviour:
@@ -4594,6 +4584,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393891337}
   m_CullTransparentMesh: 1
+--- !u!1 &1482653099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482653100}
+  - component: {fileID: 1482653102}
+  - component: {fileID: 1482653101}
+  m_Layer: 5
+  m_Name: HealthHearts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1482653100
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482653099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 56319268}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 305.2, y: -120.399994}
+  m_SizeDelta: {x: 450, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1482653101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482653099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e67bd0438e83a948b5b1cc71afce2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rico: {fileID: 349839448}
+  heartPrefab: {fileID: 9057275324606029798, guid: 69aba3ff09604fb49b2b1b890e2f89e6, type: 3}
+--- !u!114 &1482653102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482653099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 1.8, y: 1.8}
+  m_Spacing: {x: 145, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1568905608
 GameObject:
   m_ObjectHideFlags: 0

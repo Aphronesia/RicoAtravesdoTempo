@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using BulletHell.Player;
+using Game.Player;
 using UnityEngine;
 
 public class HealthHeartManager : MonoBehaviour
 {
+    public GameObject Rico;
     public GameObject heartPrefab;
-    public Player_Status player_Status;
+    public IPlayer_Status player_Status;
     List<HealthHeart> hearts = new List<HealthHeart>();
 
     private void OnEnable() {
@@ -15,19 +18,23 @@ public class HealthHeartManager : MonoBehaviour
         Player_Status.OnPlayerDamaged -= DrawHearts;
     }
     private void Start() {
+        TakeComponents();
+        if (player_Status == null) {
+            Debug.LogError("fudeu");
+        }
         DrawHearts();
     }
     public void DrawHearts(){
         ClearHearts(); 
         //determinar quantos corações fazer no total
         //baseado na vida total (healthMax)
-        float maxHealthRemainder = player_Status.healthMax % 2;
-        int heartsToMake = (int)((player_Status.healthMax / 2) + maxHealthRemainder);
+        float maxHealthRemainder = player_Status.IhealthMax % 2;
+        int heartsToMake = (int)((player_Status.IhealthMax / 2) + maxHealthRemainder);
         for (int i = 0; i < heartsToMake; i++){
             CreateEmptyHeart();
         }
         for (int i = 0; i < hearts.Count; i++ ){
-            int heartStatusRemainder = (int)Mathf.Clamp(player_Status.health - ( i*2 ), 0, 2 );
+            int heartStatusRemainder = (int)Mathf.Clamp(player_Status.Ihealth - ( i*2 ), 0, 2 );
             hearts[i].SetHeartImage((HeartStatus)heartStatusRemainder);
         }
     }
@@ -50,5 +57,14 @@ public class HealthHeartManager : MonoBehaviour
             Destroy(t.gameObject);
         }
         hearts = new List<HealthHeart>();
+    }
+
+    private void TakeComponents() {
+        if (Rico is null) {
+            Rico = GameObject.Find("Rico");
+        }
+        if (Rico is not null) {
+            player_Status = Rico.GetComponent<IPlayer_Status>();
+        }
     }
 }

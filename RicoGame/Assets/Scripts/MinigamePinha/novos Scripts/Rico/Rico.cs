@@ -1,8 +1,9 @@
 using System;
+using Game.Player;
 using UnityEngine;
 
 
-public class Rico : MonoBehaviour
+public class Rico : MonoBehaviour, IPlayer_Status
 {
     Rigidbody2D rig;
     public SpriteRenderer spriteRenderer;
@@ -13,10 +14,21 @@ public class Rico : MonoBehaviour
     private Animator anima;
     public Sprite RicoDead;
     public int heart;  
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private int maxHealth = 4;
     public bool ricoDied = false;
-     
+    
+    public int Ihealth {
+        get => heart;
+        set => heart = value;
+    }
 
+    public int IhealthMax {
+        get => maxHealth; 
+        set => maxHealth = value;
+    }
+    public static event Action OnPlayerDamaged;
+    public GameObject healthmanager;
+    public HealthHeartManager healthHeart;
     void Start()
     {
         ricoDied = false;
@@ -25,7 +37,7 @@ public class Rico : MonoBehaviour
          if (targetPositions.Length > 0){
             transform.position = targetPositions[0];
         }
-
+        healthHeart = healthmanager.GetComponent<HealthHeartManager>();
         anima = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         
@@ -149,6 +161,8 @@ public class Rico : MonoBehaviour
     {
           if (ricoDied) return; // Se já morreu, não toma mais dano
         heart = Mathf.Max(0, heart - 1); // Garante que a vida não fique negativa
+        OnPlayerDamaged?.Invoke();
+        healthHeart.DrawHearts();
         if (heart <= 0){
             Died();
         }
@@ -158,6 +172,7 @@ public class Rico : MonoBehaviour
         if (ricoDied) return; // Se está morto, não pode ser curado
         heart = Mathf.Min(heart + healAmount, maxHealth); // Cura sem ultrapassar o máximo
         //Debug.Log("Vida atual: " + heart);
+        healthHeart.DrawHearts();
     }
       
 }
