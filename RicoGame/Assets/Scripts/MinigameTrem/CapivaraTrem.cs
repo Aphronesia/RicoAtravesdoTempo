@@ -93,14 +93,21 @@ namespace MinigameTrem{
             }
             else if(!invisibility)
             {
-                if (other.gameObject.CompareTag("Obstacle"))
-                {
-                    Morreu();
-                }
                 if (other.gameObject.CompareTag("TopObstacle"))
                 {
-                    chao = true;
+                    ContactPoint2D[] contacts = other.contacts;
+                    Vector2 normal = contacts[0].normal;
+                    if (normal.y > 0.5f){
+                        chao = true;
+                    }
+                    else if (Mathf.Abs(normal.x) > 0.5f){
+                        Morreu();
+                    }
                 }
+                //if (other.gameObject.CompareTag("TopObstacle"))
+                //{
+                //   chao = true;
+                //}
             }
         }
         private void OnTriggerEnter2D(Collider2D other) {
@@ -150,7 +157,11 @@ namespace MinigameTrem{
                 transform.position = PosicaoInicial;
             }
         }
-        public IEnumerator InvisibilityTime()
+
+        public void TriggerInvisibility(){
+            StartCoroutine(InvisibilityTime());
+        }
+        private IEnumerator InvisibilityTime()
         {
             invisibility = true;
             color.a = 0.5f;

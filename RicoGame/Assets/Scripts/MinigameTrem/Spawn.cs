@@ -13,7 +13,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PodeSpawn = true;
+        PodeSpawn = true; //true
         NumObstacle = Obstacle.Length;
         NumCollectible = Collectible.Length;
         NumPower = PowerUp.Length;
@@ -36,8 +36,7 @@ public class Spawn : MonoBehaviour
             //Debug.Log("colidiu com SpawnCollectible");
             Spawnar(2);
         }
-
-        Debug.Log("Colidiu com" + colisionTrigger.name);
+        //Debug.Log("Colidiu com" + colisionTrigger.name);
     }
     void Movimento()
     {

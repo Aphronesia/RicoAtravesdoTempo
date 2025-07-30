@@ -9,8 +9,8 @@ namespace MinigameTrem.PowerUps {
             TakeComponents();
         }
 
-        public void Effect() {
-            StartCoroutine(_capivaraTrem.InvisibilityTime());
+        public void Effect(){
+            _capivaraTrem.TriggerInvisibility();
             Destroy(gameObject);
         }
 
