@@ -7,7 +7,5 @@ namespace Game.Player {
         int Ihealth { get; set; }
         int IhealthMax { get; set; }
 
-        static event Action OnPlayerDamaged;
-
     }
 }

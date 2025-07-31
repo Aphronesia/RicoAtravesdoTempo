@@ -5401,6 +5401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e67bd0438e83a948b5b1cc71afce2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rico: {fileID: 1696997753}
   heartPrefab: {fileID: 655232467213814626, guid: 54277daf4418ef644bc17360b3e989b4, type: 3}
 --- !u!114 &1702709702
 MonoBehaviour:

@@ -26,7 +26,7 @@ public class Rico : MonoBehaviour, IPlayer_Status
         get => maxHealth; 
         set => maxHealth = value;
     }
-    public static event Action OnPlayerDamaged;
+    
     public GameObject healthmanager;
     public HealthHeartManager healthHeart;
     void Start()
@@ -161,7 +161,6 @@ public class Rico : MonoBehaviour, IPlayer_Status
     {
           if (ricoDied) return; // Se já morreu, não toma mais dano
         heart = Mathf.Max(0, heart - 1); // Garante que a vida não fique negativa
-        OnPlayerDamaged?.Invoke();
         healthHeart.DrawHearts();
         if (heart <= 0){
             Died();
