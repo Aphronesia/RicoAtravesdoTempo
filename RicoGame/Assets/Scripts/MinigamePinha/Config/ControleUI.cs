@@ -83,7 +83,9 @@ public class ControleUI : MonoBehaviour
     }
 
     public void ShowWinPanel() {
-        _saveLoadSystem.runtimeGameData.levelCompleted = 1;
+        if (_saveLoadSystem.runtimeGameData.levelCompleted <= 1){
+            _saveLoadSystem.runtimeGameData.levelCompleted = 1;
+        }
         _saveLoadSystem.runtimeGameData.menuMapRico = 1;
         if (winPanel != null){
             winPanel.SetActive(true);
