@@ -14,7 +14,8 @@ namespace MinigameTrem.Scoreboard{
         public float tempoAcumulado;
         public bool poinsIsRunning;
         public TMP_Text timeText;
-        
+        public float cooldown; 
+            
         private ControleUITrem _controleUI;
         private SaveLoadSystem _saveLoadSystem;
 
@@ -26,6 +27,7 @@ namespace MinigameTrem.Scoreboard{
             _points = 0;
             tempoAcumulado = 0f;
             poinsIsRunning = false;
+            cooldown = 0.1f;
         }
         public void StartRun()
         {
@@ -40,7 +42,7 @@ namespace MinigameTrem.Scoreboard{
             if(poinsIsRunning)
             {
                 tempoAcumulado += Time.deltaTime;  // Soma o tempo decorrido
-                if (tempoAcumulado >= 0.1f)  // Verifica se 1 segundo se passou
+                if (tempoAcumulado >= cooldown)  // Verifica se 1 segundo se passou
                 {
                     _points++;
                     tempoAcumulado = 0f;     // Reseta o contador
