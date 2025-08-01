@@ -21,6 +21,7 @@ namespace MinigameTrem.PowerUps {
         private IEnumerator IEEffect(){
             Time.timeScale = timeScale;
             _spriteRenderer.enabled = false;
+            transform.position = new Vector3(transform.position.x, -50f, transform.position.z);
             yield return new WaitForSeconds(cooldown);
             Time.timeScale = 1f;
             Destroy(gameObject);

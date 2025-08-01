@@ -80,37 +80,38 @@ namespace MinigameTrem{
                 if (powerUps != null) {
                     powerUps.Effect();
                 }
-                
+                return;
             }
-            if (invisibility)
+            switch (invisibility)
             {
-                if (other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("TopObstacle"))
-                {
-                    Debug.Log("ignorou colisao");
-                    BoxCollider2D collider = other.collider as BoxCollider2D;
-                    Physics2D.IgnoreCollision(playerCollider, collider);
-                }
-            }
-            else if(!invisibility)
-            {
-                if (other.gameObject.CompareTag("TopObstacle"))
-                {
-                    ContactPoint2D[] contacts = other.contacts;
-                    Vector2 normal = contacts[0].normal;
-                    if (normal.y > 0.5f){
-                        chao = true;
+                case true:
+                    if (other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("TopObstacle"))
+                    {
+                        Debug.Log("ignorou colisao");
+                        BoxCollider2D collider = other.collider as BoxCollider2D;
+                        Physics2D.IgnoreCollision(playerCollider, collider);
                     }
-                    else if (Mathf.Abs(normal.x) > 0.5f){
+                    break;
+                case false:
+                    if (other.gameObject.CompareTag("TopObstacle"))
+                    {
+                        ContactPoint2D[] contacts = other.contacts;
+                        Vector2 normal = contacts[0].normal;
+                        if (normal.y > 0.5f){
+                            chao = true;
+                        }
+                        else if (Mathf.Abs(normal.x) > 0.5f){
+                            Morreu();
+                        }
+                    }
+                    if (other.gameObject.CompareTag("Obstacle")) {
                         Morreu();
                     }
-                }
-                if (other.gameObject.CompareTag("Obstacle")) {
-                    Morreu();
-                }
-                //if (other.gameObject.CompareTag("TopObstacle"))
-                //{
-                //   chao = true;
-                //}
+                    //if (other.gameObject.CompareTag("TopObstacle"))
+                    //{
+                    //   chao = true;
+                    //}
+                    break;
             }
         }
         private void OnTriggerEnter2D(Collider2D other) {

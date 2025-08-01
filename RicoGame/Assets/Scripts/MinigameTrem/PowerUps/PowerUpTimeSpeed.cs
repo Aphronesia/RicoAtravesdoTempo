@@ -27,6 +27,7 @@ namespace MinigameTrem.PowerUps
             _scoreManager.cooldown = 0.05f;
             timeText.color = Color.yellow;
             _spriteRenderer.enabled = false;
+            transform.position = new Vector3(transform.position.x, -50f, transform.position.z);
             yield return new WaitForSeconds(cooldown);
             _scoreManager.cooldown = 0.1f;
             timeText.color = Color.white;
