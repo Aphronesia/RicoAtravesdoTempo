@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Game;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Serialization;
 
 namespace UIGeral {
@@ -30,6 +31,23 @@ namespace UIGeral {
 
         [SerializeField] private int index;
         
+        [Header("Painel de configurações")]
+        [SerializeField]
+        private RectTransform panelSettingRT;
+        [SerializeField]
+        private Slider sMusic;
+        [SerializeField]
+        private Slider sMaster;
+        [SerializeField]
+        private Toggle tEffects;
+        [SerializeField]
+        private Vector2 onSettingsPos;
+        [SerializeField]
+        private Vector2 offSettingsPos;
+        [SerializeField]
+        private bool isOnSettings;
+        private Settings _settings;
+        private CanvasGroup _panelTransition;
     
         private ControlScenes _controlScenes;
         private SaveLoadSystem _saveLoadSystem;
@@ -42,8 +60,15 @@ namespace UIGeral {
         private void OnDisable() {
         
         }
+        public void OnLoadSettingsUI(){
+            sMusic.value = _settings.volumeMusic;
+            sMaster.value = _settings.volumeMaster;
+            tEffects.isOn = _settings.effects;
+        }
         private void Start() {
             TakeComponents();
+            panelSaveRect.anchoredPosition = offPanelPos;
+            panelSettingRT.anchoredPosition = offSettingsPos;
         
         }
         public void Home(){
@@ -52,6 +77,10 @@ namespace UIGeral {
         }
         public void Quit(){
             _controlScenes.QuitGame();
+        }
+
+        public void Settings() {
+            
         }
         public void ShowSavePanel(int value) {
             panelSaveRect.anchoredPosition = onPanelPos ;
@@ -62,6 +91,23 @@ namespace UIGeral {
             panelSaveRect.anchoredPosition = offPanelPos;
         }
 
+        public void ShowHideSettingsPanel() {
+            if (!isOnSettings) {
+                panelSettingRT.anchoredPosition = onSettingsPos;
+                isOnSettings = true;
+            }
+            else {
+                panelSettingRT.anchoredPosition = offSettingsPos;
+                isOnSettings = false;
+            }
+        }
+        public void SaveSettingsUI(){
+            _settings.volumeMusic = sMusic.value;
+            _settings.volumeMaster = sMaster.value;
+            _settings.effects = tEffects.isOn;
+
+            _settings.SaveSettings(); 
+        }
         public void ButtonSave(bool save) {
             if (save) {
                 _saveLoadSystem.SaveGameData();
@@ -126,6 +172,32 @@ namespace UIGeral {
             SaveLoadSystem saveLoadSystem = FindObjectOfType<SaveLoadSystem>();
             if (saveLoadSystem != null) {
                 _saveLoadSystem = saveLoadSystem.GetComponent<SaveLoadSystem>();
+            }
+            Settings gameSettings = FindObjectOfType<Settings>();
+            if (gameSettings != null){
+                _settings = gameSettings.GetComponent<Settings>();
+            }
+            
+            
+            GameObject panelSettingsMenu = GameObject.Find("UISettings");
+            if (panelSettingsMenu != null){
+                panelSettingRT = panelSettingsMenu.GetComponent<RectTransform>();
+            }
+            GameObject sliderMusic = GameObject.Find("MusicSlider");
+            if (sliderMusic != null){
+                sMusic = sliderMusic.GetComponent<Slider>();
+            }
+            GameObject sliderMaster = GameObject.Find("MasterSlider");
+            if (sliderMaster != null){
+                sMaster = sliderMaster.GetComponent<Slider>();
+            }
+            GameObject toggleEffect = GameObject.Find("EffectsToggle");
+            if (toggleEffect != null){
+                tEffects = toggleEffect.GetComponent<Toggle>();
+            }
+            GameObject uiTransition = GameObject.Find("UITransition");
+            if (uiTransition != null){
+                _panelTransition = uiTransition.GetComponent<CanvasGroup>();
             }
             
         }
