@@ -71,7 +71,7 @@ namespace UIGeral {
             TakeComponents();
             panelSaveRect.anchoredPosition = offPanelPos;
             panelSettingRT.anchoredPosition = offSettingsPos;
-            Time.timeScale = 1f;
+            //Time.timeScale = 1f;
         
         }
         public void Home(){

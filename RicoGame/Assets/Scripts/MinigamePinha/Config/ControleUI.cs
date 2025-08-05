@@ -19,9 +19,6 @@ public class ControleUI : MonoBehaviour
      [Header("Configurações")]
     [SerializeField] private float delayDead = 2.5f;
 
-     [Header("Buttons")]
-     public Button configButton; 
-
      private bool startGame = false;
 
      private SaveLoadSystem _saveLoadSystem;
@@ -40,8 +37,6 @@ public class ControleUI : MonoBehaviour
         
         
         Time.timeScale = 0f; // Começa pausado
-        configButton.onClick.AddListener(OnButtonClick);
-         configButton.interactable = true;
     
         if (statusRico == null) statusRico = FindObjectOfType<StatusRico>();
         if (temporizador == null) temporizador = FindObjectOfType<Temporizador>();
@@ -127,6 +122,8 @@ public class ControleUI : MonoBehaviour
             Debug.LogWarning("DiedPanel não atribuído no Inspector!");
         }
     }
+    
+    // Metodo antigo do dom pra chamar o pause
        public void OnButtonClick()
     {
         if (pausePanel != null){
