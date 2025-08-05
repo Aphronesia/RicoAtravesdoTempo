@@ -25,7 +25,13 @@ public class ControleUI : MonoBehaviour
      private bool startGame = false;
 
      private SaveLoadSystem _saveLoadSystem;
-
+    
+     private void OnEnable() {
+         UIGeral.ConfigUI.OnPause += PauseGame;
+     }
+     private void OnDisable() {
+         UIGeral.ConfigUI.OnPause -= PauseGame;
+     }
     private void Start()
     {
         // Rotaciona a tela 
@@ -132,8 +138,8 @@ public class ControleUI : MonoBehaviour
             Debug.LogWarning("pausePanel não foi atribuído no Inspetor!");
         }
     }
-
-        public void StartGame()
+    
+    public void StartGame()
     {
         if (startPanel != null)
         {
@@ -156,6 +162,10 @@ public class ControleUI : MonoBehaviour
             Debug.Log("Jogo retomado.");
         }
     }
+
+    private void PauseGame(bool pause) {
+        
+    }
     public void ReturnToStartPanel()
     {
          controlScenes.RestartGame();
@@ -163,6 +173,10 @@ public class ControleUI : MonoBehaviour
 
     public void ReturnHome(){
         controlScenes.ReturnHome();
+    }
+    public void RestartGame()
+    {
+        controlScenes.RestartGame();
     }
 
     public void ReturnMenuMap()

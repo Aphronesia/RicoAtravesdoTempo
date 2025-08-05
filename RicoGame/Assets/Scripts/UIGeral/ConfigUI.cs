@@ -46,6 +46,8 @@ namespace UIGeral {
         private Vector2 offSettingsPos;
         [SerializeField]
         private bool isOnSettings;
+
+        private bool _saved;
         private Settings _settings;
         private CanvasGroup _panelTransition;
     
@@ -69,6 +71,7 @@ namespace UIGeral {
             TakeComponents();
             panelSaveRect.anchoredPosition = offPanelPos;
             panelSettingRT.anchoredPosition = offSettingsPos;
+            Time.timeScale = 1f;
         
         }
         public void Home(){
@@ -137,6 +140,9 @@ namespace UIGeral {
                 _controlScenes.Pause(pause);
                 //_menuRt.anchoredPosition = menuOutPos;
                 HideSavePanel();
+                if (isOnSettings) {
+                    ShowHideSettingsPanel();
+                }
                 StartCoroutine(MoveMenuUI(menuOutPos));
             }
 
