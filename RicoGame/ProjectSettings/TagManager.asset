@@ -26,6 +26,7 @@ TagManager:
   - GameOverPanel
   - PanelDied
   - Level
+  - comic
   layers:
   - Default
   - TransparentFX

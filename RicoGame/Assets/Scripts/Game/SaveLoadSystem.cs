@@ -109,7 +109,7 @@ namespace Game
             }
             catch (Exception ex){
                 SaveSettingsData();
-                Debug.LogWarning(ex.Message);
+                //Debug.LogWarning(ex.Message);
             }
         }
 
