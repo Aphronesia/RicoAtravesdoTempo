@@ -326,9 +326,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 574604840}
-          m_TargetAssemblyTypeName: configUI, Assembly-CSharp
-          m_MethodName: Pause
+        - m_Target: {fileID: 2114919194}
+          m_TargetAssemblyTypeName: MenuMap.ControlUIMap, Assembly-CSharp
+          m_MethodName: PlayLevel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
