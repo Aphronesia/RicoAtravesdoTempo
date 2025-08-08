@@ -378,7 +378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000047684, y: -874}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1325.46, y: 754.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &383738214
@@ -478,15 +478,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutsceneIndex: 0
+  durationMove: 3
   comics:
   - pictures:
-    - gObject: {fileID: 0}
-      duration: 0
-    - gObject: {fileID: 0}
-      duration: 0
-    - gObject: {fileID: 0}
-      duration: 0
-  - pictures: []
+    - gObject: {fileID: 145480393}
+      duration: 5
+    - gObject: {fileID: 1953786107}
+      duration: 5
+    - gObject: {fileID: 693835256}
+      duration: 5
+    - gObject: {fileID: 1413879242}
+      duration: 5
+    - gObject: {fileID: 748295987}
+      duration: 5
+    - gObject: {fileID: 1092848178}
+      duration: 5
+    - gObject: {fileID: 1857186384}
+      duration: 5
 --- !u!50 &618753002
 Rigidbody2D:
   serializedVersion: 4
@@ -1098,6 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durationFade: 1
   UITransition: {fileID: 383738214}
+  cameraPivot: {fileID: 618753001}
 --- !u!1 &1331857663
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Game;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Cutscene.UI{
@@ -8,8 +9,11 @@ namespace Cutscene.UI{
         
         [SerializeField] private float durationFade;
         [SerializeField] private CanvasGroup UITransition; 
+        
+        [SerializeField]
+        private Cutscene.CameraPivot cameraPivot;
         private ControlScenes _controlScenes;
-
+        
         private void Start(){
             TakeComponents();
             UITransition.alpha = 1f;
@@ -29,6 +33,7 @@ namespace Cutscene.UI{
             UITransition.alpha = 0f;
             UITransition.interactable = true;
             UITransition.blocksRaycasts = true;
+            cameraPivot.GameStart(0);
         }
         public void SkipCutscene(){
             
