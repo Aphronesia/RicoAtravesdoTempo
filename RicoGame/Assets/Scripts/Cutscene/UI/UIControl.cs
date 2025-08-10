@@ -31,13 +31,17 @@ namespace Cutscene.UI{
                 yield return null;
             }
             UITransition.alpha = 0f;
-            UITransition.interactable = true;
-            UITransition.blocksRaycasts = true;
+            UITransition.interactable = false;
+            UITransition.blocksRaycasts = false;
             cameraPivot.GameStart(0);
         }
         public void SkipCutscene(){
-            
+            if (cameraPivot._runFollows != null){
+                cameraPivot.SkipPicture();
+            }
+            else{
             _controlScenes.ChangeScene(2); // menu map
+            }
         }
         private void TakeComponents(){
             var controlScenes = FindObjectOfType<ControlScenes>();

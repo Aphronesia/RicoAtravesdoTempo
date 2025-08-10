@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Game{
-    public class ControlScenes : MonoBehaviour
-    {
-    
+    public class ControlScenes : MonoBehaviour{
+        public int indexCutscene;
+        public int ProxLevel;
+        
         void Awake()
         {
             if (FindObjectsOfType<ControlScenes>().Length > 1)
@@ -49,6 +50,14 @@ namespace Game{
         public void Pause(bool pause){
             Time.timeScale = pause ? 0f : 1f;
             //Debug.Log($"pause {pause}");
+        }
+
+        public void SetCutscene(int value){
+            indexCutscene = value;
+        }
+
+        public void SetNextLevel(int value){
+            indexCutscene = value;
         }
     }
 }
