@@ -1618,7 +1618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &187324488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7390,6 +7390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375941e456edc7e4a9f168fc2fd3096e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexCutscene: 0
+  ProxLevel: 0
 --- !u!4 &328316892
 Transform:
   m_ObjectHideFlags: 0
@@ -15669,7 +15671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ixi morreu, tente novamente
+  m_text: Ixi, morreu! Tente novamente.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96da4574ea494744ea852ca06b0bab74, type: 2}
   m_sharedMaterial: {fileID: 3050961489057022808, guid: 96da4574ea494744ea852ca06b0bab74, type: 2}
