@@ -51,6 +51,7 @@ namespace MinigameTrem{
         void FixedUpdate()
         {
             Movimento();
+            anima.SetInteger("Jump", Mathf.FloorToInt(rig.velocity.y));
         }
         //esse void inicia o jogo pra capivara de fato, ele é puxado la no controleui
         public void StartGame()

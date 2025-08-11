@@ -33,13 +33,10 @@ namespace Cutscene {
             }
         }
 
+        private Game.ControlScenes _controlScenes;
         private void Start() {
             TakeComponents();
-            
-        }
-
-        public void GameStart(int index) {
-            comIndex = index;
+            comIndex = _controlScenes.indexCutscene;
             foreach (Comic.Picture picture in comics[comIndex].pictures){
                 SpriteRenderer sr = picture.gObject.GetComponent<SpriteRenderer>();
                 Color cPic =  sr.color;
@@ -47,19 +44,23 @@ namespace Cutscene {
             }
             Vector3 startPos = comics[comIndex].pictures[0].gObject.transform.position;
             transform.position = startPos;
-            _runFollows = StartCoroutine(Follows(index, 0));
+        }
+
+        public void GameStart(){
+            _runFollows = null;
+            _runFollows = StartCoroutine(Follows(0));
         }
 
         public void SkipPicture(){
             StopCoroutine(_runFollows);
             _runFollows = null;
-            _runFollows = StartCoroutine(Follows(comIndex, nextPictureIndex));
+            _runFollows = StartCoroutine(Follows(nextPictureIndex));
             
         }
-        private IEnumerator Follows(int comicI, int startIndex) {
-            // Caso esteja no ultimo quadro
+        private IEnumerator Follows( int startIndex) {
+            // Caso esteja no último quadro
             if (nextPictureIndex >= comics[comIndex].pictures.Count){
-                SpriteRenderer previousPic =  comics[comIndex].pictures[comics[comIndex].pictures.Count - 1].gObject.GetComponent<SpriteRenderer>();
+                SpriteRenderer previousPic =  comics[comIndex].pictures[^1].gObject.GetComponent<SpriteRenderer>();
                 Color cPreviousColor  = previousPic.color;
                 previousPic.color = new Color(cPreviousColor.r, cPreviousColor.g, cPreviousColor.b, 1);
                 Vector3 origin = transform.position;
@@ -79,9 +80,9 @@ namespace Cutscene {
                 _runFollows = null;
                 yield break;
             }
-            Vector3 startPos = comics[comicI].pictures[startIndex].gObject.transform.position;
+            Vector3 startPos = comics[comIndex].pictures[startIndex].gObject.transform.position;
             transform.position = startPos;
-            // Debug.Log("Mover");
+            
             // passa em quadrinho por quadrinho a partir da onde está
             for (int i = startIndex; i < comics[comIndex].pictures.Count; i++){
                 if (i != 0){
@@ -102,7 +103,9 @@ namespace Cutscene {
                     transform.position = Vector3.Lerp(origin, picture.gObject.transform.position, t);
                     yield return null;
                 }
-
+                
+                
+                // Loop para fazer o quadrinho atual aparecer
                 time = 0f;
                 SpriteRenderer srPicture = comics[comIndex].pictures[i].gObject.GetComponent<SpriteRenderer>();
                 Color colorPic = srPicture.color;
@@ -115,7 +118,7 @@ namespace Cutscene {
                 // Debug.Log("chegou no ="+ picture.gObject.name);
                 yield return new WaitForSeconds(picture.duration);
                 
-                // Depois do último quadrinho
+                // Se for o ultimo quadrinho
                 if (i == comics[comIndex].pictures.Count - 1){
                     nextPictureIndex = -1;
                     origin = transform.position;
@@ -137,7 +140,12 @@ namespace Cutscene {
             }
         }
 
-        private void TakeComponents() {
+        private void TakeComponents(){
+            var controlscenes = FindObjectOfType<Game.ControlScenes>();
+            if (controlscenes != null){
+                _controlScenes = controlscenes.GetComponent<Game.ControlScenes>();
+            }
+
         }
     }
 

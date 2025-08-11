@@ -66,7 +66,7 @@ namespace MinigameTrem{
             if (_saveLoadSystem.runtimeGameData.levelCompleted <= 2){
                 _saveLoadSystem.runtimeGameData.levelCompleted = 2;
             }
-            _saveLoadSystem.runtimeGameData.menuMapRico = 2;
+            _saveLoadSystem.runtimeGameData.menuMapRico = 1;
             
         }
         public void Pause()

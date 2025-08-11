@@ -84,13 +84,13 @@ namespace Home2.UI{
         public void GameStart(){
             if (!_hasGameData){
                 _panelTransition.alpha = 0f;
-                StartCoroutine(UITransition(1));
+                StartCoroutine(UITransition(2));
                 return;
             }
             if (_hasGameData){
                 _panelTransition.alpha = 0f;
                 _saveLoadSystem.ClearRuntimeData();
-                StartCoroutine(UITransition(1));
+                StartCoroutine(UITransition(2));
             }
         }
         // Chamado pelo botão "Continue" na UI

@@ -87,7 +87,7 @@ public class ControleUI : MonoBehaviour
         if (_saveLoadSystem.runtimeGameData.levelCompleted <= 1){
             _saveLoadSystem.runtimeGameData.levelCompleted = 1;
         }
-        _saveLoadSystem.runtimeGameData.menuMapRico = 1;
+        _saveLoadSystem.runtimeGameData.menuMapRico = 0;
         if (winPanel != null){
             winPanel.SetActive(true);
             Time.timeScale = 0f; // Pausa o jogo

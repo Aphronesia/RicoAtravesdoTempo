@@ -129,7 +129,7 @@ namespace Game
         }
 
         public void ContinueGame(){
-            Debug.Log("continuou");
+            //Debug.Log("continuou");
             runtimeGameData.menuMapRico = gameData.menuMapRico;
             runtimeGameData.levelCompleted = gameData.levelCompleted;
             runtimeGameData.recordPoinsTrem = gameData.recordPoinsTrem;

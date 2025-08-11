@@ -22,6 +22,17 @@ namespace MenuMap {
             _controlScenes.ChangeScene(index);
         }
 
+        public void PlayLevelWithCutscene(){
+            if (lvPop.Cutscene()){
+                _controlScenes.ProxLevel = lvPop.SceneIndex();
+                _controlScenes.indexCutscene = lvPop.ActualCutsceneIndex();
+                _controlScenes.ChangeScene(1);
+            }
+            else{
+                _controlScenes.ChangeScene(lvPop.SceneIndex());
+            }
+            
+        }
         
         public void SaveData() {
             _saveLoadSystem.SaveGameData();

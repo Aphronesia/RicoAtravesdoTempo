@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indexCutscene: 0
-  ProxLevel: 0
+  ProxLevel: 2
 --- !u!4 &1372525950
 Transform:
   m_ObjectHideFlags: 0

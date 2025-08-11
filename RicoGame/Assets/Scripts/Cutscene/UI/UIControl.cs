@@ -33,14 +33,14 @@ namespace Cutscene.UI{
             UITransition.alpha = 0f;
             UITransition.interactable = false;
             UITransition.blocksRaycasts = false;
-            cameraPivot.GameStart(0);
+            cameraPivot.GameStart();
         }
         public void SkipCutscene(){
             if (cameraPivot._runFollows != null){
                 cameraPivot.SkipPicture();
             }
             else{
-            _controlScenes.ChangeScene(2); // menu map
+            _controlScenes.ChangeScene(_controlScenes.ProxLevel); // menu map
             }
         }
         private void TakeComponents(){

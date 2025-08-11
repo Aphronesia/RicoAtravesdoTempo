@@ -88,6 +88,8 @@ namespace UIGeral {
         public void ShowSavePanel(int value) {
             panelSaveRect.anchoredPosition = onPanelPos ;
             index = value;
+            isOnSettings = true;
+            ShowHideSettingsPanel();
         }
 
         public void HideSavePanel() {
@@ -95,7 +97,8 @@ namespace UIGeral {
         }
 
         public void ShowHideSettingsPanel() {
-            if (!isOnSettings) {
+            if (!isOnSettings){
+                HideSavePanel();
                 panelSettingRT.anchoredPosition = onSettingsPos;
                 isOnSettings = true;
             }

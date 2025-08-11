@@ -12,7 +12,10 @@ public class LevelPopUp : MonoBehaviour
     private float distanceHorizontal;
     [SerializeField]
     private string levelname;
+
+    public bool cutscene;
     public int actualSceneIndex;
+    public int actualCutsceneIndex;
     private Vector3 pos;
     private CanvasGroup canvasGroup;   
     
@@ -23,6 +26,8 @@ public class LevelPopUp : MonoBehaviour
         public string name;
         public string description;
         public int sceneIndex;
+        public bool cutscene;
+        public int cutsceneIndex;
         public Sprite background;
     }
     private void Start()
@@ -39,6 +44,8 @@ public class LevelPopUp : MonoBehaviour
         TextMeshProUGUI tmp = GetComponentInChildren<TextMeshProUGUI>();
         canvasGroup.alpha = Mathf.Clamp01(1f);
         actualSceneIndex = levels[index].sceneIndex;
+        actualCutsceneIndex = levels[index].cutsceneIndex;
+        cutscene = levels[index].cutscene;
         if (tmp != null){
             tmp.text = levels[index].name;
             _image.sprite = levels[index].background;
@@ -48,8 +55,16 @@ public class LevelPopUp : MonoBehaviour
     public void LevelExit(){
         canvasGroup.alpha = Mathf.Clamp01(0f);
     }
+
+    public bool Cutscene(){
+        return cutscene;
+    }
     public int SceneIndex(){
         return actualSceneIndex;
+    }
+
+    public int ActualCutsceneIndex(){
+        return actualCutsceneIndex;
     }
 
     private void TakeComponents()

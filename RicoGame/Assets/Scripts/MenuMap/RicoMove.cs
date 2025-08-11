@@ -8,10 +8,12 @@ namespace MenuMap{
         [SerializeField]
         private LevelPopUp lvPop;
         private Rigidbody2D _rig;
+        private Animator _anima;
+        private SpriteRenderer _spriteRen;
         private Vector3 _target;
         [SerializeField, Tooltip("velocidade do movimento")]
         private float speed;
-        private bool _moving;
+        public bool moving;
 
         public float distance;
         private void OnEnable() {
@@ -24,17 +26,19 @@ namespace MenuMap{
             TakeComponents();
             
         
-            _moving = true;
+            moving = true;
         }
         private void Update() {
-            if (_moving && distance == 0){
+            if (moving && distance == 0){
                 lvPop.LevelEnter(_lvManager.actualRico);
-                _moving = false;
+                moving = false;
+                _anima.SetBool("walking", false);
                 //Debug.Log("parou");
             }
-            if (!_moving && distance != 0){
+            if (!moving && distance != 0){
                 lvPop.LevelExit();
-                _moving = true;
+                moving = true;
+                _anima.SetBool("walking", true);
                 //Debug.Log("movendo");
             }
         }
@@ -53,12 +57,16 @@ namespace MenuMap{
                 Vector3 newPos = currentPos + (direction / distance) * step;
                 _rig.MovePosition(newPos);
             }
+            _spriteRen.flipX = direction.x > 0 ;
         }
         private void Movement(Vector3 newTarget, bool instantly){
             if (instantly){
                 transform.position = newTarget;
+                _target = newTarget;
             }
-            _target = newTarget;
+            if (!moving){
+                _target = newTarget;
+            }
         }
 
         private void TakeComponents(){
@@ -71,6 +79,8 @@ namespace MenuMap{
                 lvPop = levelPop.GetComponent<LevelPopUp>();
             }
             _rig = GetComponent<Rigidbody2D>();
+            _anima = GetComponent<Animator>();
+            _spriteRen = GetComponent<SpriteRenderer>();
         }
     }
 }

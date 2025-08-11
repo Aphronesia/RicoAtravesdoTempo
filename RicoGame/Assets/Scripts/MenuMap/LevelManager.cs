@@ -6,6 +6,8 @@ namespace MenuMap{
     public class LevelManager : MonoBehaviour
     {
         private Game.SaveLoadSystem _saveLoadSystem;
+
+        [SerializeField] private RicoMove ricomove;
         private Vector3 _target;
         public int actualRico;
         [SerializeField]
@@ -50,7 +52,7 @@ namespace MenuMap{
             levels[0].played = true;
             
                 for (int i = 0; i <= _saveLoadSystem.runtimeGameData.levelCompleted; i++){
-                    levels[i+1].played = true;
+                    levels[i].played = true;
                 }
                 return;
             
@@ -104,6 +106,17 @@ namespace MenuMap{
             }
         }
 
+        public void NextorPrevLevel(bool direction){
+            if (ricomove.moving){
+                return;
+            }
+            int indexNext = direction ? actualRico + 1 : actualRico - 1;
+            indexNext = Mathf.Clamp(indexNext, 0, levelCount);
+            if (levels[indexNext].played){
+                GameObject objLevel = levels[indexNext].objLevel;
+                GetLevel(objLevel);
+            }
+        }
         private void TakeComponent(){
             GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
             if(levelPop !=null){
