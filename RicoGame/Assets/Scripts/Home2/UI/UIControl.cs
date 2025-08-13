@@ -39,7 +39,8 @@ namespace Home2.UI{
         private bool _hasGameData;
         //Componentes
         private Settings _settings;
-        [SerializeField]
+        private ControlSounds _controlSounds;
+        
         private SaveLoadSystem _saveLoadSystem;
         private ControlScenes _controlScene;
         private void OnEnable(){
@@ -50,7 +51,8 @@ namespace Home2.UI{
             Settings.OnLoadSettings -= OnLoadSettingsUI;
             SaveLoadSystem.OnLoadGame -= OnLoadGameData;
         }
-        public void OnLoadSettingsUI(){
+
+        private void OnLoadSettingsUI(){
             sMusic.value = _settings.volumeMusic;
             sMaster.value = _settings.volumeMaster;
             tEffects.isOn = _settings.effects;
@@ -79,9 +81,7 @@ namespace Home2.UI{
                 _saveLoadSystem.LoadGameData();
             }
             
-            
-            // SOOOOMMMM
-            _settings.SoundControllerMenu(0);
+            _controlSounds.PlayMusic("Menu");
         }
         // Chamado pelo botão "Start" na UI.
         // Para quando for iniciar uma nova run do jogo.
@@ -154,6 +154,11 @@ namespace Home2.UI{
         public void ClearGameDataUI(){
             _saveLoadSystem.ClearData();
         }
+
+        public void QuitGame()
+        {
+            _controlScene.QuitGame();
+        }
         private void TakeComponents(){
             GameObject panelSettingsMenu = GameObject.Find("PanelSettings");
             if (panelSettingsMenu != null){
@@ -190,6 +195,11 @@ namespace Home2.UI{
             ControlScenes controlScenes= FindObjectOfType<ControlScenes>();
             if (controlScenes != null){
                 _controlScene = controlScenes.GetComponent<ControlScenes>();
+            }
+            var soundManager = FindAnyObjectByType<ControlSounds>();
+            if (soundManager is not null)
+            {
+                _controlSounds = soundManager.GetComponent<ControlSounds>();
             }
         }
     }

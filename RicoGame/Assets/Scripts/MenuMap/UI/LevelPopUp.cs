@@ -17,8 +17,13 @@ public class LevelPopUp : MonoBehaviour
     public int actualSceneIndex;
     public int actualCutsceneIndex;
     private Vector3 pos;
-    private CanvasGroup canvasGroup;   
+    private CanvasGroup canvasGroup;
+    [SerializeField] private CanvasGroup cgBack;
     
+    [SerializeField]
+    private TextMeshProUGUI _titleText;
+    [SerializeField]
+    private TextMeshProUGUI _descriptionText;
     private Image _image;
     public List<LevelPop> levels = new List<LevelPop>();
     [System.Serializable]
@@ -35,25 +40,32 @@ public class LevelPopUp : MonoBehaviour
         TakeComponents();
         
     }
-    private void Update() {
+    private void Update()
+    {
+        //Moviment();
+    }
+
+    private void Moviment()
+    {
         pos = new Vector3 (ricopos.transform.position.x + distanceHorizontal, ricopos.transform.position.y, transform.position.z);
         transform.position = pos;
     }
     //chamado no RicoMove
     public void LevelEnter(int index){
-        TextMeshProUGUI tmp = GetComponentInChildren<TextMeshProUGUI>();
+        //TextMeshProUGUI tmp = GetComponentInChildren<TextMeshProUGUI>();
         canvasGroup.alpha = Mathf.Clamp01(1f);
+        cgBack.alpha = Mathf.Clamp01(1f);
         actualSceneIndex = levels[index].sceneIndex;
         actualCutsceneIndex = levels[index].cutsceneIndex;
         cutscene = levels[index].cutscene;
-        if (tmp != null){
-            tmp.text = levels[index].name;
-            _image.sprite = levels[index].background;
-            //crasha caso nao exista um elemento no valor do index
-        }
+        
+        _titleText.text = levels[index].name;
+        _descriptionText.text = levels[index].description;
+        _image.sprite = levels[index].background;
     }
     public void LevelExit(){
-        canvasGroup.alpha = Mathf.Clamp01(0f);
+        canvasGroup.alpha = Mathf.Clamp01(1f);
+        cgBack.alpha = Mathf.Clamp01(0f);
     }
 
     public bool Cutscene(){

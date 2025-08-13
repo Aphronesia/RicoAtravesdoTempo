@@ -107,6 +107,7 @@ namespace MenuMap{
         }
 
         public void NextorPrevLevel(bool direction){
+            Time.timeScale = 1f;
             if (ricomove.moving){
                 return;
             }
@@ -118,7 +119,7 @@ namespace MenuMap{
             }
         }
         private void TakeComponent(){
-            GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
+            var levelPop = FindAnyObjectByType<LevelPopUp>();
             if(levelPop !=null){
                 _lvPop = levelPop.GetComponent<LevelPopUp>();
             }

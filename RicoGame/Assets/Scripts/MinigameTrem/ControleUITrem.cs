@@ -13,7 +13,7 @@ namespace MinigameTrem{
         public Estrelas estrelas;
         public Scoreboard.ScoreManager scoreManager;
         private SaveLoadSystem _saveLoadSystem;
-        private Settings _settings;
+        private ControlSounds _controlSounds;
     
         bool paused;
         
@@ -36,7 +36,7 @@ namespace MinigameTrem{
             Screen.orientation = ScreenOrientation.LandscapeLeft;
             
             // SOMMMMM
-            _settings.SoundControllerMenu(1);   
+            _controlSounds.PlayMusic("Trem");  
         }
 
         //click do play inicial do jogo
@@ -119,9 +119,10 @@ namespace MinigameTrem{
             if (saveLoadManager != null){
                 _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
             }
-            Settings gameSettings = FindObjectOfType<Settings>();
-            if (gameSettings != null){
-                _settings = gameSettings.GetComponent<Settings>();
+            var soundManager = FindAnyObjectByType<ControlSounds>();
+            if (soundManager is not null)
+            {
+                _controlSounds = soundManager.GetComponent<ControlSounds>();
             }
         }
     }

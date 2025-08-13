@@ -12,14 +12,14 @@ namespace MenuMap {
 
         private bool _pause;
         
-        private Settings _settings;
+        private ControlSounds _controlSounds;
         
         private void Start() {
             TakeComponents();
             Screen.orientation = ScreenOrientation.LandscapeLeft;
             
             // SOMMMMM
-            _settings.SoundControllerMenu(0);   
+             _controlSounds.PlayMusic("Menu");
         }
         public void PlayLevel(){
             int index = lvPop.SceneIndex();
@@ -64,9 +64,10 @@ namespace MenuMap {
             if(levelPop !=null){
                 lvPop = levelPop.GetComponent<LevelPopUp>();
             }
-            Settings gameSettings = FindObjectOfType<Settings>();
-            if (gameSettings != null){
-                _settings = gameSettings.GetComponent<Settings>();
+            var soundManager = FindAnyObjectByType<ControlSounds>();
+            if (soundManager is not null)
+            {
+                _controlSounds = soundManager.GetComponent<ControlSounds>();
             }
         }
     }

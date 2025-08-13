@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 namespace Game 
@@ -10,7 +8,7 @@ namespace Game
     {   
         [Header("Volumes")]
         [Range(0, 1)] public float volumeMusic;
-        [Range(0, 1)] public float volumeSFX;
+        [Range(0, 1)] public float volumeSfx;
         
         [Header("Sounds")]
         [SerializeField]
@@ -18,8 +16,8 @@ namespace Game
         [SerializeField]
         private List<Audio> soundEffects = new List<Audio>();
 
-        private int _actualMusic;
-        private int _actualSFX;
+        private Audio _actualMusic;
+        private Audio _actualSfx;
         
         [Serializable]
         private class Audio
@@ -34,16 +32,22 @@ namespace Game
         [SerializeField]
         private AudioSource sfxSource;
         
-        // Componentes
+        // Componentes  
         private Settings _settings;
+
+        private void OnValidate()
+        {
+            musicSource.volume = volumeMusic;
+            sfxSource.volume = volumeSfx;
+        }
+
         private void Awake()
         {
             BecomeIndestructible();
-            
         }
         private void BecomeIndestructible()
         {
-            if (FindObjectOfType<ControlSounds>() != null) 
+            if (FindObjectOfType<ControlSounds>() == null) 
             {
                 Destroy(gameObject);
             }
@@ -52,35 +56,66 @@ namespace Game
                 DontDestroyOnLoad(gameObject);
             }
         }
-
+        
         private void Start()
         {
             TakeComponents();
         }
 
-        private void PlayMusic(string clipName)
+        public void PlayMusic(string clipName)
         {
-            int index = musics.FindIndex(x => x.name == clipName);
-            if (index == _actualMusic || index == -1)
+            Audio music = musics.Find(x => x.name == clipName);
+            if (music == null)
+            {
+                Debug.Log($"Musica '{clipName}' não encontrado");
+                return;
+            }
+            if (music == _actualMusic)
             {
                 return;
             }
+            if (music.clip == null)
+            {
+                Debug.LogError($"musica: {music.name} sem SoundClip");
+                return;
+            }
             musicSource.Stop();
-            musicSource.clip = musics[index].clip;
+            musicSource.clip = music.clip;
             musicSource.Play();
-            _actualMusic = index;
-            
+            _actualMusic =  music;
+        }
+        
+        public void PlaySfx(string clipName)
+        {
+            Audio sfx = soundEffects.Find(x => x.name == clipName);
+            if (sfx == null)
+            {
+                Debug.Log($"Efeito Sonoro '{clipName}' não encontrado");
+                return;
+            }
+            if (sfx == _actualSfx)
+            {
+                return;
+            }
+            if (sfx.clip == null)
+            {
+                Debug.LogError($"Efeito Sonoro: {sfx.name} sem SoundClip");
+                return;
+            }
+            musicSource.Stop();
+            musicSource.clip = sfx.clip;
+            musicSource.Play();
+            _actualMusic =  sfx;
         }
 
-        private void ChangeVolumeMusic()
+        public void ChangeVolumes()
         {
-            volumeMusic = _settings.volumeMusic;
+            volumeMusic = Mathf.Clamp01(_settings.volumeMusic);
+            volumeSfx = Mathf.Clamp01(_settings.volumeMaster);
+            musicSource.volume = volumeMusic;
+            sfxSource.volume = volumeSfx;
         }
-
-        private void ChangeVolumeSFX()
-        {
-            volumeSFX = _settings.volumeMaster;
-        }
+        
         private void TakeComponents()
         {
             var settings = FindObjectOfType<Settings>();

@@ -74,7 +74,8 @@ namespace MenuMap{
             if (levelController != null){
                 _lvManager = levelController.GetComponent<LevelManager>();
             }
-            GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
+
+            var levelPop = FindAnyObjectByType<LevelPopUp>();
             if(levelPop !=null){
                 lvPop = levelPop.GetComponent<LevelPopUp>();
             }
