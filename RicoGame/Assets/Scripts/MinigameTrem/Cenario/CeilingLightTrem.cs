@@ -31,7 +31,7 @@ namespace MinigameTrem.Cenario {
                     yield return new WaitForSeconds(0.2f);
                 }
             }
-       
+            _light.enabled = true;
         }
         private void TakeComponents(){
             _light = GetComponent<Light2D>();
