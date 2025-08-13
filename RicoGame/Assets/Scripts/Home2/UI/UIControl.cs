@@ -78,6 +78,10 @@ namespace Home2.UI{
             if (_saveLoadSystem.hasGameData){
                 _saveLoadSystem.LoadGameData();
             }
+            
+            
+            // SOOOOMMMM
+            _settings.SoundControllerMenu(0);
         }
         // Chamado pelo botão "Start" na UI.
         // Para quando for iniciar uma nova run do jogo.
@@ -143,6 +147,7 @@ namespace Home2.UI{
             _settings.effects = tEffects.isOn;
 
             _settings.SaveSettings(); 
+            
         }
         
         // Chamado pelo botão "Clear Data" na UI de Settings.

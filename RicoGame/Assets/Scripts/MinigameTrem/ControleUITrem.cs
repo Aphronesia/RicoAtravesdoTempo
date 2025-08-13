@@ -13,6 +13,7 @@ namespace MinigameTrem{
         public Estrelas estrelas;
         public Scoreboard.ScoreManager scoreManager;
         private SaveLoadSystem _saveLoadSystem;
+        private Settings _settings;
     
         bool paused;
         
@@ -33,6 +34,9 @@ namespace MinigameTrem{
             
             //controla rotacao de tela (muda prapaisagem)
             Screen.orientation = ScreenOrientation.LandscapeLeft;
+            
+            // SOMMMMM
+            _settings.SoundControllerMenu(1);   
         }
 
         //click do play inicial do jogo
@@ -114,6 +118,10 @@ namespace MinigameTrem{
             GameObject saveLoadManager =  GameObject.Find("SaveLoadManager");
             if (saveLoadManager != null){
                 _saveLoadSystem = saveLoadManager.GetComponent<SaveLoadSystem>();
+            }
+            Settings gameSettings = FindObjectOfType<Settings>();
+            if (gameSettings != null){
+                _settings = gameSettings.GetComponent<Settings>();
             }
         }
     }

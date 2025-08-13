@@ -110,6 +110,7 @@ namespace Game
             catch (Exception ex){
                 SaveSettingsData();
                 //Debug.LogWarning(ex.Message);
+                string exe = ex.Message;
             }
         }
 

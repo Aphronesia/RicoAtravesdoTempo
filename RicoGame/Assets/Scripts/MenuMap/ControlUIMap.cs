@@ -12,10 +12,14 @@ namespace MenuMap {
 
         private bool _pause;
         
+        private Settings _settings;
         
         private void Start() {
             TakeComponents();
             Screen.orientation = ScreenOrientation.LandscapeLeft;
+            
+            // SOMMMMM
+            _settings.SoundControllerMenu(0);   
         }
         public void PlayLevel(){
             int index = lvPop.SceneIndex();
@@ -59,6 +63,10 @@ namespace MenuMap {
             GameObject levelPop = GameObject.Find("Canvas/LevelMenu");
             if(levelPop !=null){
                 lvPop = levelPop.GetComponent<LevelPopUp>();
+            }
+            Settings gameSettings = FindObjectOfType<Settings>();
+            if (gameSettings != null){
+                _settings = gameSettings.GetComponent<Settings>();
             }
         }
     }

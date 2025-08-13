@@ -5,7 +5,8 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public Camera mainCamera;
-    private Animator anima; 
+    private Animator anima;
+    [SerializeField] private float delay;
     void Start()
     {
         //pega o objeto da camera
@@ -25,15 +26,20 @@ public class Hand : MonoBehaviour
     {
         if (VisibleOnCam())
         {
-            anima.SetBool("Break", true);
-            //Debug.Log("Quebrou o chão");
-            //desativa o script
-            enabled = false;
+            StartCoroutine(Animation());
         }
         else
         {
             //Debug.Log($"nao ta visivel");
         }
+    }
+
+    IEnumerator Animation() {
+        yield return new WaitForSeconds(delay);
+        anima.SetBool("Break", true);
+        //Debug.Log("Quebrou o chão");
+        //desativa o script
+        enabled = false;
     }
     bool VisibleOnCam()
     {

@@ -5,7 +5,7 @@ namespace MinigameTrem{
     public class CapivaraTrem : MonoBehaviour
     {
         public bool canWalk, canJump, chao, Vivo, invisibility, hyperJump;
-        private float veloc = 6.0f, salto = 20.0f, impulso = 5f;
+        private float veloc = 6.0f, salto = 12.0f, impulso = 7f;
         private Animator anima;
         public Rigidbody2D rig;
         Vector3 PosicaoInicial;

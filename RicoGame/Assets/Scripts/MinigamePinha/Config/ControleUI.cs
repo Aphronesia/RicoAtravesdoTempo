@@ -165,19 +165,23 @@ public class ControleUI : MonoBehaviour
     }
     public void ReturnToStartPanel()
     {
+         Time.timeScale = 1f; 
          controlScenes.RestartGame();
     }
 
     public void ReturnHome(){
+        Time.timeScale = 1f; 
         controlScenes.ReturnHome();
     }
     public void RestartGame()
     {
+        Time.timeScale = 1f; 
         controlScenes.RestartGame();
     }
 
     public void ReturnMenuMap()
     {
+        Time.timeScale = 1f; 
         controlScenes.ReturnMenuMap();
     }
     public void QuitGame(){
