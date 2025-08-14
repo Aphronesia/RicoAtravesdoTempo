@@ -82,10 +82,12 @@ namespace Home2.UI{
             }
             
             _controlSounds.PlayMusic("Menu");
+            
         }
         // Chamado pelo botão "Start" na UI.
         // Para quando for iniciar uma nova run do jogo.
         public void GameStart(){
+            _controlSounds.PlaySfx("button");
             if (!_hasGameData){
                 _panelTransition.alpha = 0f;
                 StartCoroutine(UITransition(2));
@@ -100,6 +102,7 @@ namespace Home2.UI{
         // Chamado pelo botão "Continue" na UI
         // Para quando for continuar a run do save. 
         public void GameContinue(){
+            _controlSounds.PlaySfx("button");
             if (_hasGameData){
                 _panelTransition.alpha = 0f;
                 _saveLoadSystem.ContinueGame();
@@ -109,6 +112,7 @@ namespace Home2.UI{
         }
 
         IEnumerator UITransition(int scene){
+            _controlSounds.PlaySfx("select");
             float startAlpha = _panelTransition.alpha;
             float time = 0f;
             while (time < transitionDuration){
@@ -124,6 +128,7 @@ namespace Home2.UI{
         }
         // Chamado pelo botão "Settings" na UI.
         public void OpenSettingsMenu(){
+            _controlSounds.PlaySfx("button");
             isOnSettings =! isOnSettings;
             StartCoroutine(!isOnSettings ? MoveMenuUI(offPanelPos) : MoveMenuUI(onPanelPos));
 

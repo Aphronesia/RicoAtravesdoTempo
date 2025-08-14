@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace MenuMap{
@@ -66,6 +67,28 @@ namespace MenuMap{
             }
             if (!moving){
                 _target = newTarget;
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            switch (other.gameObject.name)
+            {
+                case "River":
+                    _anima.SetBool("river", true);
+                    Debug.Log("truee");
+                    break;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            switch (other.gameObject.name)
+            {
+                case "River":
+                    _anima.SetBool("river", false);
+                    Debug.Log("falsee");
+                    break;
             }
         }
 

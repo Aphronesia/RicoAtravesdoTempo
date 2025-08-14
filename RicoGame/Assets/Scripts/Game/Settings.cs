@@ -56,8 +56,8 @@ namespace Game{
 
         private void TakeComponents()
         {
-            var soundManager = FindAnyObjectByType<ControlSounds>();
-            if (soundManager is not null)
+            GameObject soundManager = FindAnyObjectByType<ControlSounds>().gameObject;
+            if (soundManager != null)
             {
                 _controlSounds = soundManager.GetComponent<ControlSounds>();
             }

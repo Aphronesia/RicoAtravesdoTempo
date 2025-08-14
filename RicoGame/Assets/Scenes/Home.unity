@@ -282,8 +282,8 @@ GameObject:
   m_Component:
   - component: {fileID: 139587137}
   - component: {fileID: 139587136}
-  - component: {fileID: 139587139}
   - component: {fileID: 139587138}
+  - component: {fileID: 139587139}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -308,19 +308,19 @@ MonoBehaviour:
   musics:
   - name: Menu
     clip: {fileID: 8300000, guid: 88fc9ed6f9d02a34d9cb7444d989d192, type: 3}
-    volumeSpecific: 0
+    volumeMax: 0
   - name: Mapa
     clip: {fileID: 0}
-    volumeSpecific: 0
+    volumeMax: 0
   soundEffects:
-  - name: "bot\xE3o"
-    clip: {fileID: 0}
-    volumeSpecific: 0
-  - name: negado
-    clip: {fileID: 0}
-    volumeSpecific: 0
-  musicSource: {fileID: 139587139}
-  sfxSource: {fileID: 139587138}
+  - name: button
+    clip: {fileID: 8300000, guid: 79ae5fcb49592414b9152710717a99e6, type: 3}
+    volumeMax: 0
+  - name: select
+    clip: {fileID: 8300000, guid: 4a2f9b30653c15e49b727cd7deddb877, type: 3}
+    volumeMax: 0
+  musicSource: {fileID: 139587138}
+  sfxSource: {fileID: 139587139}
 --- !u!4 &139587137
 Transform:
   m_ObjectHideFlags: 0
@@ -670,7 +670,6 @@ MonoBehaviour:
   continueText: {fileID: 0}
   canContinue: {r: 0.5411765, g: 0.34509805, b: 0.5411765, a: 1}
   canNotContinue: {r: 0.3509434, g: 0.2138768, b: 0.3509434, a: 1}
-  _saveLoadSystem: {fileID: 0}
 --- !u!1 &327950835
 GameObject:
   m_ObjectHideFlags: 0

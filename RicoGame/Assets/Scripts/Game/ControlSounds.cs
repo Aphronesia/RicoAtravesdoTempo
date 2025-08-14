@@ -24,7 +24,7 @@ namespace Game
         {
             public string name;
             public AudioClip clip;
-            [Range(-1, 1)] public float volumeSpecific;
+            [Range(-1, 1)] public float volumeMax;
         }
         [Header("Audios Sources")]
         [SerializeField]
@@ -93,23 +93,23 @@ namespace Game
                 Debug.Log($"Efeito Sonoro '{clipName}' não encontrado");
                 return;
             }
-            if (sfx == _actualSfx)
-            {
-                return;
-            }
             if (sfx.clip == null)
             {
                 Debug.LogError($"Efeito Sonoro: {sfx.name} sem SoundClip");
                 return;
             }
-            musicSource.Stop();
-            musicSource.clip = sfx.clip;
-            musicSource.Play();
-            _actualMusic =  sfx;
+            sfxSource.Stop();
+            sfxSource.clip = sfx.clip;
+            sfxSource.Play();
+            _actualSfx =  sfx;
         }
 
         public void ChangeVolumes()
         {
+            if (_settings == null)
+            {
+                _settings = FindObjectOfType<Settings>();
+            }
             volumeMusic = Mathf.Clamp01(_settings.volumeMusic);
             volumeSfx = Mathf.Clamp01(_settings.volumeMaster);
             musicSource.volume = volumeMusic;
@@ -118,8 +118,8 @@ namespace Game
         
         private void TakeComponents()
         {
-            var settings = FindObjectOfType<Settings>();
-            if (settings is not null)
+            var settings = GameObject.Find("GameSettings");
+            if (settings != null)
             {
                 _settings = settings.GetComponent<Settings>();
             }
