@@ -48,7 +48,7 @@ public class alertAttack : AttacksSystem
         GameObject bencpress = Instantiate(atkPrefab, atkPrefab.transform.position, Quaternion.identity);
         BencpressMove bencpressMove= bencpress.GetComponent<BencpressMove>();
         bencpressMove.Started(positions[posIndex]);
-        StartSelfDestruct(0f);
+        StartSelfDestruct(0f, gameObject);
     }
     private IEnumerator Blink(){
         do{
