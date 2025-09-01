@@ -53,6 +53,7 @@ namespace UIGeral {
     
         private ControlScenes _controlScenes;
         private SaveLoadSystem _saveLoadSystem;
+        private ControlSounds _controlSounds;
 
         public static event Action<bool> OnPause;
     
@@ -71,6 +72,7 @@ namespace UIGeral {
             TakeComponents();
             panelSaveRect.anchoredPosition = offPanelPos;
             panelSettingRT.anchoredPosition = offSettingsPos;
+            OnLoadSettingsUI();
             //Time.timeScale = 1f;
         
         }
@@ -86,6 +88,7 @@ namespace UIGeral {
             
         }
         public void ShowSavePanel(int value) {
+            _controlSounds.PlaySfx("button");
             panelSaveRect.anchoredPosition = onPanelPos ;
             index = value;
             isOnSettings = true;
@@ -93,10 +96,12 @@ namespace UIGeral {
         }
 
         public void HideSavePanel() {
+            
             panelSaveRect.anchoredPosition = offPanelPos;
         }
 
         public void ShowHideSettingsPanel() {
+            _controlSounds.PlaySfx("button");
             if (!isOnSettings){
                 HideSavePanel();
                 panelSettingRT.anchoredPosition = onSettingsPos;
@@ -115,6 +120,7 @@ namespace UIGeral {
             _settings.SaveSettings(); 
         }
         public void ButtonSave(bool save) {
+            _controlSounds.PlaySfx("button");
             if (save) {
                 _saveLoadSystem.SaveGameData();
             }
@@ -128,6 +134,7 @@ namespace UIGeral {
             }
         }
         public void Pause(){
+            _controlSounds.PlaySfx("button");
             pause =! pause;
             OnPause?.Invoke(pause);
 
@@ -186,6 +193,11 @@ namespace UIGeral {
             if (gameSettings != null){
                 _settings = gameSettings.GetComponent<Settings>();
             }
+            var soundManager = FindAnyObjectByType<ControlSounds>();
+            if (soundManager is not null)
+            {
+                _controlSounds = soundManager.GetComponent<ControlSounds>();
+            }
             
             
             GameObject panelSettingsMenu = GameObject.Find("UISettings");
@@ -208,6 +220,7 @@ namespace UIGeral {
             if (uiTransition != null){
                 _panelTransition = uiTransition.GetComponent<CanvasGroup>();
             }
+            
             
         }
     }

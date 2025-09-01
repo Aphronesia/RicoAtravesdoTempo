@@ -102,6 +102,7 @@ namespace Game
             sfxSource.clip = sfx.clip;
             sfxSource.Play();
             _actualSfx =  sfx;
+            Debug.Log($"tocou som {sfx.clip.name} com volume {sfxSource.volume}");
         }
 
         public void ChangeVolumes()
@@ -110,8 +111,9 @@ namespace Game
             {
                 _settings = FindObjectOfType<Settings>();
             }
-            volumeMusic = Mathf.Clamp01(_settings.volumeMusic);
-            volumeSfx = Mathf.Clamp01(_settings.volumeMaster);
+
+            volumeMusic = _settings.volumeMusic;
+            volumeSfx = _settings.volumeMaster;
             musicSource.volume = volumeMusic;
             sfxSource.volume = volumeSfx;
         }

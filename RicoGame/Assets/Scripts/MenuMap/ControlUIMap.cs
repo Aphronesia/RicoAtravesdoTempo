@@ -27,6 +27,7 @@ namespace MenuMap {
         }
 
         public void PlayLevelWithCutscene(){
+            _controlSounds.PlayMusic("Button");
             if (lvPop.Cutscene()){
                 _controlScenes.ProxLevel = lvPop.SceneIndex();
                 _controlScenes.indexCutscene = lvPop.ActualCutsceneIndex();
