@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ControlSounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ControlSounds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/ControlUIMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/ControlUIMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIGeral/ConfigUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIGeral/ConfigUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +103,7 @@
       <workItem from="1755263350938" duration="1791000" />
       <workItem from="1755269145544" duration="7691000" />
       <workItem from="1756727374435" duration="1720000" />
+      <workItem from="1757081730572" duration="1157000" />
     </task>
     <servers />
   </component>
