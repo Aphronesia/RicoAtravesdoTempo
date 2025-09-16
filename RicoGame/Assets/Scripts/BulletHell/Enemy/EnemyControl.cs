@@ -15,7 +15,7 @@ public class EnemyControl : MonoBehaviour
     [SerializeField]
     private float tiredCooldown;
     private int turn = 0;
-    private bool alive, running;
+    private bool alive, running, damaged;
     public static event Action<bool> OnEnemyTired;
     private void OnEnable() {
         EnemyAttack.OnAtkFinished += Tired;
@@ -53,8 +53,12 @@ public class EnemyControl : MonoBehaviour
         alive = false;
     }
     private void EnemyHit(){
-        StopCoroutine(corTired);
-        StartCoroutine(EnumEnemyHit());
+        if (!damaged)
+        {
+            damaged = true;
+            StopCoroutine(corTired);
+            StartCoroutine(EnumEnemyHit());
+        }
     }
     private IEnumerator EnumEnemyHit(){
         spriteRenderer.sprite = EnemyDamage;
@@ -66,6 +70,7 @@ public class EnemyControl : MonoBehaviour
         Attacking();
     }
     private void Tired(){
+        damaged = false;
         corTired = StartCoroutine(IETired());
     }
     private IEnumerator IETired(){

@@ -25,12 +25,19 @@ namespace BulletHell.Enemy.Attacks
         private void Start()
         {
             TakeComponents();
+            transform.position = ChoosePos();
             _scratchStartY = claw.position.y;
             _scratchStartSizeY = _scratchSprite.size.y;
             StartCoroutine(Fade());
             StartSelfDestruct(delayClawDestruct + delayFallClaw, claw.gameObject);
         }
 
+        private Vector3 ChoosePos()
+        {
+            Vector3 pos = new Vector3();
+            //GameObject[] presets = GameObject.Fin
+            return pos;
+        }
         private IEnumerator Fade()
         {
             yield return new WaitForSeconds(delayFallClaw);

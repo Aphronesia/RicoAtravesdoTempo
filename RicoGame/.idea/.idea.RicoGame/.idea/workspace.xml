@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/ClawScratch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/ClawScratch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RicoGame/build08WIN\RicoGame.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RicoGame/build08WIN/Através do Tempo.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\rm90908\Desktop\RicoGame\build08WIN" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -104,6 +106,7 @@
       <workItem from="1755269145544" duration="7691000" />
       <workItem from="1756727374435" duration="1720000" />
       <workItem from="1757081730572" duration="1157000" />
+      <workItem from="1758025670019" duration="3184000" />
     </task>
     <servers />
   </component>
@@ -117,4 +120,15 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
 </project>
