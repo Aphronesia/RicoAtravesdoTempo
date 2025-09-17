@@ -25,7 +25,7 @@ namespace BulletHell.Enemy.Attacks
         private void Start()
         {
             TakeComponents();
-            transform.position = ChoosePos();
+            //transform.position = ChoosePos();
             _scratchStartY = claw.position.y;
             _scratchStartSizeY = _scratchSprite.size.y;
             StartCoroutine(Fade());
