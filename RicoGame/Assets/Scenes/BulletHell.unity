@@ -746,7 +746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -316630692, guid: c2e1750b2be49de4fafa5eedb5907e88, type: 3}
+  m_Sprite: {fileID: 971447126, guid: 97685666cba627f4889509cb9c1cf967, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4530,8 +4530,8 @@ MonoBehaviour:
   uiDead: {fileID: 0}
   running: 0
   paused: 0
-  atkBttnOn: {fileID: 56382882, guid: c2e1750b2be49de4fafa5eedb5907e88, type: 3}
-  atkBttnOff: {fileID: -316630692, guid: c2e1750b2be49de4fafa5eedb5907e88, type: 3}
+  atkBttnOn: {fileID: -1556248000, guid: 97685666cba627f4889509cb9c1cf967, type: 3}
+  atkBttnOff: {fileID: 971447126, guid: 97685666cba627f4889509cb9c1cf967, type: 3}
   AtkButton: {fileID: 84104631}
 --- !u!1 &741685495
 GameObject:
@@ -4650,18 +4650,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks:
-  - atkPrefabs: {fileID: 4131426578750467839, guid: cef4bcfa2fbb5884ba405f21766bfd20, type: 3}
+  - atkPrefabs: {fileID: 372619935266956312, guid: 0fa132172525ebe4db6e607e1fce0ccd, type: 3}
     repetitions: 1
-    cooldown: 5
-  - atkPrefabs: {fileID: 2169816929755717005, guid: 459b1707c60e9064d8668c645fb81120, type: 3}
-    repetitions: 1
-    cooldown: 5
-  - atkPrefabs: {fileID: 8192903956396983541, guid: 4a3277d785962be489d60c41d68b4941, type: 3}
-    repetitions: 4
-    cooldown: 3
+    cooldown: 13
   - atkPrefabs: {fileID: 1677516911897377234, guid: 189ad6583a0999843a4c7b3b847fc0ee, type: 3}
     repetitions: 4
     cooldown: 3
+  - atkPrefabs: {fileID: 613669723849000717, guid: 000cc4a56fcc5c4498b95bf0e6cd2fdd, type: 3}
+    repetitions: 1
+    cooldown: 17
+  - atkPrefabs: {fileID: 8192903956396983541, guid: 4a3277d785962be489d60c41d68b4941, type: 3}
+    repetitions: 4
+    cooldown: 2
+  - atkPrefabs: {fileID: 2169816929755717005, guid: 459b1707c60e9064d8668c645fb81120, type: 3}
+    repetitions: 1
+    cooldown: 13
+  - atkPrefabs: {fileID: 8192903956396983541, guid: 4a3277d785962be489d60c41d68b4941, type: 3}
+    repetitions: 6
+    cooldown: 1.5
   atkLength: 0
 --- !u!114 &766894792
 MonoBehaviour:

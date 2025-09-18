@@ -77,12 +77,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54bc78d0ec23373458c00dbd254d1ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presets:
-  - {fileID: 1544965506690909620}
-  - {fileID: 7994709535305824057}
-  - {fileID: 0}
+  presets: []
   claw: {fileID: 671724947594822180, guid: 647836b8cfe93394db1601215f557a2e, type: 3}
   delay: 3
+  player: {fileID: 0}
+  repts: 1
+  targets:
+  - obj: {fileID: 3649235987871733507}
+    order: 0
+  - obj: {fileID: 5710217459464552685}
+    order: 1
+  - obj: {fileID: 3649235987871733507}
+    order: 1
+  - obj: {fileID: 5710217459464552685}
+    order: 1
 --- !u!1 &5710217459464552685
 GameObject:
   m_ObjectHideFlags: 0

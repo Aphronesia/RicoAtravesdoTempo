@@ -10,6 +10,7 @@ public class EnemyAttack : MonoBehaviour
     public static event Action OnAtkFinished;
     public List<Attack> attacks = new List<Attack>();
     public int atkLength;
+    private int _lastAtk = -1;
     [System.Serializable]
     public class Attack{
         public GameObject atkPrefabs;
@@ -36,16 +37,24 @@ public class EnemyAttack : MonoBehaviour
         Attack attack = attacks[index];
         int reps = 0;
         while (reps < attack.repetitions){
-            yield return new WaitForSeconds(attack.cooldown);
+            yield return new WaitForSeconds(2f);
             GameObject AtkInstan = Instantiate(attack.atkPrefabs, attack.atkPrefabs.transform.position, Quaternion.identity);
             reps++;
+            yield return new WaitForSeconds(attack.cooldown);
         }
-        yield return new WaitForSeconds(attack.cooldown);
         reps = 0;
         OnAtkFinished?.Invoke();
     }
-    private void AtkSelect(){
+    private void AtkSelect()
+    {
         int AtkIndex = UnityEngine.Random.Range(0, atkLength);
+        
+        // Previne repetição de ataque
+        while (AtkIndex == _lastAtk)
+        {
+            AtkIndex = UnityEngine.Random.Range(0, atkLength);
+        }
+        _lastAtk = AtkIndex;
         Attack attackSelected = attacks[AtkIndex];
         StartCoroutine(AtkRandom(attackSelected.repetitions, attackSelected.cooldown, attackSelected.atkPrefabs));
     }

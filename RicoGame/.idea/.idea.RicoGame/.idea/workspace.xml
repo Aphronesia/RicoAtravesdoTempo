@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Scratch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Scratch.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/ClawScratch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/ClawScratch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/Hands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/Hands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyAttack.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +111,8 @@
       <workItem from="1756727374435" duration="1720000" />
       <workItem from="1757081730572" duration="1157000" />
       <workItem from="1758025670019" duration="3184000" />
-      <workItem from="1758115384086" duration="2595000" />
+      <workItem from="1758115384086" duration="2908000" />
+      <workItem from="1758195620507" duration="4093000" />
     </task>
     <servers />
   </component>
