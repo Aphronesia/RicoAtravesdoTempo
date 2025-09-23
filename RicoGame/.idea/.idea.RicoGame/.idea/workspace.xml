@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Handss02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Scratch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BulletHell/Enemys/Attacks/Scratch.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/Hands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/Hands.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameTrem/CapivaraTrem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameTrem/CapivaraTrem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Universal RP/UniversalRenderPipelineAssetssettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Universal RP/UniversalRenderPipelineAssetssettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.sequences/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/RicoGame/build08WIN/Através do Tempo.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../builds\Através do Tempo.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\rm90908\Desktop\RicoGame\build08WIN" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -113,6 +113,7 @@
       <workItem from="1758025670019" duration="3184000" />
       <workItem from="1758115384086" duration="2908000" />
       <workItem from="1758195620507" duration="4093000" />
+      <workItem from="1758633308176" duration="1175000" />
     </task>
     <servers />
   </component>
