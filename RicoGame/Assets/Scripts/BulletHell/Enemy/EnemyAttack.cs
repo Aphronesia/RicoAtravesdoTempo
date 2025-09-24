@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
 {
     
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
     public static event Action OnAtkFinished;
     public List<Attack> attacks = new List<Attack>();
     public int atkLength;
@@ -61,10 +62,25 @@ public class EnemyAttack : MonoBehaviour
     private IEnumerator AtkRandom(int repetitions, float cooldown,GameObject AtkToSummon){
         int reps = 0;
         while (reps < repetitions){
+            animator.SetTrigger("Attack");
             GameObject AtkInstan = Instantiate(AtkToSummon, AtkToSummon.transform.position, Quaternion.identity);
+            
+            AttacksSystem atk = AtkInstan.GetComponent<AttacksSystem>();
+            atk.enemyAttack = this;
+            
+            
             yield return new WaitForSeconds(cooldown);
             reps++;
         }
         OnAtkFinished?.Invoke();
+    }
+
+    public void AttackAnim()
+    {
+        
+    }
+    private void TakeComponents()
+    {
+        animator = GetComponent<Animator>();
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae36d840e374a0e4e80476157836ea84
+guid: d0e6fa1243535ee40a4ce0897343e795
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -149,85 +149,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tired(640x360)_1
+      name: Death(640x360)_0
       rect:
         serializedVersion: 2
-        x: 274
-        y: 145
-        width: 155
-        height: 132
+        x: 48
+        y: 206
+        width: 154
+        height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ad2c35c82748c4cb73f4ce59152586
-      internalID: 320269963
+      spriteID: 22dfa22ca32511840a3d2a0f3699ea61
+      internalID: -1507890493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tired(640x360)_3
+      name: Death(640x360)_2
       rect:
         serializedVersion: 2
-        x: 914
-        y: 145
-        width: 155
-        height: 135
+        x: 688
+        y: 206
+        width: 154
+        height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fdaae40d0d85f04c9957a5b2060645c
-      internalID: 1678336308
+      spriteID: ecc0d1b343515a745b3ce6d0cde47fa7
+      internalID: 1674890111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tired(640x360)_5
+      name: Death(640x360)_4
       rect:
         serializedVersion: 2
-        x: 1554
-        y: 145
-        width: 155
-        height: 135
+        x: 1328
+        y: 206
+        width: 154
+        height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01f8f565f9e10f746af6811ea343411d
-      internalID: -1926330021
+      spriteID: 7197a18d610fb594089f244a0d974365
+      internalID: 36067477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tired(640x360)_7
+      name: Death(640x360)_6
       rect:
         serializedVersion: 2
-        x: 2194
-        y: 145
-        width: 155
-        height: 132
+        x: 1968
+        y: 206
+        width: 154
+        height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 604f4d09afcfaf742acf0f37136eec13
-      internalID: 983618047
+      spriteID: f2091d45f44a6584da21711086a5bb62
+      internalID: -32893899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death(640x360)_8
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 206
+        width: 154
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7073913c3a3979249a0f80ca675a2317
+      internalID: -651604213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death(640x360)_10
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 208
+        width: 155
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee4634d3977e5f4180ffa02818afd5e
+      internalID: 1818473866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death(640x360)_12
+      rect:
+        serializedVersion: 2
+        x: 3887
+        y: 208
+        width: 155
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736e06baf4f36524194326300e8d6f7a
+      internalID: 2123314433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death(640x360)_14
+      rect:
+        serializedVersion: 2
+        x: 4527
+        y: 208
+        width: 155
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544385bb37511d449bccc57ed95ef9c6
+      internalID: 575065546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death(640x360)_16
+      rect:
+        serializedVersion: 2
+        x: 5167
+        y: 208
+        width: 155
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0126ef12f09644fb0e490bce6b13bb
+      internalID: -1963800200
       vertices: []
       indices: 
       edges: []
@@ -243,15 +348,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tired(640x360)_0: -136947620
-      tired(640x360)_1: 320269963
-      tired(640x360)_2: 1243479086
-      tired(640x360)_3: 1678336308
-      tired(640x360)_4: -1796280234
-      tired(640x360)_5: -1926330021
-      tired(640x360)_6: 410958470
-      tired(640x360)_7: 983618047
-      tired(640x360)_8: 1585138595
+      Death(640x360)_0: -1507890493
+      Death(640x360)_1: -1375052594
+      Death(640x360)_10: 1818473866
+      Death(640x360)_11: -1540545890
+      Death(640x360)_12: 2123314433
+      Death(640x360)_13: -1231981684
+      Death(640x360)_14: 575065546
+      Death(640x360)_15: -1253514698
+      Death(640x360)_16: -1963800200
+      Death(640x360)_17: 1913987218
+      Death(640x360)_2: 1674890111
+      Death(640x360)_3: -529927435
+      Death(640x360)_4: 36067477
+      Death(640x360)_5: -1602020850
+      Death(640x360)_6: -32893899
+      Death(640x360)_7: -359137673
+      Death(640x360)_8: -651604213
+      Death(640x360)_9: 92730108
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

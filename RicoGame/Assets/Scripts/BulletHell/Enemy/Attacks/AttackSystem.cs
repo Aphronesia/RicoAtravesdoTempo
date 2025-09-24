@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttacksSystem : MonoBehaviour
 {
+    public EnemyAttack enemyAttack;
     /// <summary>
     /// Inicia a coroutine de autodestruição com o delay especificado.
     /// </summary>

@@ -32,27 +32,30 @@ namespace BulletHell.Enemy.Attacks
         private IEnumerator Spawn()
         {
             int orderMax = 0;
-            foreach (Target t in targets)
-            {
-                if (t.order >= orderMax)
-                {
-                    orderMax = t.order;
-                }
-            }
-
-            int objActual = 0;
-            while (objActual <= orderMax)
+            if (targets.Count != 0)
             {
                 foreach (Target t in targets)
                 {
-                    if (t.order == objActual)
-                        Instantiate(claw, t.obj.transform.position, claw.transform.rotation);
+                    if (t.order >= orderMax)
+                    {
+                        orderMax = t.order;
+                    }
                 }
-
-                if (orderMax != 0)
+                int objActual = 0;
+                while (objActual <= orderMax)
                 {
-                    yield return new WaitForSeconds(delay);
-                    objActual++;
+                    foreach (Target t in targets)
+                    {
+                        if (t.order == objActual)
+                            Instantiate(claw, t.obj.transform.position, claw.transform.rotation);
+                        enemyAttack.
+                    }
+
+                    if (orderMax != 0)
+                    {
+                        yield return new WaitForSeconds(delay);
+                        objActual++;
+                    }
                 }
             }
             /*

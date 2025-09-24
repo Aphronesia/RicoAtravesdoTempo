@@ -8,6 +8,7 @@ public class EnemyControl : MonoBehaviour
     EnemyStatus enemyStatus;
     EnemyAttack enemyAttack;
     SpriteRenderer spriteRenderer;
+    Animator  animator;
     [SerializeField]
     private Sprite EnemyAtk, EnemyTired, EnemyDamage, EnemyDie;
 
@@ -30,10 +31,10 @@ public class EnemyControl : MonoBehaviour
         BulletHell.UI.UIControl.OnStarted -= Started;
     }
     private void Start() {
-        enemyStatus = GetComponent<EnemyStatus>();
-        enemyAttack = GetComponent<EnemyAttack>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        TakeComponents();
         alive = true;
+        animator.SetBool("Alive", true);
+        animator.SetBool("Tired", false);
         running = false;
     }
     
@@ -42,14 +43,18 @@ public class EnemyControl : MonoBehaviour
         Attacking();
     }
     private void Attacking(){
+        animator.SetBool("Tired", false);
+        animator.SetTrigger("Attack");
         OnEnemyTired?.Invoke(false);
         if(alive && running){
-            spriteRenderer.sprite = EnemyAtk;
+            //.sprite = EnemyAtk;
             turn++;
             enemyAttack.atkPre(turn);
         }
     }
     private void Die(){
+        animator.SetBool("Alive", false);
+        animator.SetBool("Tired", true);
         alive = false;
     }
     private void EnemyHit(){
@@ -61,10 +66,11 @@ public class EnemyControl : MonoBehaviour
         }
     }
     private IEnumerator EnumEnemyHit(){
-        spriteRenderer.sprite = EnemyDamage;
+        //spriteRenderer.sprite = EnemyDamage;
         yield return new WaitForSeconds(0.5f);
         if (!alive){
-            spriteRenderer.sprite = EnemyDie;
+            animator.SetBool("Alive", false);
+            //spriteRenderer.sprite = EnemyDie;
             OnEnemyTired?.Invoke(false);
         }
         Attacking();
@@ -74,9 +80,18 @@ public class EnemyControl : MonoBehaviour
         corTired = StartCoroutine(IETired());
     }
     private IEnumerator IETired(){
-        spriteRenderer.sprite = EnemyTired;
+        animator.SetBool("Tired", true);
+        //spriteRenderer.sprite = EnemyTired;
         OnEnemyTired?.Invoke(true);
         yield return new WaitForSeconds(tiredCooldown);
         Attacking();
+    }
+
+    private void TakeComponents()
+    {
+        enemyStatus = GetComponent<EnemyStatus>();
+        enemyAttack = GetComponent<EnemyAttack>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 }
