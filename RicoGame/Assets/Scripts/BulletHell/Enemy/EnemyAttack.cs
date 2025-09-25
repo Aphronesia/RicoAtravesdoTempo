@@ -22,7 +22,7 @@ public class EnemyAttack : MonoBehaviour
         atkLength = attacks.Count;
     }
     private void Start() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        TakeComponents();
     }
     public void atkPre(int index){
         if(index <= atkLength){
@@ -38,6 +38,7 @@ public class EnemyAttack : MonoBehaviour
         Attack attack = attacks[index];
         int reps = 0;
         while (reps < attack.repetitions){
+            animator.SetTrigger("Attack");
             yield return new WaitForSeconds(2f);
             GameObject AtkInstan = Instantiate(attack.atkPrefabs, attack.atkPrefabs.transform.position, Quaternion.identity);
             reps++;
@@ -82,5 +83,6 @@ public class EnemyAttack : MonoBehaviour
     private void TakeComponents()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 }

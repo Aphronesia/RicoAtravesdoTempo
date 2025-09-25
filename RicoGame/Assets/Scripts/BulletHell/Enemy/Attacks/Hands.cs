@@ -13,7 +13,7 @@ namespace BulletHell.Enemy.Attacks
         private GameObject claw;
         [SerializeField] private float delay;
         [SerializeField]
-        private GameObject player;
+        private GameObject player, enemy;
 
         [SerializeField] private int repts;
         public List<Target> targets= new List<Target>();
@@ -26,9 +26,11 @@ namespace BulletHell.Enemy.Attacks
         private void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player");
+            enemy = GameObject.Find("Enemy");
             StartCoroutine(Spawn());
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         private IEnumerator Spawn()
         {
             int orderMax = 0;
@@ -48,7 +50,8 @@ namespace BulletHell.Enemy.Attacks
                     {
                         if (t.order == objActual)
                             Instantiate(claw, t.obj.transform.position, claw.transform.rotation);
-                        enemyAttack.
+                        Animator enemyAnim = enemy.GetComponent<Animator>();
+                        enemyAnim.SetTrigger("Attack");
                     }
 
                     if (orderMax != 0)
@@ -74,6 +77,8 @@ namespace BulletHell.Enemy.Attacks
                 Instantiate(claw, pos, claw.transform.rotation);
                 yield return new WaitForSeconds(delay);
                 rps++;
+                Animator enemyAnim = enemy.GetComponent<Animator>();
+                enemyAnim.SetTrigger("Attack");
             }
             Debug.Log("Acabou");
             StartSelfDestruct(0f, this.gameObject);
