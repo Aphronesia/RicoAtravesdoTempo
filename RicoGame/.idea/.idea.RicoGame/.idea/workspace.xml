@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/BulletHell/Enemys/Guaxinim/Enemy.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/BulletHell/Enemys/Guaxinim/Enemy.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/Hands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/Attacks/Hands.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Enemy/EnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +116,7 @@
       <workItem from="1758719279352" duration="2933000" />
       <workItem from="1758724717590" duration="715000" />
       <workItem from="1758800347288" duration="3801000" />
+      <workItem from="1758892217463" duration="1941000" />
     </task>
     <servers />
   </component>
