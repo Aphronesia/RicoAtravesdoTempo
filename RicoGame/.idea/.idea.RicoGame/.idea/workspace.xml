@@ -7,6 +7,7 @@
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/RitmoControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/RitmoControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -116,7 +117,10 @@
       <workItem from="1758719279352" duration="2933000" />
       <workItem from="1758724717590" duration="715000" />
       <workItem from="1758800347288" duration="3801000" />
-      <workItem from="1758892217463" duration="1941000" />
+      <workItem from="1758892217463" duration="1999000" />
+      <workItem from="1759145668529" duration="2465000" />
+      <workItem from="1759151231452" duration="2045000" />
+      <workItem from="1759157957801" duration="2034000" />
     </task>
     <servers />
   </component>
