@@ -1,4 +1,5 @@
 using System;
+using MinigameRitmo.UI;
 using UnityEngine;
 
 namespace MinigameRitmo
@@ -10,6 +11,9 @@ namespace MinigameRitmo
         
         public static event Action OnClick;
         public static event Action OnMiss;
+
+        
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             switch (other.tag)
@@ -35,11 +39,15 @@ namespace MinigameRitmo
             if (_arrow == null)
             {
                 OnMiss?.Invoke();
+                Debug.Log("errou");
                 return;
             }
-            OnClick?.Invoke();
+
             Destroy(_arrow);
+            Debug.Log("acertou");
+            OnClick?.Invoke();
         }
+
         
     }
 }

@@ -1,21 +1,22 @@
+using TMPro;
 using UnityEngine;
 
 namespace MinigameRitmo.UI
 {
     public class UIControl : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI pontostxt;
 
-        private bool _running;
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private TextMeshProUGUI combotxt;
+
+        public void RefreshTextPontos(int value)
         {
-            _running = false;
+            pontostxt.text = $"pontos: {value}";
         }
 
-        // Update is called once per frame
-        void Update()
+        public void RefreshTextCombos(int value)
         {
-        
+            combotxt.text = $"Combo: {value}";
         }
     }
 }
