@@ -7,7 +7,8 @@ public class Arrow : MonoBehaviour
 {
     [SerializeField] private float speedDown;
     private Rigidbody2D rb;
-
+    
+    public static event Action OnMiss;
     private void Start()
     {
         TakeComponest();
@@ -22,11 +23,9 @@ public class Arrow : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "Bigorna":
+            case "Bigorna": // Fundo
                 Destroy(gameObject);
-                break;
-            default:
-                Destroy(gameObject);
+                OnMiss?.Invoke();
                 break;
                 
             

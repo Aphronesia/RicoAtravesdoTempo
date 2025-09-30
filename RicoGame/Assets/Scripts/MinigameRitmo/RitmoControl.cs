@@ -37,7 +37,7 @@ namespace MinigameRitmo
         {
             if (_index >= arrowsOrder.Count)
             {
-                Debug.Log("não espawna");
+                //Debug.Log("não espawna");
                 return;
             }
 
@@ -49,31 +49,29 @@ namespace MinigameRitmo
                 {
                     Vector3 pos = arrowProps[(int)nextArrow.direction01].pos;
                     GameObject obj = arrowProps[(int)nextArrow.direction01].prefab;
-                    GameObject arrow = Instantiate(obj, pos, Quaternion.identity);
-                    Debug.Log($"spawnou: {arrowsOrder[_index].direction01} index: {_index}");
+                    Instantiate(obj, pos, Quaternion.identity);
+                    //Debug.Log($"spawnou: {arrowsOrder[_index].direction01} index: {_index}");
                 }
 
-                //if (nextArrow.direction02 != Direction.None) {
-                //    // spawna outra flecha
-                //}
+                if (nextArrow.direction02 != Direction.None) {
+                    Vector3 pos = arrowProps[(int)nextArrow.direction02].pos;
+                    GameObject obj = arrowProps[(int)nextArrow.direction02].prefab;
+                    Instantiate(obj, pos, Quaternion.identity);
+                    //Debug.Log($"spawnou: {arrowsOrder[_index].direction02} index: {_index}");
+                }
 
                 lastIndex = _index;
                 _index++;
 
-                if (_index < arrowsOrder.Count) // <- protege contra acesso fora da lista
+                if (_index < arrowsOrder.Count) //
                 {
                     nextArrow = arrowsOrder[_index];
                     lastTime = timeRunning;
                 }
-                else
-                {
-                    Debug.Log("acabaram as flechas");
-                }
             }
         }
-        
-
     }
+    
     [System.Serializable]
     public class ArrowObj
     {
