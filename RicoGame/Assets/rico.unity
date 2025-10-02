@@ -226,166 +226,62 @@ MonoBehaviour:
     enemy: 0
     direction01: 4
     direction02: 0
-  - time: 1
+  - time: 0.7
     enemy: 0
     direction01: 2
     direction02: 0
-  - time: 0.8
-    enemy: 1
-    direction01: 1
-    direction02: 0
-  - time: 0.5
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 0.7
+  - time: 0.6
     enemy: 0
     direction01: 1
     direction02: 3
-  - time: 0.5
-    enemy: 0
-    direction01: 0
-    direction02: 4
-  - time: 0.7
+  - time: 0.6
     enemy: 0
     direction01: 1
     direction02: 4
-  - time: 0.5
+  - time: 0.6
     enemy: 0
     direction01: 1
-    direction02: 0
-  - time: 0.7
+    direction02: 3
+  - time: 0.6
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 0.8
+  - time: 0.6
+    enemy: 0
+    direction01: 1
+    direction02: 4
+  - time: 1
     enemy: 0
     direction01: 3
     direction02: 1
   - time: 0.6
     enemy: 0
     direction01: 2
-    direction02: 0
-  - time: 0.6
+    direction02: 4
+  - time: 1
     enemy: 0
     direction01: 3
     direction02: 1
-  - time: 0.8
+  - time: 1
     enemy: 0
     direction01: 2
     direction02: 0
   - time: 1
-    enemy: 0
-    direction01: 1
-    direction02: 0
-  - time: 0.8
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 3
-  - time: 0.7
-    enemy: 0
-    direction01: 1
-    direction02: 3
-  - time: 0.7
-    enemy: 0
-    direction01: 3
-    direction02: 2
-  - time: 1
-    enemy: 0
-    direction01: 1
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.7
     enemy: 0
     direction01: 3
     direction02: 1
-  - time: 0.7
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.5
-    enemy: 0
-    direction01: 3
-    direction02: 1
-  - time: 0.8
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.8
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.8
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 3
-  - time: 0.8
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 4
   - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 2
-  - time: 1
-    enemy: 0
-    direction01: 1
-    direction02: 0
-  - time: 0.6
     enemy: 0
     direction01: 2
     direction02: 0
   - time: 1
     enemy: 0
     direction01: 1
-    direction02: 3
+    direction02: 0
+  - time: 1
+    enemy: 0
+    direction01: 3
+    direction02: 0
   - time: 1
     enemy: 0
     direction01: 4
@@ -393,199 +289,19 @@ MonoBehaviour:
   - time: 1
     enemy: 0
     direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
     direction02: 3
   - time: 1
     enemy: 0
-    direction01: 0
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
+    direction01: 1
     direction02: 0
-  - time: 2.4
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
   - time: 1
     enemy: 0
-    direction01: 2
-    direction02: 4
+    direction01: 3
+    direction02: 0
   - time: 1
     enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
+    direction01: 1
+    direction02: 0
   - time: 1
     enemy: 0
     direction01: 2
