@@ -42,7 +42,7 @@ namespace MinigameRitmo
                 Debug.Log("errou");
                 return;
             }
-
+            
             Destroy(_arrow);
             Debug.Log("acertou");
             OnClick?.Invoke();

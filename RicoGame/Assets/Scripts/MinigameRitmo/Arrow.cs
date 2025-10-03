@@ -7,7 +7,7 @@ public class Arrow : MonoBehaviour
 {
     [SerializeField] private float speedDown;
     private Rigidbody2D rb;
-    
+    public bool enemy;
     public static event Action OnMiss;
     private void Start()
     {

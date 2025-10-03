@@ -49,7 +49,8 @@ namespace MinigameRitmo
                 {
                     Vector3 pos = arrowProps[(int)nextArrow.direction01].pos;
                     GameObject obj = arrowProps[(int)nextArrow.direction01].prefab;
-                    Instantiate(obj, pos, Quaternion.identity);
+                    GameObject arrow = Instantiate(obj, pos, Quaternion.identity);
+                    arrow.GetComponent<Arrow>().enemy = nextArrow.enemy;
                     //Debug.Log($"spawnou: {arrowsOrder[_index].direction01} index: {_index}");
                 }
 

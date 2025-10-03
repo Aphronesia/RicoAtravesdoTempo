@@ -187,7 +187,7 @@ MonoBehaviour:
     pos: {x: -7, y: 7, z: 0}
   arrowsOrder:
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 1
     direction02: 0
   - time: 1
@@ -1829,6 +1829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470603332}
   - component: {fileID: 1470603333}
+  - component: {fileID: 1470603334}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -1865,6 +1866,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontostxt: {fileID: 2029299604}
   combotxt: {fileID: 2051511824}
+--- !u!114 &1470603334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470603331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70b62d9fd81b14448722aa2b927d06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliderUp: {fileID: 416035629}
+  colliderDown: {fileID: 1319654535}
+  colliderLeft: {fileID: 757264686}
+  colliderRight: {fileID: 832412666}
 --- !u!1 &1781768523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,9 +2288,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1781768527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -422, y: 307}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 546, y: -65}
   m_SizeDelta: {x: 390, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029299604
@@ -2405,9 +2422,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1781768527}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -422, y: 257}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 545.99994, y: -114.999985}
   m_SizeDelta: {x: 390, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051511824
@@ -2580,6 +2597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedDown: 0
+  enemy: 0
 --- !u!1 &2132057473
 GameObject:
   m_ObjectHideFlags: 0
