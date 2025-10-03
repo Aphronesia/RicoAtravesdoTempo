@@ -1,39 +1,61 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+namespace MinigameRitmo
 {
-    [SerializeField] private float speedDown;
-    private Rigidbody2D rb;
-    public bool enemy;
-    public static event Action OnMiss;
-    private void Start()
+    public class Arrow : MonoBehaviour
     {
-        TakeComponest();
-    }
+        [SerializeField] private float speedDown;
+        private Rigidbody2D rb;
+        public bool enemy;
 
-    private void FixedUpdate()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, -speedDown);
-    }
+        [SerializeField] private Color colorEnemy;
+        private Color colorWhite = Color.white;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        switch (other.tag)
+        private SpriteRenderer _spriteRenderer;
+        public static event Action OnMiss;
+        private void Start()
         {
-            case "Bigorna": // Fundo
-                Destroy(gameObject);
-                OnMiss?.Invoke();
-                break;
+            TakeComponent();
+        }
+
+        private void FixedUpdate()
+        {
+            rb.velocity = new Vector2(rb.velocity.x, -speedDown);
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            switch (other.tag)
+            {
+                case "Bigorna": // Fundo
+                    Destroy(gameObject);
+                    OnMiss?.Invoke();
+                    break;
                 
             
+            }
         }
-    }
 
-    private void TakeComponest()
-    {
-        rb = GetComponent<Rigidbody2D>();
+        public void ChangeMode(bool value)
+        {
+            enemy = value;
+            _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            if(_spriteRenderer == null)
+                return;
+            if (enemy)
+            {
+                _spriteRenderer.color = colorEnemy;
+            }
+            else
+            {
+                _spriteRenderer.color = colorWhite;
+            }
+        }
+        private void TakeComponent()
+        {
+            rb = GetComponent<Rigidbody2D>();
+            _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        }
     }
 }

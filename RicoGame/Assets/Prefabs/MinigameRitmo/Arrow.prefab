@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedDown: 7
+  enemy: 0
+  colorEnemy: {r: 0.48427665, g: 0.48427665, b: 0.48427665, a: 1}
 --- !u!61 &1287805896377123376
 BoxCollider2D:
   m_ObjectHideFlags: 0

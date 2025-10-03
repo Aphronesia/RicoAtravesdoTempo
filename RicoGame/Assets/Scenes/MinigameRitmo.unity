@@ -189,9 +189,9 @@ MonoBehaviour:
   - time: 1
     enemy: 1
     direction01: 1
-    direction02: 0
+    direction02: 2
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 1
     direction02: 0
   - time: 1
@@ -212,7 +212,7 @@ MonoBehaviour:
     direction02: 0
   - time: 1
     enemy: 0
-    direction01: 1
+    direction01: 2
     direction02: 0
   - time: 1
     enemy: 0
@@ -2424,7 +2424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 545.99994, y: -114.999985}
+  m_AnchoredPosition: {x: 545.99994, y: -115}
   m_SizeDelta: {x: 390, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051511824
@@ -2598,6 +2598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedDown: 0
   enemy: 0
+  colorEnemy: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2132057473
 GameObject:
   m_ObjectHideFlags: 0

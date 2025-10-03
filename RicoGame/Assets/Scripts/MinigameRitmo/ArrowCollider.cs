@@ -11,6 +11,7 @@ namespace MinigameRitmo
         
         public static event Action OnClick;
         public static event Action OnMiss;
+        public static event Action OnEnemy;
 
         
 
@@ -36,16 +37,30 @@ namespace MinigameRitmo
 
         public void Click()
         {
-            if (_arrow == null)
+            if (_arrow is null)
             {
                 OnMiss?.Invoke();
                 Debug.Log("errou");
                 return;
             }
+            if (_arrow.GetComponent<Arrow>() is null)
+                return;
+            if (_arrow.GetComponent<Arrow>() is  null)
+                return;
             
-            Destroy(_arrow);
-            Debug.Log("acertou");
-            OnClick?.Invoke();
+            switch (_arrow.GetComponent<Arrow>().enemy)
+            {
+                case true:
+                    OnEnemy?.Invoke();
+                    Debug.Log("do inimigo");
+                    break;
+                case false:
+                    OnClick?.Invoke();
+                    Debug.Log("acertou");
+                    
+                    break;
+            }
+            
         }
 
         
