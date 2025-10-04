@@ -430,23 +430,23 @@ MonoBehaviour:
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1.7
+  - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1.7
+  - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1.7
+  - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1.7
+  - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1.7
+  - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
