@@ -191,122 +191,21 @@ MonoBehaviour:
     direction01: 1
     direction02: 0
   - time: 1
-<<<<<<< HEAD
     enemy: 1
     direction01: 1
     direction02: 2
   - time: 1
     enemy: 1
     direction01: 1
-=======
-    enemy: 0
-    direction01: 2
->>>>>>> ritmofase4
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 1
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 1
-  - time: 1
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 0
-  - time: 0.8
-    enemy: 1
-    direction01: 1
-    direction02: 0
-  - time: 0.5
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 1
-    direction02: 3
-  - time: 0.5
-    enemy: 0
-    direction01: 0
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 0.5
-    enemy: 0
-    direction01: 1
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.8
-    enemy: 0
-    direction01: 3
-    direction02: 1
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 3
-    direction02: 1
-  - time: 0.8
-    enemy: 0
-    direction01: 2
     direction02: 0
   - time: 1
     enemy: 0
     direction01: 1
     direction02: 0
-  - time: 0.8
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 3
-  - time: 0.7
+  - time: 1
     enemy: 0
     direction01: 1
-    direction02: 3
-  - time: 0.7
-    enemy: 0
-    direction01: 3
-    direction02: 2
+    direction02: 0
   - time: 1
     enemy: 0
     direction01: 1
@@ -314,7 +213,6 @@ MonoBehaviour:
   - time: 1
     enemy: 0
     direction01: 2
-<<<<<<< HEAD
     direction02: 0
   - time: 1
     enemy: 0
@@ -322,299 +220,28 @@ MonoBehaviour:
     direction02: 0
   - time: 1
     enemy: 1
-=======
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 3
-    direction02: 1
-  - time: 0.7
-    enemy: 0
->>>>>>> ritmofase4
     direction01: 1
-    direction02: 4
-  - time: 0.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.5
-    enemy: 0
-    direction01: 3
-    direction02: 1
-  - time: 0.8
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.8
-    enemy: 0
-    direction01: 3
     direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.7
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 0.8
-    enemy: 0
-    direction01: 1
-    direction02: 4
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 3
-  - time: 0.8
-    enemy: 0
-    direction01: 4
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 0.6
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 2
   - time: 1
     enemy: 0
     direction01: 1
     direction02: 0
-  - time: 0.6
+  - time: 1
     enemy: 0
-    direction01: 2
+    direction01: 1
     direction02: 0
   - time: 1
     enemy: 0
     direction01: 1
-    direction02: 3
-  - time: 1
-    enemy: 0
-    direction01: 4
     direction02: 0
   - time: 1
-<<<<<<< HEAD
     enemy: 1
     direction01: 1
     direction02: 0
-=======
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
   - time: 1
     enemy: 0
     direction01: 1
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 3
->>>>>>> ritmofase4
-  - time: 1
-    enemy: 0
-    direction01: 0
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
     direction02: 0
-  - time: 2.4
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1.7
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
 --- !u!1 &232210690
 GameObject:
   m_ObjectHideFlags: 0
