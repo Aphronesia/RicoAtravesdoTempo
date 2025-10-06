@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/Arrow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/ArrowCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/ArrowCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/UI/UIControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +34,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ritmofase4&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -128,6 +124,8 @@
       <workItem from="1759157957801" duration="2034000" />
       <workItem from="1759235060183" duration="4279000" />
       <workItem from="1759241658295" duration="1848000" />
+      <workItem from="1759751494119" duration="1482000" />
+      <workItem from="1759756262654" duration="1127000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,610 @@
+{
+    "arrowsOrder": [
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 1
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 4,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 0
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": true,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 0.5,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 4
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 3
+        },
+        {
+            "time": 0.5,
+            "enemy": false,
+            "direction01": 0,
+            "direction02": 4
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 4
+        },
+        {
+            "time": 0.5,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 1
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 0
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 1
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 4,
+            "direction02": 0
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 3
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 3
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 2
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 1
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 4
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.5,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 1
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 0.699999988079071,
+            "enemy": false,
+            "direction01": 4,
+            "direction02": 0
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 4
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 3
+        },
+        {
+            "time": 0.800000011920929,
+            "enemy": false,
+            "direction01": 4,
+            "direction02": 0
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 0
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 3,
+            "direction02": 2
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 0
+        },
+        {
+            "time": 0.6000000238418579,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 3
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 4,
+            "direction02": 0
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 1,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 3
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 0,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 0
+        },
+        {
+            "time": 2.4000000953674318,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.7000000476837159,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.7000000476837159,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.7000000476837159,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        },
+        {
+            "time": 1.0,
+            "enemy": false,
+            "direction01": 2,
+            "direction02": 4
+        }
+    ]
+}
