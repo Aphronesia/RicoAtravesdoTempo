@@ -30,7 +30,8 @@ namespace MinigameRitmo
             {
                 case "Bigorna": // Fundo
                     Destroy(gameObject);
-                    OnMiss?.Invoke();
+                    if(!enemy)
+                        OnMiss?.Invoke();
                     break;
                 
             

@@ -8,7 +8,6 @@ namespace MinigameRitmo.UI
         [SerializeField] private TextMeshProUGUI pontostxt;
 
         [SerializeField] private TextMeshProUGUI combotxt;
-
         public void RefreshTextPontos(int value)
         {
             pontostxt.text = $"pontos: {value}";

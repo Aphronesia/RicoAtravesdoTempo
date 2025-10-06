@@ -12,7 +12,6 @@ namespace MinigameRitmo
         public static event Action OnClick;
         public static event Action OnMiss;
         public static event Action OnEnemy;
-
         
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +21,7 @@ namespace MinigameRitmo
                 case "Pinha":
                     _arrow = other.gameObject;
                     break;
+                    
             }
         }
 
@@ -37,7 +37,7 @@ namespace MinigameRitmo
 
         public void Click()
         {
-            if (_arrow is null)
+            if (_arrow == null)
             {
                 OnMiss?.Invoke();
                 Debug.Log("errou");
@@ -53,11 +53,12 @@ namespace MinigameRitmo
                 case true:
                     OnEnemy?.Invoke();
                     Debug.Log("do inimigo");
+                    Destroy(_arrow);
                     break;
                 case false:
                     OnClick?.Invoke();
                     Debug.Log("acertou");
-                    
+                    Destroy(_arrow);
                     break;
             }
             

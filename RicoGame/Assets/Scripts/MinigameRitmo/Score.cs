@@ -18,6 +18,7 @@ namespace MinigameRitmo
         {
             ArrowCollider.OnClick += AddPoints;
             ArrowCollider.OnMiss += ResetCombo;
+            ArrowCollider.OnEnemy += EnemyPoints;
             Arrow.OnMiss += ResetCombo;
         }
 
@@ -25,6 +26,7 @@ namespace MinigameRitmo
         {
             ArrowCollider.OnClick -= AddPoints;
             ArrowCollider.OnMiss -= ResetCombo;
+            ArrowCollider.OnEnemy += EnemyPoints;
             Arrow.OnMiss -= ResetCombo;
             
         }
@@ -55,6 +57,19 @@ namespace MinigameRitmo
             //Debug.Log("perdeu");
             combo = 0;
             uiControl.RefreshTextCombos(combo);
+        }
+
+        public void EnemyPoints()
+        {
+            if (points >= 10)
+            {
+                points -= 10;
+            }
+            else if (points < 10)
+            {
+                points = 0;
+            }
+            ResetCombo();
         }
         private void TakeComponents()
         {
