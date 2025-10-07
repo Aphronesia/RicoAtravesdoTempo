@@ -188,43 +188,43 @@ MonoBehaviour:
     pos: {x: -7, y: 7, z: 0}
   arrowsOrder:
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 1
     direction02: 0
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 2
     direction02: 0
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 3
     direction02: 0
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 3
     direction02: 0
   - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 3
-    direction02: 0
-  - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 2
     direction02: 4
   - time: 1
-    enemy: 0
+    enemy: 1
+    direction01: 3
+    direction02: 0
+  - time: 1
+    enemy: 1
+    direction01: 2
+    direction02: 4
+  - time: 1
+    enemy: 1
     direction01: 1
     direction02: 0
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 3
     direction02: 1
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 4
     direction02: 0
   - time: 1
@@ -260,39 +260,39 @@ MonoBehaviour:
     direction01: 2
     direction02: 4
   - time: 0.8
-    enemy: 0
+    enemy: 1
     direction01: 3
     direction02: 1
   - time: 0.6
-    enemy: 0
+    enemy: 1
     direction01: 2
     direction02: 0
   - time: 0.6
-    enemy: 0
+    enemy: 1
     direction01: 3
     direction02: 1
   - time: 0.8
-    enemy: 0
+    enemy: 1
     direction01: 2
     direction02: 0
   - time: 1
-    enemy: 0
+    enemy: 1
     direction01: 1
     direction02: 0
   - time: 0.8
-    enemy: 0
+    enemy: 1
     direction01: 3
     direction02: 0
   - time: 0.7
-    enemy: 0
+    enemy: 1
     direction01: 4
     direction02: 0
   - time: 0.7
-    enemy: 0
+    enemy: 1
     direction01: 2
     direction02: 3
   - time: 0.7
-    enemy: 0
+    enemy: 1
     direction01: 1
     direction02: 3
   - time: 0.7
@@ -433,160 +433,144 @@ MonoBehaviour:
     direction02: 4
   - time: 1
     enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 1
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 1
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 3
+    direction02: 1
+  - time: 1
+    enemy: 0
     direction01: 2
     direction02: 4
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 1
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 2
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 3
+  - time: 0.7
+    enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 1
+    enemy: 0
+    direction01: 2
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 0
+  - time: 1
+    enemy: 0
+    direction01: 3
+    direction02: 2
+  - time: 1
+    enemy: 0
+    direction01: 1
+    direction02: 4
+  - time: 1
+    enemy: 0
+    direction01: 2
+    direction02: 0
+  - time: 1
+    enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 1
+    enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 4
+  - time: 0.7
+    enemy: 0
+    direction01: 3
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 2
+    direction02: 0
   - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
   - time: 1
     enemy: 0
-    direction01: 2
-    direction02: 4
+    direction01: 3
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 1
+    direction02: 0
+  - time: 0.7
+    enemy: 0
+    direction01: 4
+    direction02: 0
   - time: 1
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1
+  - time: 0.7
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1
+  - time: 0.6
     enemy: 0
     direction01: 2
     direction02: 4
-  - time: 1
+  - time: 0.7
     enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
-  - time: 1
-    enemy: 0
-    direction01: 2
-    direction02: 4
+    direction01: 1
+    direction02: 0
   - time: 1
     enemy: 0
     direction01: 2
@@ -608,47 +592,47 @@ MonoBehaviour:
   listSave:
     arrowsOrder:
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 0
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 0
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 3
       direction02: 0
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 3
       direction02: 0
     - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 3
-      direction02: 0
-    - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 4
     - time: 1
-      enemy: 0
+      enemy: 1
+      direction01: 3
+      direction02: 0
+    - time: 1
+      enemy: 1
+      direction01: 2
+      direction02: 4
+    - time: 1
+      enemy: 1
       direction01: 1
       direction02: 0
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 3
       direction02: 1
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 4
       direction02: 0
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 0
     - time: 0.8
@@ -656,63 +640,63 @@ MonoBehaviour:
       direction01: 1
       direction02: 0
     - time: 0.5
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 4
     - time: 0.7
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 3
     - time: 0.5
-      enemy: 0
+      enemy: 1
       direction01: 0
       direction02: 4
     - time: 0.7
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 4
     - time: 0.5
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 0
     - time: 0.7
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 4
     - time: 0.8
-      enemy: 0
+      enemy: 1
       direction01: 3
       direction02: 1
     - time: 0.6
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 0
     - time: 0.6
-      enemy: 0
+      enemy: 1
       direction01: 3
       direction02: 1
     - time: 0.8
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 0
     - time: 1
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 0
     - time: 0.8
-      enemy: 0
+      enemy: 1
       direction01: 3
       direction02: 0
     - time: 0.7
-      enemy: 0
+      enemy: 1
       direction01: 4
       direction02: 0
     - time: 0.7
-      enemy: 0
+      enemy: 1
       direction01: 2
       direction02: 3
     - time: 0.7
-      enemy: 0
+      enemy: 1
       direction01: 1
       direction02: 3
     - time: 0.7
@@ -853,160 +837,144 @@ MonoBehaviour:
       direction02: 4
     - time: 1
       enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 1
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 1
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 3
+      direction02: 1
+    - time: 1
+      enemy: 0
       direction01: 2
       direction02: 4
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 1
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 2
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 3
+    - time: 0.7
+      enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 1
+      enemy: 0
+      direction01: 2
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 0
+    - time: 1
+      enemy: 0
+      direction01: 3
+      direction02: 2
+    - time: 1
+      enemy: 0
+      direction01: 1
+      direction02: 4
+    - time: 1
+      enemy: 0
+      direction01: 2
+      direction02: 0
+    - time: 1
+      enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 1
+      enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 4
+    - time: 0.7
+      enemy: 0
+      direction01: 3
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 2
+      direction02: 0
     - time: 1
       enemy: 0
       direction01: 2
       direction02: 4
     - time: 1
       enemy: 0
-      direction01: 2
-      direction02: 4
+      direction01: 3
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 1
+      direction02: 0
+    - time: 0.7
+      enemy: 0
+      direction01: 4
+      direction02: 0
     - time: 1
       enemy: 0
       direction01: 2
       direction02: 4
-    - time: 1
+    - time: 0.7
       enemy: 0
       direction01: 2
       direction02: 4
-    - time: 1
+    - time: 0.6
       enemy: 0
       direction01: 2
       direction02: 4
-    - time: 1
+    - time: 0.7
       enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
-    - time: 1
-      enemy: 0
-      direction01: 2
-      direction02: 4
+      direction01: 1
+      direction02: 0
     - time: 1
       enemy: 0
       direction01: 2
@@ -1895,6 +1863,90 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &265285834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265285836}
+  - component: {fileID: 265285835}
+  m_Layer: 0
+  m_Name: "Cen\xE1rioFundo"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &265285835
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265285834}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 38d173c6bb2e4774a9d225e9e09a6ff6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 17.777779, y: 10}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &265285836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265285834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &274493743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,7 +3108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bc0e1c839c8a08a4882e87720ad23167, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4446,6 +4498,55 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1027513694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1027513696}
+  - component: {fileID: 1027513695}
+  m_Layer: 0
+  m_Name: PosProcessing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1027513695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027513694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 1
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 0b099001b19e37a44a0c17d954c540a2, type: 2}
+--- !u!4 &1027513696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027513694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.492, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039535518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4976,6 +5077,90 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1079930754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1079930756}
+  - component: {fileID: 1079930755}
+  m_Layer: 0
+  m_Name: ProibidoAnu-Cercado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1079930755
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079930754}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 816ac39c6d7201e4991d68845eea246c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 17.777779, y: 10}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1079930756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079930754}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097487280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,6 +5267,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097487280}
   m_CullTransparentMesh: 1
+--- !u!1 &1200399390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1200399392}
+  - component: {fileID: 1200399391}
+  m_Layer: 0
+  m_Name: Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1200399391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200399390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 4
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 9f8d010271a3ab2ea583831bf3664793000000003bca0abb
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
+--- !u!4 &1200399392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200399390}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226526697
 GameObject:
   m_ObjectHideFlags: 0
@@ -6174,7 +6441,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -245403448, guid: 9f7800f15e971824a8c27f617c6e5351, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6687,10 +6954,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1025
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -7321,6 +7588,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051511822}
   m_CullTransparentMesh: 1
+--- !u!1 &2054698000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054698002}
+  - component: {fileID: 2054698001}
+  m_Layer: 0
+  m_Name: testeGlow(16x16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2054698001
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054698000}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4d01244bc8eca014db341c3ab97de9c8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8888889, y: 0.8888889}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2054698002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054698000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.602, y: 0.548, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2128398511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7439,8 +7790,10 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1027513696}
   - {fileID: 1916230340}
   - {fileID: 710178719}
+  - {fileID: 265285836}
   - {fileID: 1775146746}
   - {fileID: 588952466}
   - {fileID: 1315127105}
@@ -7453,3 +7806,6 @@ SceneRoots:
   - {fileID: 913483091}
   - {fileID: 966257032}
   - {fileID: 931690126}
+  - {fileID: 1200399392}
+  - {fileID: 2054698002}
+  - {fileID: 1079930756}
