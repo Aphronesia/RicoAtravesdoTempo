@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 38d173c6bb2e4774a9d225e9e09a6ff6
+guid: 4c9c6329ac558d243881ba7783bb4a53
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 36
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -147,20 +147,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: setas_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 51
+        width: 73
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72787d9f0714db64d80836633a8a98a3
+      internalID: -2103294919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: setas_1
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 55
+        width: 73
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81c3dfa01ecd8e4eb255efbd5b177f1
+      internalID: -945577662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: setas_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 7
+        width: 73
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c15ddfe4b56bf14799e022cf57d77b9
+      internalID: -1061319809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: setas_3
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2
+        width: 73
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21df374772699e846b8ade45fc8bc65e
+      internalID: 621551260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 54d30b9e245ab25489ace38f5c71aa93, type: 3}
-      name: _Emission
-    nameFileIdTable: {}
+    secondaryTextures: []
+    nameFileIdTable:
+      setas_0: -2103294919
+      setas_1: -945577662
+      setas_2: -1061319809
+      setas_3: 621551260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

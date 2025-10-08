@@ -971,17 +971,17 @@ MonoBehaviour:
   musics:
   - name: Menu
     clip: {fileID: 8300000, guid: 88fc9ed6f9d02a34d9cb7444d989d192, type: 3}
-    volumeSpecific: 0
+    volumeMax: 0
   - name: Mapa
     clip: {fileID: 0}
-    volumeSpecific: 0
+    volumeMax: 0
   soundEffects:
   - name: "bot\xE3o"
     clip: {fileID: 0}
-    volumeSpecific: 0
+    volumeMax: 0
   - name: negado
     clip: {fileID: 0}
-    volumeSpecific: 0
+    volumeMax: 0
   musicSource: {fileID: 161954506}
   sfxSource: {fileID: 161954505}
 --- !u!4 &161954508
