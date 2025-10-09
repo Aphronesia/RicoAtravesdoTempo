@@ -7,6 +7,7 @@
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/UI/UIControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +129,7 @@
       <workItem from="1759497340964" duration="1566000" />
       <workItem from="1759680024659" duration="8689000" />
       <workItem from="1759763057599" duration="1526000" />
+      <workItem from="1760010095918" duration="1960000" />
     </task>
     <servers />
   </component>
