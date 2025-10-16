@@ -2748,10 +2748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pegue 30 pinhas em 2 minutos, evitando as bigornas.
-
-    Pegue as aboboras
-    para recuperar vida'
+  m_text: toque as notas no ritmo certo e consiga mais de xxxx pontos.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 96da4574ea494744ea852ca06b0bab74, type: 2}
   m_sharedMaterial: {fileID: 3050961489057022808, guid: 96da4574ea494744ea852ca06b0bab74, type: 2}
@@ -2790,7 +2787,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 4
   m_wordSpacing: 3
-  m_lineSpacing: 20
+  m_lineSpacing: 35.76
   m_lineSpacingMax: 0
   m_paragraphSpacing: 66
   m_charWidthMaxAdj: 0

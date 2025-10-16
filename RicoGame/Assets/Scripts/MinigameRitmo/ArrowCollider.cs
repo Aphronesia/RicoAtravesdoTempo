@@ -40,7 +40,7 @@ namespace MinigameRitmo
             if (_arrow == null)
             {
                 OnMiss?.Invoke();
-                Debug.Log("errou");
+                //Debug.Log("errou");
                 return;
             }
             if (_arrow.GetComponent<Arrow>() is null)
@@ -52,12 +52,12 @@ namespace MinigameRitmo
             {
                 case true:
                     OnEnemy?.Invoke();
-                    Debug.Log("do inimigo");
+                    //Debug.Log("do inimigo");
                     Destroy(_arrow);
                     break;
                 case false:
                     OnClick?.Invoke();
-                    Debug.Log("acertou");
+                    //Debug.Log("acertou");
                     Destroy(_arrow);
                     break;
             }

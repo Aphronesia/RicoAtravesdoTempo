@@ -33,7 +33,6 @@ namespace MinigameRitmo
         private void Start()
         {
             TakeComponents();
-            Debug.Log("oioi");
         }
 
         public void AddPoints()
