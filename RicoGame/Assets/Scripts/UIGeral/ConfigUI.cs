@@ -10,7 +10,7 @@ namespace UIGeral {
     {
         [Header("Properties")]
         [SerializeField]
-        private bool pause;
+        public bool pause;
         
         [Header("Menu UI")]
         [SerializeField]

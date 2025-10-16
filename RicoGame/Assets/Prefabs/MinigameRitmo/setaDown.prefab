@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a4cb22081a17c4ca33e610b4cedf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDown: 4
+  speedDown: 10
   enemy: 0
   colorEnemy: {r: 0.5031446, g: 0.5031446, b: 0.5031446, a: 1}
 --- !u!50 &5680933563506974511

@@ -18,6 +18,7 @@ namespace MinigameRitmo.UI
         [SerializeField] private TextMeshProUGUI combotxt;
         
         private Game.ControlScenes _scene;
+        public MusicControl music;
         private void Start()
         {
             TakeComponents();
@@ -30,7 +31,13 @@ namespace MinigameRitmo.UI
         {
             _scene.Pause(false);
             tutorial.SetActive(false);
-        } 
+            music.PlayMusic();
+        }
+
+        public void EndGame()
+        {
+            Debug.Log("Acabooou");
+        }
         public void RefreshTextPontos(int value)
         {
             pontostxt.text = $"pontos: {value}";

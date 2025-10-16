@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using MinigameRitmo.UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -20,7 +21,10 @@ namespace MinigameRitmo
         
         [Header("Padrão")]
         public List<ArrowList> arrowsOrder = new List<ArrowList>();
-
+        
+        // Componentes 
+        [SerializeField] private UIControl uiControl;
+        // Eventos
         public static event Action OnChange;
         
         private void Start()
@@ -50,6 +54,7 @@ namespace MinigameRitmo
         }
         private void ArrowSpawn()
         {
+            // Ultima tecla 
             if (_index >= arrowsOrder.Count)
             {
                 //Debug.Log("não espawna");

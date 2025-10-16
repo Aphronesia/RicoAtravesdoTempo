@@ -19,13 +19,6 @@ namespace Game
         private Audio _actualMusic;
         private Audio _actualSfx;
         
-        [Serializable]
-        private class Audio
-        {
-            public string name;
-            public AudioClip clip;
-            [Range(-1, 1)] public float volumeMax;
-        }
         [Header("Audios Sources")]
         [SerializeField]
         private AudioSource musicSource;
@@ -35,6 +28,7 @@ namespace Game
         // Componentes  
         private Settings _settings;
 
+        public static event Action OnChangeVolumes;
         private void OnValidate()
         {
             musicSource.volume = volumeMusic;
@@ -116,6 +110,8 @@ namespace Game
             volumeSfx = _settings.volumeMaster;
             musicSource.volume = volumeMusic;
             sfxSource.volume = volumeSfx;
+
+            OnChangeVolumes?.Invoke();
         }
         
         private void TakeComponents()
@@ -126,5 +122,12 @@ namespace Game
                 _settings = settings.GetComponent<Settings>();
             }
         }
+    }
+    [Serializable]
+    public class Audio
+    {
+        public string name;
+        public AudioClip clip;
+        [Range(-1, 1)] public float volumeMax;
     }
 }

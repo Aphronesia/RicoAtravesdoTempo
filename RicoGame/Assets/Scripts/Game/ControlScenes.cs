@@ -5,6 +5,7 @@ namespace Game{
     public class ControlScenes : MonoBehaviour{
         public int indexCutscene;
         public int ProxLevel;
+        public bool actualStatePause;
         
         void Awake()
         {
@@ -50,6 +51,7 @@ namespace Game{
         public void Pause(bool pause){
             Time.timeScale = pause ? 0f : 1f;
             //Debug.Log($"pause {pause}");
+            actualStatePause = pause;
         }
 
         public void SetCutscene(int value){
