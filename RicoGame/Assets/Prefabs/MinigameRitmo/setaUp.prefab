@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedDown: 6.5
   enemy: 0
-  colorEnemy: {r: 0.5031446, g: 0.5031446, b: 0.5031446, a: 1}
+  colorEnemy: {r: 0.35220122, g: 0.35220122, b: 0.35220122, a: 1}
 --- !u!50 &3363687372001311065
 Rigidbody2D:
   serializedVersion: 4

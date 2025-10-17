@@ -31,6 +31,7 @@ namespace MinigameRitmo
         public static event Action OnEndMusic;
         private void Start()
         {
+            TakeComponents();
             nextArrow = arrowsOrder[0];
         }
 
@@ -101,6 +102,13 @@ namespace MinigameRitmo
                     lastTime = timeRunning;
                 }
             }
+        }
+
+        private void TakeComponents()
+        {
+            var uiobj = uiControl.GetComponent<UIControl>();
+            if  (uiobj != null)
+                uiControl = uiobj.GetComponent<UIControl>();
         }
     }
     

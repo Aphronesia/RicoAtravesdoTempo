@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -47,12 +48,21 @@ namespace MinigameTrem{
         private void Update()
         {
             Teleporte();
+            Keyboard();
+        }
+        private void Keyboard(){
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
         }
         void FixedUpdate()
         {
             Movimento();
             anima.SetInteger("Jump", Mathf.FloorToInt(rig.velocity.y));
         }
+        
+
         //esse void inicia o jogo pra capivara de fato, ele é puxado la no controleui
         public void StartGame()
         {

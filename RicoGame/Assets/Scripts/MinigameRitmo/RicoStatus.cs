@@ -13,6 +13,12 @@ namespace MinigameRitmo
             RitmoControl.OnEndMusic += EndAnim;
         }
 
+        private void OnDisable()
+        {
+            RitmoControl.OnChange -= ChangeAnim;
+            RitmoControl.OnEndMusic -= EndAnim;
+        }
+
         private void Start()
         {
             TakeComponents();

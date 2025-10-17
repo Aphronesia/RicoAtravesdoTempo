@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29135d281a32fe4eb3ee8f71beba257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 5
+  cooldown: 10
   timeText: {fileID: 0}
 --- !u!61 &6484097710527322185
 BoxCollider2D:

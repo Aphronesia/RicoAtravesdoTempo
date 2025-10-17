@@ -1,5 +1,4 @@
 using System;
-using Autodesk.Fbx;
 using MinigameRitmo.UI;
 using UnityEngine;
 

@@ -31,7 +31,9 @@ namespace Home2.UI{
         private Toggle tEffects;
         [SerializeField]
         private TextMeshProUGUI continueText;
-
+        [SerializeField] private Image arvore;
+        [SerializeField] private Sprite arvoreOn;
+        [SerializeField] private Sprite arvoreOff;
         public Color canContinue;
         public Color canNotContinue;
         
@@ -82,7 +84,6 @@ namespace Home2.UI{
             }
             
             _controlSounds.PlayMusic("Menu");
-            
         }
         // Chamado pelo botão "Start" na UI.
         // Para quando for iniciar uma nova run do jogo.
@@ -149,12 +150,24 @@ namespace Home2.UI{
         public void SaveSettingsUI(){
             _settings.volumeMusic = sMusic.value;
             _settings.volumeMaster = sMaster.value;
-            _settings.effects = tEffects.isOn;
-
+            Effects(tEffects.isOn);
             _settings.SaveSettings(); 
+            OpenSettingsMenu();
+        }
+
+        public void Effects(bool value)
+        {
+            _settings.effects = value;
+            if (_settings.effects)
+            {
+                // Arvores On
+                arvore.sprite = arvoreOn;
+                return;
+            }
+            arvore.sprite = arvoreOff;
+            // arvores off
             
         }
-        
         // Chamado pelo botão "Clear Data" na UI de Settings.
         public void ClearGameDataUI(){
             _saveLoadSystem.ClearData();

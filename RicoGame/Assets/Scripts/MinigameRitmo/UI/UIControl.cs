@@ -30,6 +30,11 @@ namespace MinigameRitmo.UI
             RitmoControl.OnEndMusic += EndGame;
         }
 
+        private void OnDisable()
+        {
+            RitmoControl.OnEndMusic -= EndGame;
+        }
+        
         private void Start()
         {
             TakeComponents();
@@ -51,11 +56,10 @@ namespace MinigameRitmo.UI
 
         public void EndGame()
         {
-            
-            StartCoroutine(End(score.GetScore()));
+            StartCoroutine(IEnd(score.GetScore()));
         }
 
-        IEnumerator End(bool state)
+        IEnumerator IEnd(bool state)
         {
             yield return new WaitForSeconds(secondsToEnd);
             if (state)

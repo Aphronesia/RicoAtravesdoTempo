@@ -26,10 +26,20 @@ public class Player_Move : MonoBehaviour
     }
     private void FixedUpdate() {
         Moviment();
+        
+    }
+
+    private void Update()
+    {
         Keyboard();
     }
+
     private void Keyboard(){
         vecMove.x = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
     }
     private void Moviment(){
         if (canMove)
