@@ -8,6 +8,7 @@ namespace MinigameRitmo
     public class Score : MonoBehaviour
     {
         [SerializeField]private int points;
+        [SerializeField] private int pointsToWin;
         [SerializeField]private int reward; // 10
         [SerializeField]private int combo;
         
@@ -35,6 +36,12 @@ namespace MinigameRitmo
             TakeComponents();
         }
 
+        public bool GetScore()
+        {
+            if (points >= pointsToWin)
+                return true;
+            return false;
+        }
         public void AddPoints()
         {
             combo++;

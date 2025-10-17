@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using MinigameRitmo.UI;
 using UnityEngine;
@@ -15,7 +16,8 @@ namespace MinigameRitmo
         [SerializeField] private ArrowList nextArrow;
         private int _index = 0;
 
-        private bool tocando;
+        private bool tocando = true, 
+            end;
         [Header("Setas")]
         [SerializeField] private List<ArrowObj> arrowProps = new List<ArrowObj>();
         
@@ -26,7 +28,7 @@ namespace MinigameRitmo
         [SerializeField] private UIControl uiControl;
         // Eventos
         public static event Action OnChange;
-        
+        public static event Action OnEndMusic;
         private void Start()
         {
             nextArrow = arrowsOrder[0];
@@ -55,15 +57,17 @@ namespace MinigameRitmo
         private void ArrowSpawn()
         {
             // Ultima tecla 
-            if (_index >= arrowsOrder.Count)
+            if (_index >= arrowsOrder.Count && end == false)
             {
-                //Debug.Log("não espawna");
+                Debug.Log("acabou");
+                end = true;
+                OnEndMusic?.Invoke();
                 return;
             }
 
             float time = timeRunning - lastTime;
 
-            if (time >= nextArrow.time)
+            if (time >= nextArrow.time && end == false)
             {
                 if (nextArrow.direction01 != Direction.None)
                 {

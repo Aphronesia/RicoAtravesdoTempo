@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BulletHell.unity
     guid: c5b3d144465b94e439b67b3b13a11a7b
+  - enabled: 1
+    path: Assets/Scenes/MinigameRitmo.unity
+    guid: af9ded43760de994ca9f2315fe40b7b6
   m_configObjects: {}

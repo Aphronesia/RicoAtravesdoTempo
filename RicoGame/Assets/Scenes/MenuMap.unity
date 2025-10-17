@@ -3486,6 +3486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexCutscene: 0
   ProxLevel: 0
+  actualStatePause: 0
 --- !u!4 &829394344
 Transform:
   m_ObjectHideFlags: 0
@@ -6196,18 +6197,18 @@ MonoBehaviour:
   - name: Trem
     description: Corra !
     sceneIndex: 4
-    cutscene: 0
-    cutsceneIndex: 0
+    cutscene: 1
+    cutsceneIndex: 1
     background: {fileID: 21300000, guid: 4f4a9684345cf4047a87d6949b9210b1, type: 3}
   - name: Beco do Guaxinim
     description: Lute !
     sceneIndex: 5
-    cutscene: 0
-    cutsceneIndex: 0
+    cutscene: 1
+    cutsceneIndex: 2
     background: {fileID: 21300000, guid: 9d98a3f10a649194ca3d363bf469ed9e, type: 3}
   - name: Fase 4
     description: Lute !
-    sceneIndex: 5
+    sceneIndex: 6
     cutscene: 0
     cutsceneIndex: 0
     background: {fileID: 21300000, guid: 3f9ada0f4d5031b4d8ac3ee65b53f169, type: 3}

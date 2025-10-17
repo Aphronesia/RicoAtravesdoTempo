@@ -10,17 +10,22 @@ namespace MinigameRitmo
         private void OnEnable()
         {
             RitmoControl.OnChange += ChangeAnim;
+            RitmoControl.OnEndMusic += EndAnim;
         }
 
         private void Start()
         {
             TakeComponents();
-            
         }
 
         private void ChangeAnim()
         {
             _animator.SetTrigger("Change");
+        }
+
+        private void EndAnim()
+        {
+            _animator.SetTrigger("End");
         }
         private void TakeComponents()
         {

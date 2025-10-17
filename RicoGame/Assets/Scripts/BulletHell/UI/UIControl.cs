@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using BulletHell.Player;
 using Game;
 using UnityEngine;
@@ -9,8 +10,10 @@ namespace BulletHell.UI{
     public class UIControl : MonoBehaviour
     {
         private ControlScenes controlScenes;
+        private Game.SaveLoadSystem saveLoadSystem;
+        [SerializeField] private float secondsToEnd;
         [SerializeField]
-        private GameObject CtrlScenes, uiStart, uiPause, uiDead;
+        private GameObject CtrlScenes, uiStart, uiPause, uiDead, uiWin;
         public bool running, paused;
         [SerializeField]
         private Sprite atkBttnOn, atkBttnOff;
@@ -20,10 +23,12 @@ namespace BulletHell.UI{
         private void OnEnable() {
             EnemyControl.OnEnemyTired += EnemyTired;
             Player_Status.OnPlayeDeath += PlayerDie;
+            EnemyStatus.OnEnemyDie += Enemydie;
         }
         private void OnDisable() {
             EnemyControl.OnEnemyTired -= EnemyTired;
             Player_Status.OnPlayeDeath -= PlayerDie;
+            EnemyStatus.OnEnemyDie -= Enemydie;
         }
         private void EnemyTired(bool value){
             if (value){
@@ -37,12 +42,12 @@ namespace BulletHell.UI{
             uiStart = GameObject.Find("Canvas/UIStart");
             uiPause = GameObject.Find("Canvas/UIPause");
             uiDead = GameObject.Find("Canvas/UIDead");
+            uiWin = GameObject.Find("Canvas/UIWin");
         }
-        private void Start() {
-            
+        private void Start()
+        {
+            TakeComponents();
             Screen.orientation = ScreenOrientation.LandscapeLeft;
-            
-            controlScenes = CtrlScenes.GetComponent<ControlScenes>();
             GetUIObjects();
             if (uiStart != null){
                 uiStart.SetActive(true);
@@ -55,6 +60,11 @@ namespace BulletHell.UI{
             if (uiDead != null){
                 uiDead.SetActive(false);
             }
+
+            if (uiWin != null)
+            {
+                uiWin.SetActive(false);
+            }
             running = false;
         }
         //quando botão de play for apertado
@@ -66,6 +76,26 @@ namespace BulletHell.UI{
         public void PlayerDie(){
             uiDead.SetActive(true);
             controlScenes.Pause(true);
+        }
+
+        public void Enemydie()
+        {
+            StartCoroutine(GameWin());
+            
+        }
+        IEnumerator GameWin()
+        {
+            yield return new WaitForSeconds(secondsToEnd);
+            Win();
+            
+        }
+        public void Win()
+        {
+            if(saveLoadSystem.runtimeGameData.levelCompleted <= 3)
+                saveLoadSystem.runtimeGameData.levelCompleted = 3;
+            uiWin.SetActive(true);
+            uiDead.SetActive(false);
+            saveLoadSystem.runtimeGameData.menuMapRico = 2;
         }
         public void Pause(){
             paused =! paused;
@@ -85,6 +115,16 @@ namespace BulletHell.UI{
         }
         public void Quit(){
             controlScenes.QuitGame();
+        }
+
+        private void TakeComponents()
+        {
+            var sceneObj = FindObjectOfType<Game.ControlScenes>();
+            if ( sceneObj != null)
+                controlScenes = sceneObj.GetComponent<Game.ControlScenes>();
+            var saveObj = FindAnyObjectByType<Game.SaveLoadSystem>();
+            if ( saveObj != null)
+                saveLoadSystem = saveObj.GetComponent<SaveLoadSystem>();
         }
     }
 }

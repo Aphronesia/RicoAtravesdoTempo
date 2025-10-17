@@ -39,16 +39,26 @@ namespace Game
         {
             BecomeIndestructible();
         }
+        public bool indestructible = true;
         private void BecomeIndestructible()
         {
-            if (FindObjectOfType<ControlSounds>() == null) 
+            if (!indestructible) return;
+            // Procura por todas as instâncias deste mesmo componente na cena
+            ControlSounds[] all = FindObjectsOfType<ControlSounds>();
+
+            foreach (var other in all)
             {
-                Destroy(gameObject);
+                if (other == this) continue;           // ignora ele mesmo
+                if (other.indestructible)
+                {
+                    // já existe outro indestrutível -> destrói este
+                    Destroy(gameObject);
+                    return;
+                }
             }
-            else
-            {
-                DontDestroyOnLoad(gameObject);
-            }
+
+            // Se chegou aqui, não há outro indestrutível — marca como persistente
+            DontDestroyOnLoad(gameObject);
         }
         
         private void Start()
@@ -96,7 +106,7 @@ namespace Game
             sfxSource.clip = sfx.clip;
             sfxSource.Play();
             _actualSfx =  sfx;
-            Debug.Log($"tocou som {sfx.clip.name} com volume {sfxSource.volume}");
+            //Debug.Log($"tocou som {sfx.clip.name} com volume {sfxSource.volume}");
         }
 
         public void ChangeVolumes()
