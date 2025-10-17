@@ -80,6 +80,7 @@ namespace BulletHell.UI{
 
         public void Enemydie()
         {
+            Debug.Log("ganhoouuuu");
             StartCoroutine(GameWin());
             
         }
@@ -91,7 +92,7 @@ namespace BulletHell.UI{
         }
         public void Win()
         {
-            if(saveLoadSystem.runtimeGameData.levelCompleted <= 3)
+            if(saveLoadSystem.runtimeGameData.levelCompleted < 3)
                 saveLoadSystem.runtimeGameData.levelCompleted = 3;
             uiWin.SetActive(true);
             uiDead.SetActive(false);

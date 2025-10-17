@@ -76,7 +76,7 @@ namespace MenuMap{
             {
                 case "River":
                     _anima.SetBool("river", true);
-                    Debug.Log("truee");
+                    //Debug.Log("truee");
                     break;
             }
         }
@@ -87,7 +87,7 @@ namespace MenuMap{
             {
                 case "River":
                     _anima.SetBool("river", false);
-                    Debug.Log("falsee");
+                    //Debug.Log("falsee");
                     break;
             }
         }

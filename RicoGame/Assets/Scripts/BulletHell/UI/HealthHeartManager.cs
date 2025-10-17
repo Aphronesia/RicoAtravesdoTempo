@@ -41,7 +41,7 @@ public class HealthHeartManager : MonoBehaviour
     public void CreateEmptyHeart(){
         //Instancea o prefab
         GameObject newHeart = Instantiate(heartPrefab);
-        newHeart.transform.SetParent(transform);
+        newHeart.transform.SetParent(transform, false);
 
         //define o pai do Transform
         HealthHeart heartComponent = newHeart.GetComponent<HealthHeart>();

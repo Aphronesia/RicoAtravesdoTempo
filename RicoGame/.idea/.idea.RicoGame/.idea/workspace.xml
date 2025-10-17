@@ -6,32 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/BulletHell/Enemys/Guaxinim/Guaxinim-Tired.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/BulletHell/Enemys/Guaxinim/Guaxinim-Tired.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MinigameTrem/Tenia_Stop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MinigameTrem/Tenia_Stop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MinigameTrem/Tenia_Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MinigameTrem/Tenia_Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BuracoNegro.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/BuracoNegro.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaDown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaDown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaLeft.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaLeft.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaRight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaRight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameRitmo/setaUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameTrem/Obstacles/ArmSoundBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameTrem/Obstacles/ArmSoundBox.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameTrem/Obstacles/Malas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameTrem/Obstacles/Malas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MinigameTrem/PowerUps/pitaya.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MinigameTrem/PowerUps/pitaya.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameTrem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameTrem.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Player/Player_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/Player/Player_Move.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home2/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home2/UI/UIControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/RitmoControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/RitmoControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameRitmo/UI/UIControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MinigameTrem/CapivaraTrem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MinigameTrem/CapivaraTrem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BulletHell/Enemy/Guaxinim/Maromba_Cansado.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BulletHell/Enemy/Guaxinim/Maromba_Cansado.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BulletHell/Enemy/Guaxinim/tired(640x360).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BulletHell/Enemy/Guaxinim/tired(640x360).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/pause/Botão de efeto do pause Ligado(640x360).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/pause/Botão de efeto do pause Ligado(640x360).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/pause/Botão de efeto do pause(640x360).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/pause/Botão de efeto do pause(640x360).png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TilePalette/MinigameTrem/CenarioTrem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TilePalette/MinigameTrem/CenarioTrem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/HealthHeartManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/HealthHeartManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/UIControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletHell/UI/UIControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuMap/RicoMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuMap/RicoMove.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +51,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="F:/! Aphronesia/Através do tempo/build04\Através do Tempo.exe" />
+      <option name="EXE_PATH" value="F:/! Aphronesia/Através do tempo/BUILD05\Através do Tempo.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\rm90908\Desktop\RicoGame\build08WIN" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -160,6 +139,7 @@
       <workItem from="1760698976077" duration="462000" />
       <workItem from="1760699558018" duration="16000" />
       <workItem from="1760701688048" duration="3962000" />
+      <workItem from="1760711745875" duration="1961000" />
     </task>
     <servers />
   </component>
