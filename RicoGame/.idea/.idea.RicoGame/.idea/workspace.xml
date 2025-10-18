@@ -54,7 +54,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Unity Builds/Através do Tempo/buildFInal\Através do Tempo.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/Unity Builds/Através do Tempo/BUILD FINAL MESMO\Através do Tempo.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\rm90908\Desktop\RicoGame\build08WIN" />
       <option name="PASS_PARENT_ENVS" value="1" />

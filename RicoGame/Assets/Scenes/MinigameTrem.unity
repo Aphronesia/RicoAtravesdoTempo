@@ -24261,10 +24261,11 @@ MonoBehaviour:
   - {fileID: 7047040830741810201, guid: 3b457dffc922d46489744bb4bc9cdefc, type: 3}
   Collectible: []
   PowerUp:
-  - {fileID: 2193147372814283179, guid: 152820578590ab34c829e59f9fd31b9c, type: 3}
   - {fileID: 4769115967918517924, guid: f7367e1d8716be54a9c34d24d7dafc98, type: 3}
   - {fileID: 1535264977169139288, guid: 1bd6869ee75f78140aa5b8bc84897bee, type: 3}
   - {fileID: 6669169386825758863, guid: 5cc946fbe8b72e9489b00fc482633bbe, type: 3}
+  - {fileID: 2193147372814283179, guid: 152820578590ab34c829e59f9fd31b9c, type: 3}
+  - {fileID: 2193147372814283179, guid: 152820578590ab34c829e59f9fd31b9c, type: 3}
   PodeSpawn: 0
   posicaoRico: {fileID: 457275066}
 --- !u!50 &978761669
