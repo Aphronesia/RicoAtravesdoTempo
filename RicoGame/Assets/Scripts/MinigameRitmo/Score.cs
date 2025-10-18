@@ -16,7 +16,6 @@ namespace MinigameRitmo
         [SerializeField]
         private UIControl uiControl;
         
-        public ScoreBoard scoreBoard;
         private void OnEnable()
         {
             ArrowCollider.OnClick += AddPoints;

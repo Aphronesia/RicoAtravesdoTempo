@@ -21,13 +21,13 @@ namespace MinigameRitmo.UI
         [SerializeField] private TextMeshProUGUI combotxt;
 
         [SerializeField] private Score score;
-        [SerializeField] private ScoreBoard scoreboard;
         private Game.ControlScenes _scene;
         private Game.ControlSounds _sound;
         private Game.SaveLoadSystem _saveLoad;
         public MusicControl music;
 
         public static event Action OnStopMusic;
+        public static event Action<int> OnLevel;
         private void OnEnable()
         {
             RitmoControl.OnEndMusic += EndGame;
@@ -87,9 +87,7 @@ namespace MinigameRitmo.UI
 
         public void Win()
         {
-            scoreboard.AddValue(score.Points());
-            if (_saveLoad.runtimeGameData.levelCompleted <= 3)
-                _saveLoad.runtimeGameData.levelCompleted = 4;
+            OnLevel?.Invoke(4);
             gameWin.SetActive(true);
             gameOver.SetActive(false);
             _saveLoad.runtimeGameData.menuMapRico = 3;

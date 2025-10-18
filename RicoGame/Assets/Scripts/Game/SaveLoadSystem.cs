@@ -21,6 +21,29 @@ namespace Game
         [SerializeField] private bool pathInAssets;
         public static event Action OnLoadGame;
 
+        private void OnEnable()
+        {
+            BulletHell.UI.UIControl.OnLevel += AumentarLevel;
+            MinigameRitmo.UI.UIControl.OnLevel += AumentarLevel;
+        }
+
+        private void OnDisable()
+        {
+            BulletHell.UI.UIControl.OnLevel -= AumentarLevel;
+            MinigameRitmo.UI.UIControl.OnLevel -= AumentarLevel;
+        }
+
+        public void AumentarLevel(int level)
+        {
+            if (level < runtimeGameData.levelCompleted)
+            {
+                Debug.Log("é menor");
+                return;
+            }
+            runtimeGameData.levelCompleted = level;
+            Debug.Log("aumentou");
+            SaveGameData();
+        }
         private void Awake(){
             if (FindObjectsOfType<SaveLoadSystem>().Length > 1){
                 Destroy(gameObject);

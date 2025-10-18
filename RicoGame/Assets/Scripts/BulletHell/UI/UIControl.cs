@@ -20,6 +20,7 @@ namespace BulletHell.UI{
         [SerializeField]
         private Image AtkButton;
         public static event Action<bool> OnStarted;
+        public static event Action<int> OnLevel;
         private void OnEnable() {
             EnemyControl.OnEnemyTired += EnemyTired;
             Player_Status.OnPlayeDeath += PlayerDie;
@@ -91,8 +92,7 @@ namespace BulletHell.UI{
         }
         public void Win()
         {
-            if(saveLoadSystem.runtimeGameData.levelCompleted <= 2)
-                saveLoadSystem.runtimeGameData.levelCompleted = 3;
+            OnLevel?.Invoke(3);
             uiWin.SetActive(true);
             uiDead.SetActive(false);
             saveLoadSystem.runtimeGameData.menuMapRico = 2;

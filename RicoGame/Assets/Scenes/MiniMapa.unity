@@ -6401,13 +6401,13 @@ MonoBehaviour:
   _titleText: {fileID: 399038366}
   _descriptionText: {fileID: 1327113327}
   levels:
-  - name: 'Pinhas '
+  - name: Coleta de Pinhas
     description: "Colete pinhas para abastecer a m\xE1quina do tempo."
     sceneIndex: 3
     cutscene: 1
     cutsceneIndex: 0
     background: {fileID: 21300000, guid: 9b139d98a82a2e647aa3692de8983d90, type: 3}
-  - name: Trem
+  - name: Corrida no Trem
     description: Viage no tempo para salvar o mundo...mas espere! Parece que estamos
       sendo observados.
     sceneIndex: 4
@@ -6427,8 +6427,8 @@ MonoBehaviour:
     cutscene: 1
     cutsceneIndex: 3
     background: {fileID: 21300000, guid: 3f9ada0f4d5031b4d8ac3ee65b53f169, type: 3}
-  - name: Fase 5
-    description: Lute !
+  - name: Fim
+    description: quebre a barragem e libere o rio... mas calma! estamos vendo dobrado??
     sceneIndex: 2
     cutscene: 1
     cutsceneIndex: 4

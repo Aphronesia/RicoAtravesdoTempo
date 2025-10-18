@@ -4716,7 +4716,6 @@ GameObject:
   m_Component:
   - component: {fileID: 772857916}
   - component: {fileID: 772857915}
-  - component: {fileID: 772857917}
   m_Layer: 0
   m_Name: ScoreController
   m_TagString: Untagged
@@ -4741,7 +4740,6 @@ MonoBehaviour:
   reward: 10
   combo: 0
   uiControl: {fileID: 0}
-  scoreBoard: {fileID: 772857917}
 --- !u!4 &772857916
 Transform:
   m_ObjectHideFlags: 0
@@ -4757,19 +4755,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &772857917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 772857914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dbd0d7545ce2754ab01fc0982c2ddf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSize: 10
 --- !u!1 &832412664
 GameObject:
   m_ObjectHideFlags: 0
