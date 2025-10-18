@@ -35,30 +35,28 @@ namespace Game
             sfxSource.volume = volumeSfx;
         }
 
+        private void OnEnable()
+        {
+            MinigameRitmo.UI.UIControl.OnStopMusic += StopMusic;
+        }
+
+        private void OnDisable()
+        {
+            MinigameRitmo.UI.UIControl.OnStopMusic -= StopMusic;
+        }
+
         private void Awake()
         {
             BecomeIndestructible();
         }
-        public bool indestructible = true;
         private void BecomeIndestructible()
         {
-            if (!indestructible) return;
-            // Procura por todas as instâncias deste mesmo componente na cena
-            ControlSounds[] all = FindObjectsOfType<ControlSounds>();
-
-            foreach (var other in all)
-            {
-                if (other == this) continue;           // ignora ele mesmo
-                if (other.indestructible)
-                {
-                    // já existe outro indestrutível -> destrói este
-                    Destroy(gameObject);
-                    return;
-                }
+            if (FindObjectsOfType<ControlSounds>().Length > 1) {
+                Destroy(gameObject);
             }
-
-            // Se chegou aqui, não há outro indestrutível — marca como persistente
-            DontDestroyOnLoad(gameObject);
+            else {
+                DontDestroyOnLoad(gameObject);
+            }
         }
         
         private void Start()
@@ -83,10 +81,23 @@ namespace Game
                 Debug.LogError($"musica: {music.name} sem SoundClip");
                 return;
             }
+            // Evita o erro se o AudioSource foi destruído
+            if (musicSource == null)
+            {
+                Debug.LogWarning("sfxSource foi destruído, som não pode ser tocado");
+                return;
+            }
             musicSource.Stop();
             musicSource.clip = music.clip;
             musicSource.Play();
             _actualMusic =  music;
+        }
+
+        public void StopMusic()
+        {
+            musicSource.Stop();
+            _actualMusic = null;
+            musicSource.clip = null;
         }
         
         public void PlaySfx(string clipName)
@@ -102,12 +113,20 @@ namespace Game
                 Debug.LogError($"Efeito Sonoro: {sfx.name} sem SoundClip");
                 return;
             }
+
+            // Evita o erro se o AudioSource foi destruído
+            if (sfxSource == null)
+            {
+                //Debug.LogWarning("sfxSource foi destruído, som não pode ser tocado");
+                return;
+            }
+
             sfxSource.Stop();
             sfxSource.clip = sfx.clip;
             sfxSource.Play();
-            _actualSfx =  sfx;
-            //Debug.Log($"tocou som {sfx.clip.name} com volume {sfxSource.volume}");
+            _actualSfx = sfx;
         }
+
 
         public void ChangeVolumes()
         {

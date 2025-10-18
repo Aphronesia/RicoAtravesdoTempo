@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,32 +7,25 @@ using UnityEngine.UI;
 public class SoundControllerTrem : MonoBehaviour
 {
     //Componente q executa o som e os sons
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip[] sounds;
     public Slider slider;
     public float volumeLoaded;
-    public SettingsController settingsController;
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnEnable()
     {
-        audioSource = GetComponent<AudioSource>();
-        slider.onValueChanged.AddListener(ChangeVolume);
+        Game.Settings.OnLoadSettings += AtualizasSom;
+    }
 
-        SettingsController setControl = FindObjectOfType<SettingsController>();
-        if (setControl != null)
-        {
-            settingsController = setControl.GetComponent<SettingsController>();
-            settingsController.Load();
-            volumeLoaded = settingsController.volume;
-            ChangeVolume(volumeLoaded);
-            //Debug.Log("mudou a bolinha de lugar");
-            slider.value = volumeLoaded;
-        }
-        else 
-        {
-            //Debug.Log("deu errado ferle se ferra");
-        }
+    private void OnDisable()
+    {
+        Game.Settings.OnLoadSettings -= AtualizasSom;
+    }
 
+    private void AtualizasSom()
+    {
+        volumeLoaded = slider.value;
+        OnSliderValueChanged(volumeLoaded);
     }
     public void PlaySound(int index)
     {
@@ -61,6 +55,5 @@ public class SoundControllerTrem : MonoBehaviour
         volume = Mathf.Clamp(volume, 0.0f, 1.0f);
         //altera o volume
         audioSource.volume = volume;
-        settingsController.Save(volume);
     }
 }

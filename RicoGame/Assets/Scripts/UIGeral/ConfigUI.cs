@@ -49,7 +49,9 @@ namespace UIGeral {
 
         private bool _saved;
         private Settings _settings;
-        private CanvasGroup _panelTransition;
+        [Header("transição")]
+        [SerializeField] CanvasGroup _panelTransition;
+        [SerializeField] private float durationFade;
     
         private ControlScenes _controlScenes;
         private SaveLoadSystem _saveLoadSystem;
@@ -61,7 +63,7 @@ namespace UIGeral {
         
         }
         private void OnDisable() {
-        
+            
         }
         public void OnLoadSettingsUI(){
             sMusic.value = _settings.volumeMusic;
@@ -88,7 +90,7 @@ namespace UIGeral {
             
         }
         public void ShowSavePanel(int value) {
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             panelSaveRect.anchoredPosition = onPanelPos ;
             index = value;
             isOnSettings = true;
@@ -101,7 +103,7 @@ namespace UIGeral {
         }
 
         public void ShowHideSettingsPanel() {
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             if (!isOnSettings){
                 HideSavePanel();
                 panelSettingRT.anchoredPosition = onSettingsPos;
@@ -120,7 +122,7 @@ namespace UIGeral {
             _settings.SaveSettings(); 
         }
         public void ButtonSave(bool save) {
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             if (save) {
                 _saveLoadSystem.SaveGameData();
             }
@@ -134,7 +136,7 @@ namespace UIGeral {
             }
         }
         public void Pause(){
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             pause =! pause;
             OnPause?.Invoke(pause);
 
@@ -220,6 +222,7 @@ namespace UIGeral {
             if (uiTransition != null){
                 _panelTransition = uiTransition.GetComponent<CanvasGroup>();
             }
+            
             
             
         }

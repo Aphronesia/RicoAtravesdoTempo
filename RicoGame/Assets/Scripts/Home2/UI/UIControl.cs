@@ -88,7 +88,7 @@ namespace Home2.UI{
         // Chamado pelo botão "Start" na UI.
         // Para quando for iniciar uma nova run do jogo.
         public void GameStart(){
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             if (!_hasGameData){
                 _panelTransition.alpha = 0f;
                 StartCoroutine(UITransition(2));
@@ -103,7 +103,7 @@ namespace Home2.UI{
         // Chamado pelo botão "Continue" na UI
         // Para quando for continuar a run do save. 
         public void GameContinue(){
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             if (_hasGameData){
                 _panelTransition.alpha = 0f;
                 _saveLoadSystem.ContinueGame();
@@ -113,7 +113,7 @@ namespace Home2.UI{
         }
 
         IEnumerator UITransition(int scene){
-            _controlSounds.PlaySfx("select");
+            _controlSounds.PlaySfx("Select");
             float startAlpha = _panelTransition.alpha;
             float time = 0f;
             while (time < transitionDuration){
@@ -129,7 +129,7 @@ namespace Home2.UI{
         }
         // Chamado pelo botão "Settings" na UI.
         public void OpenSettingsMenu(){
-            _controlSounds.PlaySfx("button");
+            _controlSounds.PlaySfx("Button");
             isOnSettings =! isOnSettings;
             StartCoroutine(!isOnSettings ? MoveMenuUI(offPanelPos) : MoveMenuUI(onPanelPos));
 
@@ -149,12 +149,16 @@ namespace Home2.UI{
         // Chamado pelo botão "Apply" na UI de Settings.
         public void SaveSettingsUI(){
             _settings.volumeMusic = sMusic.value;
-            _settings.volumeMaster = sMaster.value;
+            VolumeMusic(sMaster.value);
             Effects(tEffects.isOn);
             _settings.SaveSettings(); 
             OpenSettingsMenu();
         }
 
+        public void VolumeMusic(float value)
+        {
+            _settings.volumeMaster = sMaster.value;
+        }
         public void Effects(bool value)
         {
             _settings.effects = value;

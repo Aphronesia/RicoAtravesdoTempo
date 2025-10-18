@@ -45,6 +45,7 @@ namespace MinigameRitmo
         private void Start()
         {
             TakeComponents();
+            ChangeVolume();
         }
 
         public void PlayMusic()

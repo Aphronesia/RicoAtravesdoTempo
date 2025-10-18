@@ -7,8 +7,6 @@ using UnityEngine;
 namespace Cutscene.UI{
     public class UIControl : MonoBehaviour {
         
-        [SerializeField] private float durationFade;
-        [SerializeField] private CanvasGroup UITransition; 
         
         [SerializeField]
         private Cutscene.CameraPivot cameraPivot;
@@ -40,8 +38,24 @@ namespace Cutscene.UI{
                 cameraPivot.SkipPicture();
             }
             else{
-            _controlScenes.ChangeScene(_controlScenes.ProxLevel); // menu map
+            StartCoroutine(Transition());
             }
+        }
+        [SerializeField] private float durationFade;
+        [SerializeField] private CanvasGroup UITransition; 
+        private IEnumerator Transition()
+        {
+            float startAlpha = UITransition.alpha;
+            float time = 0f;
+            while (time < durationFade){
+                time += Time.deltaTime;
+                UITransition.alpha = Mathf.Lerp(startAlpha, 1f, time / durationFade);
+                yield return null;
+            }
+            UITransition.alpha = 1f;
+            UITransition.interactable = true;
+            UITransition.blocksRaycasts = true;
+            _controlScenes.ChangeScene(_controlScenes.ProxLevel); // menu map
         }
         private void TakeComponents(){
             var controlScenes = FindObjectOfType<ControlScenes>();

@@ -182,10 +182,28 @@ public class ControleUI : MonoBehaviour
     public void ReturnMenuMap()
     {
         Time.timeScale = 1f; 
+        
         controlScenes.ReturnMenuMap();
     }
     public void QuitGame(){
         controlScenes.QuitGame();
+    }
+    [SerializeField] private float durationFade;
+    [SerializeField] private CanvasGroup UITransition; 
+    private IEnumerator Transition(int value)
+    {
+        Time.timeScale = 1f;
+        float startAlpha = UITransition.alpha;
+        float time = 0f;
+        while (time < durationFade){
+            time += Time.deltaTime;
+            UITransition.alpha = Mathf.Lerp(startAlpha, 1f, time / durationFade);
+            yield return null;
+        }
+        UITransition.alpha = 1f;
+        UITransition.interactable = true;
+        UITransition.blocksRaycasts = true;
+        controlScenes.ChangeScene(value); // menu map
     }
 }
 

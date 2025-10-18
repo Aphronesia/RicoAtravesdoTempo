@@ -22,9 +22,6 @@ public class PlayerAttack : MonoBehaviour
         if(canDamage){
             OnPlayerAtk?.Invoke(Damage);
         }
-        else{
-            Debug.LogError($"nao pode atacar");
-        }
 
     }
 }

@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;  
+using System.Linq;
 using MinigameRitmo.UI;
 using UnityEngine;
 
@@ -14,6 +16,7 @@ namespace MinigameRitmo
         [SerializeField]
         private UIControl uiControl;
         
+        public ScoreBoard scoreBoard;
         private void OnEnable()
         {
             ArrowCollider.OnClick += AddPoints;
@@ -35,12 +38,19 @@ namespace MinigameRitmo
             TakeComponents();
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public bool GetScore()
         {
             if (points >= pointsToWin)
                 return true;
             return false;
         }
+
+        public int Points()
+        {
+            return points;
+        }
+        
         public void AddPoints()
         {
             combo++;

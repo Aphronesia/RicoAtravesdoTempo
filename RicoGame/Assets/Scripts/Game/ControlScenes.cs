@@ -34,12 +34,12 @@ namespace Game{
         public void ReturnHome()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Home");
+            SceneManager.LoadScene(0);
         }
         public void ReturnMenuMap()
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("MenuMap");
+            SceneManager.LoadScene(2);
         }
         public void QuitGame()
         {

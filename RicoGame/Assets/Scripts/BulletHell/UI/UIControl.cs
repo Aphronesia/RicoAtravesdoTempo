@@ -80,7 +80,6 @@ namespace BulletHell.UI{
 
         public void Enemydie()
         {
-            Debug.Log("ganhoouuuu");
             StartCoroutine(GameWin());
             
         }
@@ -92,7 +91,7 @@ namespace BulletHell.UI{
         }
         public void Win()
         {
-            if(saveLoadSystem.runtimeGameData.levelCompleted < 3)
+            if(saveLoadSystem.runtimeGameData.levelCompleted <= 2)
                 saveLoadSystem.runtimeGameData.levelCompleted = 3;
             uiWin.SetActive(true);
             uiDead.SetActive(false);
@@ -107,15 +106,33 @@ namespace BulletHell.UI{
             controlScenes.RestartGame();
         }
         public void Home(){
+            //StartCoroutine(Transition(0));
             controlScenes.ReturnHome();
         }
 
         public void MenuMap()
         {
+            //StartCoroutine(Transition(2));
             controlScenes.ReturnMenuMap();
         }
         public void Quit(){
             controlScenes.QuitGame();
+        }
+        [SerializeField] private float durationFade;
+        [SerializeField] private CanvasGroup UITransition; 
+        private IEnumerator Transition(int value)
+        {
+            float startAlpha = UITransition.alpha;
+            float time = 0f;
+            while (time < durationFade){
+                time += Time.deltaTime;
+                UITransition.alpha = Mathf.Lerp(startAlpha, 1f, time / durationFade);
+                yield return null;
+            }
+            UITransition.alpha = 1f;
+            UITransition.interactable = true;
+            UITransition.blocksRaycasts = true;
+            controlScenes.ChangeScene(value); // menu map
         }
 
         private void TakeComponents()

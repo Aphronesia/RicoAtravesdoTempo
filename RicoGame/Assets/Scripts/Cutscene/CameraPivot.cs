@@ -18,6 +18,8 @@ namespace Cutscene {
         private Camera cam;
         [SerializeField]
         private GameObject background;
+        [SerializeField]
+        private GameObject bgTwoPages;
 
         public Coroutine _runFollows = null;
         public List<Comic> comics = new List<Comic>();
@@ -73,7 +75,15 @@ namespace Cutscene {
                     float p = 2f;
                     t = 1f - Mathf.Pow(1f - t, p);
                     testee = t;
-                    transform.position = Vector3.Lerp(origin, background.transform.position, t);
+                    // Duas paginas nesse quadrinho
+                    if (comIndex == 4)
+                    {
+                        transform.position = Vector3.Lerp(origin, bgTwoPages.transform.position, t);
+                    }
+                    else
+                    {
+                        transform.position = Vector3.Lerp(origin, background.transform.position, t);
+                    }
                     cam.orthographicSize = sizeStart + (diferenceSize * t);
                     yield return null;
                 }

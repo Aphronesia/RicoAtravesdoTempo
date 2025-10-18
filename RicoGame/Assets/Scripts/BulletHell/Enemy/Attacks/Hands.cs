@@ -80,7 +80,6 @@ namespace BulletHell.Enemy.Attacks
                 Animator enemyAnim = enemy.GetComponent<Animator>();
                 enemyAnim.SetTrigger("Attack");
             }
-            Debug.Log("Acabou");
             StartSelfDestruct(0f, this.gameObject);
         }
     }

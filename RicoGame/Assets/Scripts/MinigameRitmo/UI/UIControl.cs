@@ -21,10 +21,13 @@ namespace MinigameRitmo.UI
         [SerializeField] private TextMeshProUGUI combotxt;
 
         [SerializeField] private Score score;
+        [SerializeField] private ScoreBoard scoreboard;
         private Game.ControlScenes _scene;
+        private Game.ControlSounds _sound;
         private Game.SaveLoadSystem _saveLoad;
         public MusicControl music;
 
+        public static event Action OnStopMusic;
         private void OnEnable()
         {
             RitmoControl.OnEndMusic += EndGame;
@@ -45,6 +48,14 @@ namespace MinigameRitmo.UI
             tutorial.SetActive(true);
             gameWin.SetActive(false);
             gameOver.SetActive(false);
+            if (_sound != null)
+            {
+                _sound.StopMusic();
+            }
+            else
+            {
+                OnStopMusic?.Invoke();
+            }
         }
 
         public void PlayGame()
@@ -76,7 +87,8 @@ namespace MinigameRitmo.UI
 
         public void Win()
         {
-            if(_saveLoad.runtimeGameData.levelCompleted <= 4)
+            scoreboard.AddValue(score.Points());
+            if (_saveLoad.runtimeGameData.levelCompleted <= 3)
                 _saveLoad.runtimeGameData.levelCompleted = 4;
             gameWin.SetActive(true);
             gameOver.SetActive(false);
@@ -101,6 +113,23 @@ namespace MinigameRitmo.UI
         {
             _scene.RestartGame();
         }
+        [SerializeField] private float durationFade;
+        [SerializeField] private CanvasGroup UITransition; 
+        private IEnumerator Transition(int value)
+        {
+            float startAlpha = UITransition.alpha;
+            float time = 0f;
+            while (time < durationFade){
+                time += Time.deltaTime;
+                UITransition.alpha = Mathf.Lerp(startAlpha, 1f, time / durationFade);
+                yield return null;
+            }
+            UITransition.alpha = 1f;
+            UITransition.interactable = true;
+            UITransition.blocksRaycasts = true;
+            _scene.ChangeScene(value); // menu map
+        }
+        
         private void TakeComponents()
         {
             var sceneObj = FindObjectOfType<Game.ControlScenes>();
@@ -109,6 +138,9 @@ namespace MinigameRitmo.UI
             var saveObj = FindAnyObjectByType<Game.SaveLoadSystem>();
             if ( saveObj != null)
                 _saveLoad = saveObj.GetComponent<SaveLoadSystem>();
+            var soundObj = FindAnyObjectByType<Game.ControlSounds>();
+            if ( soundObj != null)
+                _sound = saveObj.GetComponent<ControlSounds>();
         }
     }
 }

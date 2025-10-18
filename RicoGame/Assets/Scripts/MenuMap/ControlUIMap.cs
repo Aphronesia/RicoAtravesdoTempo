@@ -1,3 +1,4 @@
+using System.Collections;
 using Game;
 using UnityEngine;
 
@@ -11,7 +12,9 @@ namespace MenuMap {
         private LevelManager _lvManager;
 
         private bool _pause;
-        
+        [SerializeField]
+        private CanvasGroup _panelTransition;
+        [SerializeField] private float transitionDuration;
         private ControlSounds _controlSounds;
         
         private void Start() {
@@ -27,7 +30,29 @@ namespace MenuMap {
         }
 
         public void PlayLevelWithCutscene(){
-            _controlSounds.PlayMusic("Button");
+            _controlSounds.PlaySfx("Button");
+            StartCoroutine(Transition());
+            
+        }
+
+        private IEnumerator Transition()
+        {
+            _controlSounds.PlaySfx("Select");
+            float startAlpha = _panelTransition.alpha;
+            float time = 0f;
+            while (time < transitionDuration){
+                time += Time.deltaTime;
+                _panelTransition.alpha = Mathf.Lerp(startAlpha, 1f, time / transitionDuration);
+                yield return null;
+            }
+            _panelTransition.alpha = 1f;
+            _panelTransition.interactable = true;
+            _panelTransition.blocksRaycasts = true;
+            ContinueTranstion();
+        }
+
+        private void ContinueTranstion()
+        {
             if (lvPop.Cutscene()){
                 _controlScenes.ProxLevel = lvPop.SceneIndex();
                 _controlScenes.indexCutscene = lvPop.ActualCutsceneIndex();
@@ -36,9 +61,7 @@ namespace MenuMap {
             else{
                 _controlScenes.ChangeScene(lvPop.SceneIndex());
             }
-            
         }
-        
         public void SaveData() {
             _saveLoadSystem.SaveGameData();
         }

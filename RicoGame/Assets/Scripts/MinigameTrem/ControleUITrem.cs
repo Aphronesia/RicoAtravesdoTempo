@@ -100,10 +100,28 @@ namespace MinigameTrem{
         }
         public void ReturnHome()
         {
+            //StartCoroutine(Transition(0));
             controlScenes.ReturnHome();
         }
         public void ReturnMenuMap(){
+            //StartCoroutine(Transition(2));
             controlScenes.ReturnMenuMap();
+        }
+        [SerializeField] private float durationFade;
+        [SerializeField] private CanvasGroup UITransition; 
+        private IEnumerator Transition(int value)
+        {
+            float startAlpha = UITransition.alpha;
+            float time = 0f;
+            while (time < durationFade){
+                time += Time.deltaTime;
+                UITransition.alpha = Mathf.Lerp(startAlpha, 1f, time / durationFade);
+                yield return null;
+            }
+            UITransition.alpha = 1f;
+            UITransition.interactable = true;
+            UITransition.blocksRaycasts = true;
+            controlScenes.ChangeScene(value); // menu map
         }
 
         private void TakeComponents(){
