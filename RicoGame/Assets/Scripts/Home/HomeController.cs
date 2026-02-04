@@ -21,7 +21,7 @@ public class HomeController : MonoBehaviour
             NextScene = 1;
         }
         //controla rotacao de tela (muda pra retrato)
-        Screen.orientation = ScreenOrientation.Portrait;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         credits.SetActive(false);
         credi = false;
         
