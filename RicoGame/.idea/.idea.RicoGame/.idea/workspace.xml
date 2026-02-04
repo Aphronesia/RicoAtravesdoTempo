@@ -7,14 +7,9 @@
     <list default="true" id="b89b26d2-06dc-4c0c-b89b-f8e289adc325" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RicoGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BulletHell.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cutscenes.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cutscenes.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MiniMapa.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MiniMapa.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigamePinhas.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigamePinhas.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameRitmo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MinigameTrem.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MinigameTrem.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Home2/HomeControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Home2/HomeControl.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +154,7 @@
       <workItem from="1760735998574" duration="11481000" />
       <workItem from="1760760284288" duration="1654000" />
       <workItem from="1760786484356" duration="306000" />
-      <workItem from="1770232604207" duration="4599000" />
+      <workItem from="1770232604207" duration="6964000" />
     </task>
     <servers />
   </component>
