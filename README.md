@@ -1,2 +1,362 @@
-# RicoAtravesdoTempo
-yes babe 
+# Através do Tempo
+
+<div align="center">
+
+  <img src="./docs/images/logo.png" alt="Logo Através do Tempo" width="320"/>
+
+  <p align="center">
+    <strong>Uma aventura temporal em pixel art desenvolvida pela equipe Aphronesia, combinando múltiplos gêneros, narrativa em quadrinhos interativos e desafios mecânicos marcantes.</strong>
+  </p>
+
+  [![Website](https://img.shields.io/badge/Website-Aphronesia-000?style=for-the-badge&logo=vercel&logoColor=white)](https://aphronesia.vercel.app/)
+  [![Unity Version](https://img.shields.io/badge/Unity-2022.3.62f3%20LTS-black?style=for-the-badge&logo=unity&logoColor=white)](https://unity.com/)
+  [![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
+  [![Render Pipeline](https://img.shields.io/badge/Pipeline-URP%202D-orange?style=for-the-badge&logo=unity)](https://unity.com/features/universal-render-pipeline)
+  [![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20WebGL%20%7C%20Mobile-blue?style=for-the-badge&logo=googleplay)](https://ferlemou.itch.io/atravesdotempo)
+  [![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)](#)
+  [![Play on Itch.io](https://img.shields.io/badge/Jogar%20Agora-Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://ferlemou.itch.io/atravesdotempo)
+
+  <br />
+
+  <a href="https://ferlemou.itch.io/atravesdotempo">
+    <img src="https://img.shields.io/badge/▶_JOGAR_NO_ITCH.IO-VER_DEMO-red?style=for-the-badge&labelColor=1a1a1a" alt="Jogar no Itch.io" height="40">
+  </a>
+
+</div>
+
+---
+
+## 📖 Sumário
+- [Sobre o Jogo](#-sobre-o-jogo)
+  - [Contexto Acadêmico](#-contexto-acadêmico)
+  - [Premissa Narrativa](#-premissa-narrativa)
+  - [Direção Artística & Atmosfera](#-direção-artística--atmosfera)
+- [Mecânicas Principais & Fases](#-mecânicas-principais--fases)
+  - [1. Coleta de Pinhas (Lane Catcher)](#1-coleta-de-pinhas-lane-catcher)
+  - [2. Corrida no Trem (Endless Runner & Time Dilation)](#2-corrida-no-trem-endless-runner--time-dilation)
+  - [3. Beco do Guaxinim (Boss Fight / Bullet Hell)](#3-beco-do-guaxinim-boss-fight--bullet-hell)
+  - [4. Batalha Musical (Rhythm Battle)](#4-batalha-musical-rhythm-battle)
+  - [Sistema de Cutscenes em HQ Interativa](#sistema-de-cutscenes-em-hq-interativa)
+- [Arquitetura & Engenharia de Software](#-arquitetura--engenharia-de-software)
+  - [Estrutura do Projeto](#estrutura-do-projeto)
+  - [Padrões de Projeto (Design Patterns)](#padrões-de-projeto-design-patterns)
+  - [Data-Driven Design & Charting com JSON](#data-driven-design--charting-com-json)
+  - [Sistemas Centrais e Destaques Técnicos](#sistemas-centrais-e-destaques-técnicos)
+- [Esquema de Controles](#-esquema-de-controles)
+- [Como Executar o Projeto](#-como-executar-o-projeto)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação e Execução no Unity Editor](#instalação-e-execução-no-unity-editor)
+- [Equipe & Créditos](#-equipe--créditos)
+- [Publicação & Links](#-publicação--links)
+
+---
+
+## 🎮 Sobre o Jogo
+
+### 🎓 Contexto Acadêmico
+**Através do Tempo** foi concebido e desenvolvido pelo grupo **Aphronesia** como **Trabalho de Conclusão de Curso (TCC)** do curso técnico de **Jogos Digitais pela FIEB** (Fundação Instituto de Educação de Barueri). O projeto sintetizou o aprendizado de game design, engenharia de software em C#, modelagem e animação 2D, composição de áudio e gestão de projetos digitais.
+
+### 📜 Premissa Narrativa
+Quando o fluxo temporal e o ecossistema local entram em colapso, o protagonista **Rico** embarca em uma missão através de diferentes épocas e ambientes para restaurar o curso dos acontecimentos e desobstruir as águas do rio. Para abastecer sua máquina do tempo e impedir que a realidade caia em mãos erradas, Rico precisará coletar combustível temporal, escapar de ameaças sobre trilhos em alta velocidade, enfrentar o temido **Guaxinim Maromba** e provar seu ritmo em uma batalha musical decisiva contra o lendário **Carcará**.
+
+<div align="center">
+  <img src="./docs/images/mapa.png" alt="Mapa do Mundo - Overworld" width="700"/>
+  <p><em>Overworld interativo: navegação por nós com progressão persistente e transições em HQ.</em></p>
+</div>
+
+### 🎨 Direção Artística & Atmosfera
+- **Estilo Visual:** Pixel art vibrante e estilizada com animações quadro a quadro ricas em expressividade.
+- **Narrativa Cinemática:** Transições de história contadas via histórias em quadrinhos (HQs) integradas diretamente à engine, com câmera dinâmica e ritmo dramático.
+- **Variedade Temática:** Ambientes que transitam de florestas ensolaradas e trens em alta velocidade a becos urbanos inspirados em academias e shoppings retrô.
+
+---
+
+## 🕹️ Mecânicas Principais & Fases
+
+O jogo se destaca pela proposta **multigênero**, onde cada fase apresenta um loop de gameplay completamente diferente com regras bem delimitadas, demonstrando versatilidade técnica e criativa de design.
+
+```mermaid
+graph LR
+    Overworld["🗺️ Overworld (MiniMapa)"] --> HQ["📖 Cutscene HQ Interativa"]
+    HQ --> F1["🍂 Fase 1: Coleta de Pinhas<br/>(Lane / Reflexos)"]
+    F1 --> F2["🚂 Fase 2: Corrida no Trem<br/>(Runner / Manipulação Temporal)"]
+    F2 --> F3["🦝 Fase 3: Beco do Guaxinim<br/>(Boss Fight / Bullet Hell)"]
+    F3 --> F4["🎶 Fase 4: Batalha Musical<br/>(Rhythm Game / Troca de Turno)"]
+    F4 --> Ending["🏆 Desfecho & Conclusão"]
+```
+
+---
+
+### 1. Coleta de Pinhas (Lane Catcher)
+*Cena: `MinigamePinhas.unity`*
+
+<div align="center">
+  <img src="./docs/images/fase1.png" alt="Gameplay Coleta de Pinhas" width="600"/>
+</div>
+
+- **Objetivo:** Coletar pinhas que despencam dos pinheiros através de nuvens para abastecer a máquina do tempo antes que o tempo esgote.
+- **Mecânicas:**
+  - **Movimentação em Pistas (Lanes):** Rico transita instantaneamente ou desliza entre faixas pré-posicionadas (Esquerda, Centro, Direita).
+  - **Identificação de Alvos:** Coleta de pinhas (+pontuação) e corações de vida (+recuperação de vida), enquanto evita bigornas letais que caem com aceleração física.
+  - **Gestão de Saúde & Tempo:** Sistema integrado de temporizador regressivo (`Temporizador.cs`) e contagem visual de corações (`HealthHeartManager.cs`).
+
+---
+
+### 2. Corrida no Trem (Endless Runner & Time Dilation)
+*Cena: `MinigameTrem.unity`*
+
+<div align="center">
+  <img src="./docs/images/fase2.png" alt="Gameplay Corrida no Trem" width="600"/>
+</div>
+
+- **Objetivo:** Sobreviver ao percurso sobre o teto de um trem em alta velocidade, desviando de obstáculos e manipulando as leis da física.
+- **Mecânicas & Destaques de Gameplay:**
+  - **Salto e Super Pulo (Spring Jump):** Pulo convencional sincronizado e pulo amplificado ao atingir caixas de som equipadas com molas dinâmicas.
+  - **Teleporte Cíclico Sem Fim:** Implementação de reposicionamento vetorial suave (`Teleporte()`) que gera a ilusão perfeita de uma locomotiva infinita.
+  - **Manipulação Temporal (Time Manipulation Power-Up):**
+    - ⏳ **Relógio (`Clock.cs`):** Altera a escala de tempo global da engine (`Time.timeScale < 1.0f`), ativando um efeito de câmera lenta (*bullet time*) que permite desviar de ameaças com precisão cirúrgica.
+    - 🍈 **Melancia (`Melon.cs`):** Concede faseamento e intangibilidade temporária (`TriggerInvisibility()`), desativando colisões de dano contra obstáculos via camada física (`Physics2D.IgnoreCollision`).
+    - ⚡ **Multiplicador de Tempo (`PowerUpTimeSpeed.cs`):** Acelera a geração de pontuação e altera a paleta visual da HUD.
+
+---
+
+### 3. Beco do Guaxinim (Boss Fight / Bullet Hell)
+*Cena: `BulletHell.unity`*
+
+<div align="center">
+  <img src="./docs/images/fase3.png" alt="Gameplay Beco do Guaxinim" width="600"/>
+</div>
+
+- **Objetivo:** Enfrentar o temível e musculoso **Guaxinim Maromba** que tenta saquear a máquina temporal.
+- **Lógica da Boss Fight (Padrão Telegrafado & Janela de Punição):**
+  - **Fase Ofensiva do Chefe (Dodge Phase):** O Guaxinim desfere sequências telegrafadas e aleatórias de projéteis (pesos de academia, barras de supino, arremesso de anilhas e arranhões cortantes). Indicadores visuais de perigo (`alertAttack.cs`) avisam a trajetória antes do impacto.
+  - **Fase de Exaustão (Punish Window):** Ao esgotar sua energia de treino, o chefe entra no estado de fadiga (`OnEnemyTired(true)`). Durante esse intervalo, a HUD libera o botão de contra-ataque (`PlayerAttack.cs`), permitindo ao jogador infligir dano direto.
+  - **Controle Preciso de Plataforma:** Movimentação fluida, suporte a analógico virtual mobile (`Joystick Pack`), detecção de contato com solo/paredes e animações de salto reativas.
+
+---
+
+### 4. Batalha Musical (Rhythm Battle)
+*Cena: `MinigameRitmo.unity`*
+
+<div align="center">
+  <img src="./docs/images/fase4.png" alt="Gameplay Batalha Musical" width="600"/>
+</div>
+
+- **Objetivo:** Vencer o duelo rítmico contra o imponente **Carcará** dentro do shopping, acompanhando o compasso da trilha sonora.
+- **Mecânicas Rítmicas:**
+  - **4 Vias de Notas:** Setas direcionais (Cima, Baixo, Esquerda, Direita) geradas dinamicamente com base em coordenadas mundiais precisas.
+  - **Sistema de Turnos Musicais:** O Carcará executa a melodia inicial (telegrafando as notas e acionando gatilhos de animação), e Rico deve replicar com precisão rítmica.
+  - **Detecção de Janela de Acerto (`ArrowCollider.cs`):** Gatilhos de colisão que validam o *timing* do jogador, calculando acertos, erros e sincronizando o fim da composição musical.
+
+---
+
+### 📖 Sistema de Cutscenes em HQ Interativa
+*Cena: `Cutscenes.unity`*
+
+<div align="center">
+  <img src="./docs/images/hq-preview.png" alt="Exemplo Cutscene HQ" width="550"/>
+</div>
+
+Uma das inovações mais expressivas do projeto é o sistema de câmera de história em quadrinhos (`Cutscene.CameraPivot`):
+- **Interpolação Suave Não-Linear:** Utiliza curvas polinomiais personalizadas de aceleração e desaceleração ($t = 1 - (1 - t)^p$) para mover a câmera entre quadros da página.
+- **Fade-in Gradual por Painel:** Cada vinheta da HQ surge com opacidade gradativa (`SpriteRenderer.color`), guiando a leitura do jogador quadro a quadro.
+- **Visão Geral Panorâmica:** Ao término de cada sequência, a câmera recua dinamicamente alterando seu `orthographicSize`, revelando a página inteira finalizada.
+- **Sistema de Skip Inteligente:** Permite ao jogador pular para o próximo quadro ou avançar diretamente para o gameplay.
+
+---
+
+## 🛠️ Arquitetura & Engenharia de Software
+
+O código foi estruturado com foco em boas práticas de programação em C#, desacoplamento e facilidade de manutenção no ecossistema da Unity.
+
+```mermaid
+classDiagram
+    class SaveLoadSystem {
+        +SettingsData settingsData
+        +GameData runtimeGameData
+        +SaveGameData()
+        +LoadGameData()
+        +AumentarLevel(int level)
+    }
+    class ControlScenes {
+        +int indexCutscene
+        +int ProxLevel
+        +ChangeScene(int index)
+        +ReturnMenuMap()
+    }
+    class ControlSounds {
+        +float volumeMusic
+        +float volumeSfx
+        +PlayMusic(string name)
+        +PlaySfx(string name)
+        +ChangeVolumes()
+    }
+    class LevelManager {
+        +List~Level~ levels
+        +int actualRico
+        +GetClick()
+        +NextorPrevLevel()
+    }
+
+    ControlScenes <.. LevelManager : Notifica
+    SaveLoadSystem <.. LevelManager : Persiste Progresso
+    ControlSounds <.. LevelManager : Dispara SFX
+```
+
+### 📂 Estrutura do Projeto
+
+```text
+RicoAtravesdoTempo/
+├── README.md
+└── RicoGame/
+    ├── Packages/
+    │   └── manifest.json             # Dependências da engine (URP, 2D, UGUI, TMP, etc.)
+    ├── ProjectSettings/
+    │   ├── EditorBuildSettings.asset # Lista de cenas do build
+    │   ├── InputManager.asset        # Mapeamento de eixos e teclas
+    │   └── ProjectVersion.txt        # Versão: Unity 2022.3.62f3
+    └── Assets/
+        ├── JSON/
+        │   └── MinigameRitmo/        # Arquivos de dados de notas musicais
+        ├── Joystick Pack/            # Pacote para joysticks virtuais em tela touch
+        ├── Scenes/                   # Cenas do jogo
+        │   ├── Home.unity            # Menu principal
+        │   ├── Cutscenes.unity       # Visualizador cinemático de HQs
+        │   ├── MiniMapa.unity        # Mapa do mundo (Overworld)
+        │   ├── MinigamePinhas.unity  # Fase 1: Coleta
+        │   ├── MinigameTrem.unity    # Fase 2: Corrida
+        │   ├── BulletHell.unity      # Fase 3: Batalha de Chefe
+        │   └── MinigameRitmo.unity   # Fase 4: Batalha de Ritmo
+        ├── Scripts/
+        │   ├── Game/                 # Singletons centrais (Save, Cenas, Áudio, Câmera)
+        │   ├── Home/                 # Gerenciador de menu inicial e configurações
+        │   ├── Cutscene/             # Controle cinemático e interpolação de quadros
+        │   ├── MenuMap/              # Lógica de seleção de níveis e movimentação no mapa
+        │   ├── BulletHell/           # Lógica do Boss Guaxinim, ataques e jogador
+        │   ├── MinigamePinha/        # Lógica de coleta de pinhas e danos
+        │   ├── MinigameTrem/         # Runner, power-ups temporais e geração de obstáculos
+        │   └── MinigameRitmo/        # Motor rítmico, leitor de JSON e colisores
+        └── Sprites/                  # Recursos visuais organizados por módulo
+```
+
+### 🏛️ Padrões de Projeto (Design Patterns)
+
+1. **Singleton Pattern Persistente (`DontDestroyOnLoad`):**
+   - Implementado em sistemas centrais como `SaveLoadSystem`, `ControlScenes` e `ControlSounds`.
+   - Garante que a transição de cenas não destrua instâncias vitais nem duplique objetos na hierarquia ao recarregar fases (`if (FindObjectsOfType<T>().Length > 1) Destroy(gameObject);`).
+2. **Observer Pattern / Event-Driven Architecture:**
+   - Amplo emprego de `public static event Action` para garantir desacoplamento estrito entre lógica e apresentação.
+   - Exemplos: `EnemyControl.OnEnemyTired`, `EnemyAttack.OnAtkFinished`, `RitmoControl.OnChange`, `ScoreManager.OnGanhou`, `UIControl.OnLevel`.
+3. **Interface Segregation & Polimorfismo:**
+   - `IPowerUps`: Padroniza o contrato de ativação de efeitos consumíveis (`Effect()`), permitindo estender facilmente novos itens (ex.: `Clock`, `Melon`, `PowerUpTimeSpeed`).
+   - `IPlayer_Status`: Desacopla regras de vida máxima, vida atual e eventos de dano entre os diferentes minigames.
+4. **State Machine Comportamental em Chefes:**
+   - O boss do Bullet Hell opera em ciclo de estados explícitos: `Attacking` (combinações de projéteis) $\rightarrow$ `Tired` (janela vulnerável ao jogador) $\rightarrow$ `Damaged` $\rightarrow$ `Die`.
+
+### 📊 Data-Driven Design & Charting com JSON
+No minigame rítmico, os tempos de spawn, direção das setas e troca de turnos são abstraídos fora da lógica estática de código através da classe `RitmoJson.cs`:
+- Leitura e gravação de arquivos serializados (`musica01.json`).
+- Criação de comandos de inspeção no Unity Editor via atributos `[ContextMenu("Salvar JSON")]` e `[ContextMenu("Carregar JSON")]`, funcionando como uma ferramenta interna para os designers calibrarem novas faixas sem recompilar código.
+
+### 📐 Sistemas Centrais e Destaques Técnicos
+- **Adaptador Dinâmico de Proporção de Tela (`CameraSize.cs`):**
+  - Calcula a proporção da tela do usuário (`screenAspect`) em relação à referência de 16:9 (`16f / 9f`).
+  - Em telas ultrawide ou formatos verticais, recalcula em tempo real o `orthographicSize` e aplica um deslocamento vertical compensatório em `transform.position`, prevenindo cortes de elementos e mantendo a composição estética pretendida em qualquer display.
+- **Gerenciador Central de Áudio com Mixagem (`ControlSounds.cs`):**
+  - Separação de canais dedicados para `MusicSource` e `SfxSource`.
+  - Mapeamento dinâmico de `AudioClip` por chave de string e persistência imediata dos níveis de volume nas configurações locais.
+- **Sistema de Salvamento Robusto (`SaveLoadSystem.cs`):**
+  - Armazenamento em formato JSON via `Application.persistentDataPath`.
+  - Controle de progresso contínuo de fases desbloqueadas (`levelCompleted`), posição de Rico no overworld (`menuMapRico`) e recorde de pontuação da fase do trem (`recordPoinsTrem`).
+
+---
+
+## 🎮 Esquema de Controles
+
+O jogo foi projetado com suporte híbrido: totalmente funcional via **Teclado no PC** e otimizado para telas sensíveis ao toque (**Mobile / WebGL touch**) através de botões na UI e analógico virtual.
+
+| Contexto / Fase | Ação | Teclado (PC) | Toque / Mobile |
+| :--- | :--- | :--- | :--- |
+| **Mapa do Mundo** | Selecionar Nível / Mover Rico | `Clique do Mouse` nas fases | `Toque Direto` no ponto da fase |
+| **Cutscenes (HQs)** | Avançar / Pular Quadro | `Espaço` / Clique | Toque no botão de Skip na tela |
+| **Fase 1: Coleta de Pinhas** | Deslocar para Esquerda | `Seta Esquerda` ou `J` | Toque no lado esquerdo da tela |
+| | Posição Central | `K` | Retorno automático por posição |
+| | Deslocar para Direita | `Seta Direita` ou `L` | Toque no lado direito da tela |
+| **Fase 2: Corrida no Trem** | Pular / Salto Normal | `Barra de Espaço` | Botão virtual de Pulo |
+| | Super Pulo | Contato automático com a Mola + Pulo | Contato com a Mola + Toque de Pulo |
+| **Fase 3: Beco do Guaxinim** | Movimentação Horizontal | `A` / `D` ou `Setas Esquerda/Direita` | Analógico Virtual (`Fixed Joystick`) |
+| | Pular | `Barra de Espaço` | Botão virtual de Pulo |
+| | Golpear o Chefe | Botão de Ataque na UI | Toque no botão de Ataque na HUD |
+| **Fase 4: Batalha Musical** | Nota Superior (Cima) | `W`, `Seta Cima` ou `K` | Toque na seta Cima |
+| | Nota Inferior (Baixo) | `S`, `Seta Baixo` ou `L` | Toque na seta Baixo |
+| | Nota Esquerda | `A`, `Seta Esquerda` ou `H` | Toque na seta Esquerda |
+| | Nota Direita | `D`, `Seta Direita` ou `J` | Toque na seta Direita |
+| **Menus & Pausa** | Pausar / Despausar | `Esc` ou Botão de Menu | Botão de Engrenagem / Menu |
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- **Unity Hub** instalado.
+- **Unity Editor 2022.3.62f3 LTS** (com suporte a módulos Windows/Linux/WebGL/Android).
+- **Git** instalado na máquina.
+
+> [!NOTE]
+> **Observação sobre a versão da Engine:** O projeto foi originalmente desenvolvido na versão `2022.3.52f1 LTS`, mas foi migrado para a `2022.3.62f3` seguindo as recomendações oficiais de estabilidade e patches da Unity.
+
+### Instalação e Execução no Unity Editor
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/ferlemou/RicoAtravesdoTempo.git
+   ```
+
+2. **Abra o projeto no Unity Hub:**
+   - Abra o **Unity Hub**.
+   - Clique em **Add** (Adicionar projeto a partir do disco).
+   - Selecione a pasta do projeto interno: `RicoAtravesdoTempo/RicoGame`.
+   - Certifique-se de vincular o editor com a versão **Unity 2022.3.62f3**.
+
+3. **Cena Inicial recomendada:**
+   - No painel de pastas da Unity (`Project`), navegue até:
+     ```text
+     Assets > Scenes > Home.unity
+     ```
+   - Dê um duplo clique na cena `Home.unity`.
+   - Pressione o botão **Play (▶)** no topo do Unity Editor para iniciar o fluxo completo com áudio, menus e saves sincronizados.
+
+---
+
+## 👥 Equipe & Créditos
+
+O projeto foi concebido e construído colaborativamente pela equipe **Aphronesia**:
+
+<div align="center">
+  <img src="./docs/images/rico-like.png" alt="Rico Mascote" width="120"/>
+</div>
+
+| Integrante | Papel Principal | Contribuições Chave |
+| :--- | :--- | :--- |
+| **Felipe Moura** | Programador Principal & Level Design | Arquitetura de software em C#, lógica de todas as mecânicas dos minigames, sistemas de física, saves e balanceamento de níveis. |
+| **Dominique Toledo** | Gerente de Projeto | Gestão de cronograma e escopo, suporte ao desenvolvimento de scripts e curadoria/integração de assets. |
+| **Murilo Cesar** | Designer de Mundo & Assets Visuais | Criação de sprites de personagens, direção estética, ambientalização e arte dos minigames. |
+| **Jonas Gomes** | Designer Principal | Arte conceitual, ilustração dos cenários principais e diagramação artística das páginas de HQ. |
+| **Nayara Domingues** | Documentação & Web Developer | Redação e estruturação da documentação do TCC, conceitualização narrativa e desenvolvimento do site oficial. |
+| **Caneca** | Sound Designer Principal | Composição de trilhas sonoras originais, sonoplastia dos minigames, efeitos sonoros (SFX) e apoio em level design. |
+
+---
+
+## 🌐 Publicação & Links
+
+- 🌐 **Website Oficial:** [aphronesia.vercel.app](https://aphronesia.vercel.app/)
+- 📄 **Página do Projeto (Detalhes & Sinopse):** [aphronesia.vercel.app/projetos](https://aphronesia.vercel.app/projetos)
+- 🕹️ **Versão Jogável no Itch.io:** [https://ferlemou.itch.io/atravesdotempo](https://ferlemou.itch.io/atravesdotempo)
+- 🏢 **Instituição:** FIEB (Fundação Instituto de Educação de Barueri)
+- 📚 **Curso:** Técnico em Jogos Digitais
+
+---
+
+<div align="center">
+  <sub>Desenvolvido com carinho e café pela equipe Aphronesia. Todos os direitos reservados.</sub>
+</div>
