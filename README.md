@@ -5,7 +5,7 @@
   <img src="./docs/images/logo.png" alt="Logo Através do Tempo" width="320"/>
 
   <p align="center">
-    <strong>Uma aventura temporal em pixel art desenvolvida pela equipe Aphronesia, combinando múltiplos gêneros, narrativa em quadrinhos interativos e desafios mecânicos marcantes.</strong>
+    <strong>Jogo de ação e aventura em pixel art desenvolvido pela equipe Aphronesia, combinando múltiplos gêneros de gameplay e narrativa contada em quadrinhos.</strong>
   </p>
 
   [![Website](https://img.shields.io/badge/Website-Aphronesia-000?style=for-the-badge&logo=vercel&logoColor=white)](https://aphronesia.vercel.app/)
@@ -15,12 +15,6 @@
   [![Platform](https://img.shields.io/badge/Platform-PC%20%7C%20WebGL%20%7C%20Mobile-blue?style=for-the-badge&logo=googleplay)](https://ferlemou.itch.io/atravesdotempo)
   [![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)](#)
   [![Play on Itch.io](https://img.shields.io/badge/Jogar%20Agora-Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://ferlemou.itch.io/atravesdotempo)
-
-  <br />
-
-  <a href="https://ferlemou.itch.io/atravesdotempo">
-    <img src="https://img.shields.io/badge/▶_JOGAR_NO_ITCH.IO-VER_DEMO-red?style=for-the-badge&labelColor=1a1a1a" alt="Jogar no Itch.io" height="40">
-  </a>
 
 </div>
 
@@ -57,7 +51,9 @@
 **Através do Tempo** foi concebido e desenvolvido pelo grupo **Aphronesia** como **Trabalho de Conclusão de Curso (TCC)** do curso técnico de **Jogos Digitais pela FIEB** (Fundação Instituto de Educação de Barueri). O projeto sintetizou o aprendizado de game design, engenharia de software em C#, modelagem e animação 2D, composição de áudio e gestão de projetos digitais.
 
 ### 📜 Premissa Narrativa
-Quando o fluxo temporal e o ecossistema local entram em colapso, o protagonista **Rico** embarca em uma missão através de diferentes épocas e ambientes para restaurar o curso dos acontecimentos e desobstruir as águas do rio. Para abastecer sua máquina do tempo e impedir que a realidade caia em mãos erradas, Rico precisará coletar combustível temporal, escapar de ameaças sobre trilhos em alta velocidade, enfrentar o temido **Guaxinim Maromba** e provar seu ritmo em uma batalha musical decisiva contra o lendário **Carcará**.
+O jogo se passa em um futuro onde a degradação ambiental e a instabilidade climática destruíram os ecossistemas locais. O protagonista, Rico, é uma capivara detetive que decide voltar no tempo para tentar evitar esse desfecho.
+
+Para a viagem, ele utiliza um trem adaptado por um amigo cientista como máquina do tempo, movido a combustível orgânico renovável. Ao longo do trajeto por diferentes eras, outros animais tentam impedir o avanço de Rico, revelando uma tentativa coordenada de sabotagem que culmina em um paradoxo temporal contra sua própria versão do futuro.
 
 <div align="center">
   <img src="./docs/images/mapa.png" alt="Mapa do Mundo - Overworld" width="700"/>
@@ -65,25 +61,23 @@ Quando o fluxo temporal e o ecossistema local entram em colapso, o protagonista 
 </div>
 
 ### 🎨 Direção Artística & Atmosfera
-- **Estilo Visual:** Pixel art vibrante e estilizada com animações quadro a quadro ricas em expressividade.
-- **Narrativa Cinemática:** Transições de história contadas via histórias em quadrinhos (HQs) integradas diretamente à engine, com câmera dinâmica e ritmo dramático.
-- **Variedade Temática:** Ambientes que transitam de florestas ensolaradas e trens em alta velocidade a becos urbanos inspirados em academias e shoppings retrô.
+- **Estilo Visual:** Pixel art com animações quadro a quadro para personagens e elementos de cenário.
+- **Narrativa Cinemática:** Transições de história estruturadas em páginas de quadrinhos (HQs) com câmera dinâmica desenvolvida na Unity.
+- **Cenários:** Ambientes variados ao longo da progressão, cobrindo florestas, teto de trem em movimento, becos urbanos e interiores comerciais.
 
 ---
 
 ## 🕹️ Mecânicas Principais & Fases
 
-O jogo se destaca pela proposta **multigênero**, onde cada fase apresenta um loop de gameplay completamente diferente com regras bem delimitadas, demonstrando versatilidade técnica e criativa de design.
+O jogo adota uma estrutura **multigênero**, onde cada fase funciona com regras, objetivos e loops de gameplay próprios.
 
-```mermaid
-graph LR
-    Overworld["🗺️ Overworld (MiniMapa)"] --> HQ["📖 Cutscene HQ Interativa"]
-    HQ --> F1["🍂 Fase 1: Coleta de Pinhas<br/>(Lane / Reflexos)"]
-    F1 --> F2["🚂 Fase 2: Corrida no Trem<br/>(Runner / Manipulação Temporal)"]
-    F2 --> F3["🦝 Fase 3: Beco do Guaxinim<br/>(Boss Fight / Bullet Hell)"]
-    F3 --> F4["🎶 Fase 4: Batalha Musical<br/>(Rhythm Game / Troca de Turno)"]
-    F4 --> Ending["🏆 Desfecho & Conclusão"]
-```
+- **Progressão da Jornada:**
+  - `Mapa do Mundo (Overworld)` → `Cutscene em HQ Interativa`
+  - `Fase 1: Coleta de Pinhas` (Lane Catcher / Reflexos)
+  - `Fase 2: Corrida no Trem` (Endless Runner / Manipulação Temporal)
+  - `Fase 3: Beco do Guaxinim` (Boss Fight / Bullet Hell)
+  - `Fase 4: Batalha Musical` (Rhythm Game / Duelo de Turnos)
+  - `Conclusão & Desfecho`
 
 ---
 
@@ -94,11 +88,11 @@ graph LR
   <img src="./docs/images/fase1.png" alt="Gameplay Coleta de Pinhas" width="600"/>
 </div>
 
-- **Objetivo:** Coletar pinhas que despencam dos pinheiros através de nuvens para abastecer a máquina do tempo antes que o tempo esgote.
+- **Objetivo:** Coletar pinhas para gerar combustível para a máquina do tempo antes que o cronômetro expire.
 - **Mecânicas:**
-  - **Movimentação em Pistas (Lanes):** Rico transita instantaneamente ou desliza entre faixas pré-posicionadas (Esquerda, Centro, Direita).
-  - **Identificação de Alvos:** Coleta de pinhas (+pontuação) e corações de vida (+recuperação de vida), enquanto evita bigornas letais que caem com aceleração física.
-  - **Gestão de Saúde & Tempo:** Sistema integrado de temporizador regressivo (`Temporizador.cs`) e contagem visual de corações (`HealthHeartManager.cs`).
+  - **Movimentação em Pistas (Lanes):** Rico transita entre três posições horizontais fixas (Esquerda, Centro e Direita).
+  - **Itens e Obstáculos:** Coleta de pinhas para somar pontos e corações para regenerar vida, desviando de bigornas que caem do topo da tela.
+  - **Gestão de Vida e Tempo:** Temporizador regressivo (`Temporizador.cs`) e contador visual de corações (`HealthHeartManager.cs`).
 
 ---
 
@@ -109,14 +103,14 @@ graph LR
   <img src="./docs/images/fase2.png" alt="Gameplay Corrida no Trem" width="600"/>
 </div>
 
-- **Objetivo:** Sobreviver ao percurso sobre o teto de um trem em alta velocidade, desviando de obstáculos e manipulando as leis da física.
-- **Mecânicas & Destaques de Gameplay:**
-  - **Salto e Super Pulo (Spring Jump):** Pulo convencional sincronizado e pulo amplificado ao atingir caixas de som equipadas com molas dinâmicas.
-  - **Teleporte Cíclico Sem Fim:** Implementação de reposicionamento vetorial suave (`Teleporte()`) que gera a ilusão perfeita de uma locomotiva infinita.
-  - **Manipulação Temporal (Time Manipulation Power-Up):**
-    - ⏳ **Relógio (`Clock.cs`):** Altera a escala de tempo global da engine (`Time.timeScale < 1.0f`), ativando um efeito de câmera lenta (*bullet time*) que permite desviar de ameaças com precisão cirúrgica.
-    - 🍈 **Melancia (`Melon.cs`):** Concede faseamento e intangibilidade temporária (`TriggerInvisibility()`), desativando colisões de dano contra obstáculos via camada física (`Physics2D.IgnoreCollision`).
-    - ⚡ **Multiplicador de Tempo (`PowerUpTimeSpeed.cs`):** Acelera a geração de pontuação e altera a paleta visual da HUD.
+- **Objetivo:** Percorrer o teto do trem em movimento, desviando de obstáculos e sobrevivendo ao trajeto.
+- **Mecânicas:**
+  - **Pulo e Super Pulo:** Pulo simples para desviar de obstáculos e super pulo acionado por caixas de som equipadas com molas.
+  - **Cenário em Loop:** Reposicionamento vetorial do personagem (`Teleporte()`) ao atingir o limite do vagão, mantendo a sensação de corrida contínua.
+  - **Power-Ups:**
+    - **Relógio (`Clock.cs`):** Reduz o `Time.timeScale` da Unity temporariamente, criando um efeito de câmera lenta para facilitar as esquivas.
+    - **Melancia (`Melon.cs`):** Ativa intangibilidade temporária (`TriggerInvisibility()`), desabilitando colisões com obstáculos via `Physics2D.IgnoreCollision`.
+    - **Multiplicador de Pontos (`PowerUpTimeSpeed.cs`):** Reduz o intervalo de pontuação do `ScoreManager`, acelerando os pontos obtidos por tempo.
 
 ---
 
@@ -127,11 +121,11 @@ graph LR
   <img src="./docs/images/fase3.png" alt="Gameplay Beco do Guaxinim" width="600"/>
 </div>
 
-- **Objetivo:** Enfrentar o temível e musculoso **Guaxinim Maromba** que tenta saquear a máquina temporal.
-- **Lógica da Boss Fight (Padrão Telegrafado & Janela de Punição):**
-  - **Fase Ofensiva do Chefe (Dodge Phase):** O Guaxinim desfere sequências telegrafadas e aleatórias de projéteis (pesos de academia, barras de supino, arremesso de anilhas e arranhões cortantes). Indicadores visuais de perigo (`alertAttack.cs`) avisam a trajetória antes do impacto.
-  - **Fase de Exaustão (Punish Window):** Ao esgotar sua energia de treino, o chefe entra no estado de fadiga (`OnEnemyTired(true)`). Durante esse intervalo, a HUD libera o botão de contra-ataque (`PlayerAttack.cs`), permitindo ao jogador infligir dano direto.
-  - **Controle Preciso de Plataforma:** Movimentação fluida, suporte a analógico virtual mobile (`Joystick Pack`), detecção de contato com solo/paredes e animações de salto reativas.
+- **Objetivo:** Enfrentar o Guaxinim em combate direto de plataforma e esquiva.
+- **Lógica de Combate:**
+  - **Fase de Esquiva:** O chefe dispara sequências de projéteis (halteres, anilhas e golpes de garra). Avisos visuais (`alertAttack.cs`) sinalizam a área de perigo antes dos ataques.
+  - **Janela de Punição:** Ao término de cada série ofensiva, o chefe entra em estado de exaustão (`OnEnemyTired(true)`), liberando o botão de ataque (`PlayerAttack.cs`) para que o jogador cause dano.
+  - **Controles de Plataforma:** Movimentação horizontal com física 2D, pulo com checagem de chão e suporte a teclado ou joystick virtual.
 
 ---
 
@@ -142,11 +136,11 @@ graph LR
   <img src="./docs/images/fase4.png" alt="Gameplay Batalha Musical" width="600"/>
 </div>
 
-- **Objetivo:** Vencer o duelo rítmico contra o imponente **Carcará** dentro do shopping, acompanhando o compasso da trilha sonora.
-- **Mecânicas Rítmicas:**
-  - **4 Vias de Notas:** Setas direcionais (Cima, Baixo, Esquerda, Direita) geradas dinamicamente com base em coordenadas mundiais precisas.
-  - **Sistema de Turnos Musicais:** O Carcará executa a melodia inicial (telegrafando as notas e acionando gatilhos de animação), e Rico deve replicar com precisão rítmica.
-  - **Detecção de Janela de Acerto (`ArrowCollider.cs`):** Gatilhos de colisão que validam o *timing* do jogador, calculando acertos, erros e sincronizando o fim da composição musical.
+- **Objetivo:** Vencer o duelo de ritmo contra o Carcará acertando as notas sincronizadas com a música.
+- **Mecânicas:**
+  - **4 Vias de Entrada:** Setas direcionais (Cima, Baixo, Esquerda e Direita) geradas com base na marcação rítmica da trilha sonora.
+  - **Troca de Turnos:** O oponente executa a sequência melódica primeiro, e o jogador deve reproduzir as notas correspondentes em seu turno.
+  - **Validação de Timing (`ArrowCollider.cs`):** Colisores que registram acertos e erros conforme a nota passa pela área de validação.
 
 ---
 
@@ -157,11 +151,11 @@ graph LR
   <img src="./docs/images/hq-preview.png" alt="Exemplo Cutscene HQ" width="550"/>
 </div>
 
-Uma das inovações mais expressivas do projeto é o sistema de câmera de história em quadrinhos (`Cutscene.CameraPivot`):
-- **Interpolação Suave Não-Linear:** Utiliza curvas polinomiais personalizadas de aceleração e desaceleração ($t = 1 - (1 - t)^p$) para mover a câmera entre quadros da página.
-- **Fade-in Gradual por Painel:** Cada vinheta da HQ surge com opacidade gradativa (`SpriteRenderer.color`), guiando a leitura do jogador quadro a quadro.
-- **Visão Geral Panorâmica:** Ao término de cada sequência, a câmera recua dinamicamente alterando seu `orthographicSize`, revelando a página inteira finalizada.
-- **Sistema de Skip Inteligente:** Permite ao jogador pular para o próximo quadro ou avançar diretamente para o gameplay.
+A narrativa entre as fases utiliza um sistema customizado de câmera para quadrinhos (`Cutscene.CameraPivot`):
+- **Movimentação Não Linear:** Utiliza interpolação com curvas polinomiais ($t = 1 - (1 - t)^p$) para guiar a câmera suavemente entre os quadros.
+- **Fade-in Sequencial:** Cada quadro da HQ surge com transição de opacidade no `SpriteRenderer`, conduzindo a leitura.
+- **Enquadramento Final:** Ao término da cena, a câmera ajusta o `orthographicSize` para enquadrar a página completa.
+- **Avanço Rápido:** O jogador pode pular para o próximo quadro ou avançar diretamente para o gameplay.
 
 ---
 
@@ -245,11 +239,11 @@ RicoAtravesdoTempo/
    - Implementado em sistemas centrais como `SaveLoadSystem`, `ControlScenes` e `ControlSounds`.
    - Garante que a transição de cenas não destrua instâncias vitais nem duplique objetos na hierarquia ao recarregar fases (`if (FindObjectsOfType<T>().Length > 1) Destroy(gameObject);`).
 2. **Observer Pattern / Event-Driven Architecture:**
-   - Amplo emprego de `public static event Action` para garantir desacoplamento estrito entre lógica e apresentação.
+   - Uso de `public static event Action` para desacoplar a lógica de jogo, interface e áudio.
    - Exemplos: `EnemyControl.OnEnemyTired`, `EnemyAttack.OnAtkFinished`, `RitmoControl.OnChange`, `ScoreManager.OnGanhou`, `UIControl.OnLevel`.
 3. **Interface Segregation & Polimorfismo:**
-   - `IPowerUps`: Padroniza o contrato de ativação de efeitos consumíveis (`Effect()`), permitindo estender facilmente novos itens (ex.: `Clock`, `Melon`, `PowerUpTimeSpeed`).
-   - `IPlayer_Status`: Desacopla regras de vida máxima, vida atual e eventos de dano entre os diferentes minigames.
+   - `IPowerUps`: Define a assinatura do método `Effect()` compartilhada por diferentes itens consumíveis (ex.: `Clock`, `Melon`, `PowerUpTimeSpeed`).
+   - `IPlayer_Status`: Padroniza os atributos de vida e a recepção de dano/cura entre os diferentes minigames.
 4. **State Machine Comportamental em Chefes:**
    - O boss do Bullet Hell opera em ciclo de estados explícitos: `Attacking` (combinações de projéteis) $\rightarrow$ `Tired` (janela vulnerável ao jogador) $\rightarrow$ `Damaged` $\rightarrow$ `Die`.
 
@@ -259,15 +253,15 @@ No minigame rítmico, os tempos de spawn, direção das setas e troca de turnos 
 - Criação de comandos de inspeção no Unity Editor via atributos `[ContextMenu("Salvar JSON")]` e `[ContextMenu("Carregar JSON")]`, funcionando como uma ferramenta interna para os designers calibrarem novas faixas sem recompilar código.
 
 ### 📐 Sistemas Centrais e Destaques Técnicos
-- **Adaptador Dinâmico de Proporção de Tela (`CameraSize.cs`):**
-  - Calcula a proporção da tela do usuário (`screenAspect`) em relação à referência de 16:9 (`16f / 9f`).
-  - Em telas ultrawide ou formatos verticais, recalcula em tempo real o `orthographicSize` e aplica um deslocamento vertical compensatório em `transform.position`, prevenindo cortes de elementos e mantendo a composição estética pretendida em qualquer display.
-- **Gerenciador Central de Áudio com Mixagem (`ControlSounds.cs`):**
-  - Separação de canais dedicados para `MusicSource` e `SfxSource`.
-  - Mapeamento dinâmico de `AudioClip` por chave de string e persistência imediata dos níveis de volume nas configurações locais.
-- **Sistema de Salvamento Robusto (`SaveLoadSystem.cs`):**
-  - Armazenamento em formato JSON via `Application.persistentDataPath`.
-  - Controle de progresso contínuo de fases desbloqueadas (`levelCompleted`), posição de Rico no overworld (`menuMapRico`) e recorde de pontuação da fase do trem (`recordPoinsTrem`).
+- **Ajuste de Proporção de Tela (`CameraSize.cs`):**
+  - Compara o aspect ratio atual (`screenAspect`) com a base de 16:9 (`16f / 9f`).
+  - Em resoluções ultrawide ou telas verticais, recalcula o `orthographicSize` e compensa a posição da câmera em Y para evitar cortes no conteúdo da cena.
+- **Gerenciamento de Áudio (`ControlSounds.cs`):**
+  - Canais dedicados para trilha sonora (`MusicSource`) e efeitos (`SfxSource`).
+  - Mapeamento de clipes por chave identificadora e sincronização com as configurações de volume salvas.
+- **Sistema de Salvamento (`SaveLoadSystem.cs`):**
+  - Serialização de dados em formato JSON via `Application.persistentDataPath`.
+  - Persiste o progresso de fases liberadas (`levelCompleted`), posição atual no mapa (`menuMapRico`) e recorde de pontos da fase do trem (`recordPoinsTrem`).
 
 ---
 
