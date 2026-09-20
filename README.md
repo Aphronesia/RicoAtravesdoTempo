@@ -332,12 +332,12 @@ O projeto foi concebido e construído colaborativamente pela equipe **Aphronesia
 
 | Integrante | Papel Principal | Contribuições Chave |
 | :--- | :--- | :--- |
-| **Felipe Moura** | Programador Principal & Level Design | Arquitetura de software em C#, lógica de todas as mecânicas dos minigames, sistemas de física, saves e balanceamento de níveis. |
-| **Dominique Toledo** | Gerente de Projeto | Gestão de cronograma e escopo, suporte ao desenvolvimento de scripts e curadoria/integração de assets. |
-| **Murilo Cesar** | Designer de Mundo & Assets Visuais | Criação de sprites de personagens, direção estética, ambientalização e arte dos minigames. |
-| **Jonas Gomes** | Designer Principal | Arte conceitual, ilustração dos cenários principais e diagramação artística das páginas de HQ. |
-| **Nayara Domingues** | Documentação & Web Developer | Redação e estruturação da documentação do TCC, conceitualização narrativa e desenvolvimento do site oficial. |
 | **Caneca** | Sound Designer Principal | Composição de trilhas sonoras originais, sonoplastia dos minigames, efeitos sonoros (SFX) e apoio em level design. |
+| **Dominique Toledo** | Gerente de Projeto, Programador & Artista | Gestão de cronograma e escopo, ilustração artística das páginas de HQ (cutscenes), curadoria de assets e refatoração de código da primeira fase. |
+| **Felipe Moura** | Programador Principal | Arquitetura de software em C#, lógica e programação das mecânicas de todos os minigames, sistemas de física e implementação de saves. |
+| **Jonas Gomes** | Artista & Designer Principal | Arte conceitual, design visual e ilustração de cenários principais do jogo. |
+| **Murilo Cesar** | Designer de Mundo & Assets Visuais | Criação de sprites de personagens, direção estética, ambientalização e arte dos minigames. |
+| **Nayara Domingues** | Documentação & Web Developer | Redação e estruturação da documentação do TCC, conceitualização narrativa e desenvolvimento do site oficial. |
 
 ---
 
